@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-14 14:07:26
+ * @LastEditTime: 2023-09-14 15:27:30
 -->
 <template>
     <div class="model-recipe-page">
@@ -276,10 +276,10 @@ const events = {
                 break;
             case 'delete':
                 if (checkboxRecords && checkboxRecords.length === 0) {
-                    showWarning('common.tip.selectData');
+                    showWarning('请选择至少一条数据进行删除');
                     return;
                 }
-                handleDelete();
+                handleDelete(checkboxRecords);
                 break;
             case 'refresh':
                 getModelRecipe();
