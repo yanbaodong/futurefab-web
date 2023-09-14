@@ -1,0 +1,26 @@
+[ 
+	{
+		"router": "/list-page",
+		"name": "list-page",
+		"buttons": [
+			{
+				"btnId": "list-page-Add",
+				"type": "Edit",
+				"zh-CN": "新增",
+				"en-US":"Add"
+			},
+			{
+				"btnId": "list-page-save",
+				"type": "Edit",
+				"zh-CN": "保存",
+				"en-US":"Save"
+			},
+			{
+				"btnId": "list-page-delete",
+				"type": "Delete",
+				"zh-CN": "删除",
+				"en-US":"Delete"
+			}
+		]
+	}
+]

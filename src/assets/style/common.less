@@ -1,0 +1,239 @@
+/*主要存放公共的样式*/
+
+@import url('./variable.less');
+
+/*
+    各项目相同的所有公共样式
+*/
+* {
+    margin: 0;
+    padding: 0;
+    font-size: @font-size-auxiliary;
+    font-family: '微软雅黑';
+    box-sizing: border-box;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+img {
+    width: 100%;
+}
+
+input,
+button {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+/*模块卡片的样式*/
+.cardItem {
+    background: @bg-color !important;
+    box-shadow: 0 4px 10px #4e59690f;
+    border-radius: @border-circle;
+}
+
+/* 右键菜单样式全局改 */
+.menuContainer {
+    padding: 0 !important;
+    color: #fff !important;
+    border: none !important;
+    background: rgba(8, 14, 44, 0.7) !important;
+    box-shadow: 0px 4px 8px rgba(76, 86, 92, 0.21) !important;
+    backdrop-filter: blur(12px) !important;
+    min-width: 178px;
+    width: auto;
+}
+
+.vxe-context-menu--link {
+    color: #fff !important;
+    padding: 0 1rem !important;
+}
+
+.vxe-context-menu--option-wrapper li.link-active {
+    border: none !important;
+}
+
+.vxe-context-menu--option-wrapper {
+    border-bottom: none;
+}
+
+.vxe-context-menu--option-wrapper li {
+    border: none !important;
+}
+
+.vxe-header--column .vxe-cell--required-icon:before {
+    content: '';
+}
+
+//表头checkbox列 隐藏title
+.table-hide-checkbox-all-title {
+    .vxe-checkbox--label {
+        display: none;
+    }
+}
+
+//列设置 多层表头 样式错乱
+.vxe-custom--option-wrapper {
+    .vxe-custom--body > li.level--2 {
+        padding-left: 4em !important;
+    }
+}
+
+/*清除浮动*/
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/*有些需要使用tableName的样式*/
+.common_table_top_title {
+    font-size: @font-size;
+    color: @primary-font-color-3;
+    font-style: normal;
+    font-weight: 700;
+    padding: 0.6em 0;
+    display: block;
+
+    &:before {
+        content: '';
+        display: inline-block;
+        background: @primary-color;
+        width: 7px;
+        height: 14px;
+        border-radius: 0 7px 7px 0;
+        line-height: 14px;
+        margin-right: 8px;
+    }
+}
+/*splitpanes组件样式修改*/
+.splitpanes__pane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.splitpanes__splitter {
+    background-color: transparent !important;
+}
+
+/*本项目使用的公共样式*/
+#app {
+    width: 100%;
+    height: 100%;
+    background-color: @pale-color;
+    box-sizing: border-box;
+    overflow: auto;
+}
+.seed_wrapper {
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    .txt-center {
+        text-align: center;
+    }
+    .dcp-state-txt {
+        display: inline-block;
+        margin-left: 5px;
+    }
+    .icon-ic_page_check {
+        color: #00b42a;
+    }
+    .icon-Ic_x {
+        color: #707070;
+    }
+}
+
+.eqp_register_table_header {
+    background: @header-bg-color;
+    color: @header-font-color;
+}
+.eqp_register_table_header_cell {
+    border: 1px solid #ffffff;
+}
+// 弹框关闭按钮
+.dcp_modal_close {
+    width: 23px;
+    height: 23px;
+    background: @primary-color;
+    color: @white-color;
+    text-align: center;
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+}
+.content-table-confirm {
+    .vxe-modal--header {
+        box-shadow: inset 0px -1px 0px #e5e6e8;
+    }
+    .vxe-modal--title {
+        .vxe-modal--status-wrapper {
+            display: none;
+        }
+    }
+    .vxe-modal--footer {
+        text-align: end !important;
+        padding: 0.4em 1em 0.4em 1em !important;
+    }
+    .vxe-modal--content {
+        padding: 0 10px !important;
+    }
+}
+
+.child_container {
+    display: inline-block;
+    min-width: 12px;
+    max-width: 23px;
+    line-height: 16px;
+    background: @bg-color-4;
+    color: @primary-font-color-3 !important;
+    border-radius: 2px;
+    text-align: center;
+    margin-left: 4px;
+}
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/**页面样式重写**/
+.app_theme_dark,
+.app_theme-light {
+    background-color: @body-bg-color !important;
+}
+/**Trace Detail Analysis页面样式重写**/
+.lot-list-tab {
+    background: @bg-color !important;
+}
+/**.eqp_tab_item_text.active**/
+.eqp_tab_item_text.active {
+    border-bottom-color: @primary-color !important;
+}
+.eqp_tab_item_line {
+    background-color: @br-default-color !important;
+}

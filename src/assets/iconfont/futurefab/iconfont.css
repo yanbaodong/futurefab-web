@@ -1,0 +1,839 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3502223 */
+  src: url('iconfont.woff2?t=1688374705766') format('woff2'),
+       url('iconfont.woff?t=1688374705766') format('woff'),
+       url('iconfont.ttf?t=1688374705766') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-ic_menu_FlowDesign:before {
+  content: "\e799";
+}
+
+.icon-a-ic_menu_EQPConfig:before {
+  content: "\e79a";
+}
+
+.icon-a-ic_menu_MenuManagement:before {
+  content: "\e79b";
+}
+
+.icon-a-ic_menu_AlarmHistory:before {
+  content: "\e79c";
+}
+
+.icon-a-ic_menu_LogViewer:before {
+  content: "\e79d";
+}
+
+.icon-a-ic_menu_PPMonLogviewer:before {
+  content: "\e79e";
+}
+
+.icon-a-ic_menu_FrameworkStatus:before {
+  content: "\e79f";
+}
+
+.icon-ic_menu_Simulation:before {
+  content: "\e7a0";
+}
+
+.icon-a-ic_menu_AlarmSPEC:before {
+  content: "\e7a1";
+}
+
+.icon-a-ic_menu_ReportManagements:before {
+  content: "\e7a2";
+}
+
+.icon-a-ic_menu_StateViewer:before {
+  content: "\e7a3";
+}
+
+.icon-a-ic_menu_FWMonitoring:before {
+  content: "\e7a4";
+}
+
+.icon-a-ic_menu_ProcessMetrologyMapping:before {
+  content: "\e7a5";
+}
+
+.icon-a-ic_menu_ApplicationManagement:before {
+  content: "\e7a6";
+}
+
+.icon-a-ic_menu_VirtualDOE:before {
+  content: "\e7a7";
+}
+
+.icon-a-ic_menu_APIManagement:before {
+  content: "\e7a8";
+}
+
+.icon-a-ic_menu_UserDesignedReport:before {
+  content: "\e7a9";
+}
+
+.icon-ic_but_Release_gray:before {
+  content: "\e614";
+}
+
+.icon-ic_but_Unrelease_gray:before {
+  content: "\e615";
+}
+
+.icon-ic_Btn_CheckOut_gray:before {
+  content: "\e616";
+}
+
+.icon-ic_Btn_UndoCheckOut_gray:before {
+  content: "\e617";
+}
+
+.icon-ic_Btn_CheckIn_gray:before {
+  content: "\e618";
+}
+
+.icon-ic_menu_chart:before {
+  content: "\e784";
+}
+
+.icon-ic_menu_chart3:before {
+  content: "\e785";
+}
+
+.icon-ic_menu_Report1:before {
+  content: "\e786";
+}
+
+.icon-ic_menu_Modeling:before {
+  content: "\e787";
+}
+
+.icon-ic_menu_chart2:before {
+  content: "\e788";
+}
+
+.icon-ic_menu_chart4:before {
+  content: "\e789";
+}
+
+.icon-ic_menu_Modeling4:before {
+  content: "\e78a";
+}
+
+.icon-ic_menu_Modeling2:before {
+  content: "\e78b";
+}
+
+.icon-ic_menu_Analysis1:before {
+  content: "\e78c";
+}
+
+.icon-ic_menu_Analysis2:before {
+  content: "\e78d";
+}
+
+.icon-ic_menu_Report:before {
+  content: "\e78e";
+}
+
+.icon-ic_menu_Analysis:before {
+  content: "\e78f";
+}
+
+.icon-ic_menu_chart1:before {
+  content: "\e790";
+}
+
+.icon-ic_menu_Modeling3:before {
+  content: "\e791";
+}
+
+.icon-ic_menu_Setting:before {
+  content: "\e792";
+}
+
+.icon-ic_menu_Report3:before {
+  content: "\e793";
+}
+
+.icon-ic_menu_Setting1:before {
+  content: "\e794";
+}
+
+.icon-ic_menu_Setting3:before {
+  content: "\e795";
+}
+
+.icon-ic_menu_Report2:before {
+  content: "\e796";
+}
+
+.icon-ic_menu_Setting2:before {
+  content: "\e797";
+}
+
+.icon-ic_menu_Setting4:before {
+  content: "\e798";
+}
+
+.icon-ic_but_Add_gray:before {
+  content: "\e602";
+}
+
+.icon-ic_but_Save_gray:before {
+  content: "\e600";
+}
+
+.icon-ic_but_Export_gray:before {
+  content: "\e612";
+}
+
+.icon-ic_but_Delete_gray:before {
+  content: "\e613";
+}
+
+.icon-ic_but_Deactivate_gray:before {
+  content: "\e60b";
+}
+
+.icon-ic_but_Activate_gray:before {
+  content: "\e60c";
+}
+
+.icon-guanbi:before {
+  content: "\e60a";
+}
+
+.icon-ic_btn_Collected:before {
+  content: "\e609";
+}
+
+.icon-ic_btn_Collection:before {
+  content: "\e607";
+}
+
+.icon-ic_btn_Setting:before {
+  content: "\e608";
+}
+
+.icon-ic_tree_SECSEQP1:before {
+  content: "\e782";
+}
+
+.icon-ic_tree_SECSEQP2:before {
+  content: "\e783";
+}
+
+.icon-ic_language_CH:before {
+  content: "\e780";
+}
+
+.icon-ic_language1:before {
+  content: "\e781";
+}
+
+.icon-ic_Table_Add:before {
+  content: "\e601";
+}
+
+.icon-ic_theme2:before {
+  content: "\e77f";
+}
+
+.icon-ic_Application_page:before {
+  content: "\e779";
+}
+
+.icon-a-ic_Application_routelink:before {
+  content: "\e77a";
+}
+
+.icon-ic_Application_route:before {
+  content: "\e77b";
+}
+
+.icon-ic_language:before {
+  content: "\e77c";
+}
+
+.icon-ic_theme1:before {
+  content: "\e77d";
+}
+
+.icon-ic_Application_url:before {
+  content: "\e77e";
+}
+
+.icon-icon-a-ic_btn_Questionmark:before {
+  content: "\e778";
+}
+
+.icon-ic_btn_Fullscreen:before {
+  content: "\e776";
+}
+
+.icon-ic_btn_CancelfullScreen:before {
+  content: "\e777";
+}
+
+.icon-a-ic_btn_DataSet:before {
+  content: "\e775";
+}
+
+.icon-ic_page_SummaryDataAnalysis3:before {
+  content: "\e774";
+}
+
+.icon-ic_page_config3:before {
+  content: "\e6f4";
+}
+
+.icon-ic_page_config2:before {
+  content: "\e6f5";
+}
+
+.icon-ic_page_analysis1:before {
+  content: "\e70b";
+}
+
+.icon-ic_page_analysis4:before {
+  content: "\e70c";
+}
+
+.icon-ic_page_Dashboard:before {
+  content: "\e70d";
+}
+
+.icon-ic_page_CodeConfig:before {
+  content: "\e70e";
+}
+
+.icon-ic_page_ClientInterface:before {
+  content: "\e70f";
+}
+
+.icon-ic_page_ActivityRegister:before {
+  content: "\e710";
+}
+
+.icon-ic_page_EQPStatusReport-2:before {
+  content: "\e711";
+}
+
+.icon-ic_page_CustomTableDataView:before {
+  content: "\e712";
+}
+
+.icon-ic_page_analysis2:before {
+  content: "\e713";
+}
+
+.icon-ic_page_DCPAdmin:before {
+  content: "\e714";
+}
+
+.icon-ic_page_EGHistoryReport:before {
+  content: "\e715";
+}
+
+.icon-ic_page_ClientInterface2:before {
+  content: "\e716";
+}
+
+.icon-ic_page_config1:before {
+  content: "\e717";
+}
+
+.icon-ic_page_DCConfig:before {
+  content: "\e718";
+}
+
+.icon-ic_page_EQPStatusReport:before {
+  content: "\e719";
+}
+
+.icon-ic_page_APIFunctionManager:before {
+  content: "\e71a";
+}
+
+.icon-ic_page_PageRegister:before {
+  content: "\e71b";
+}
+
+.icon-ic_page_ExecutionMapping:before {
+  content: "\e71c";
+}
+
+.icon-ic_page_ClientInterface3:before {
+  content: "\e71d";
+}
+
+.icon-a-ic_page_R2RCustomTableModeling:before {
+  content: "\e71e";
+}
+
+.icon-ic_page_DispatchingConfig:before {
+  content: "\e71f";
+}
+
+.icon-ic_page_ActivityDesign:before {
+  content: "\e720";
+}
+
+.icon-ic_page_OCAPReport:before {
+  content: "\e721";
+}
+
+.icon-ic_page_Notification:before {
+  content: "\e722";
+}
+
+.icon-ic_page_DashboardManager:before {
+  content: "\e723";
+}
+
+.icon-ic_page_FavoriteCondtion:before {
+  content: "\e724";
+}
+
+.icon-ic_page_analysis3:before {
+  content: "\e725";
+}
+
+.icon-ic_page_PageHistory:before {
+  content: "\e726";
+}
+
+.icon-ic_page_R2RHistoryViewer:before {
+  content: "\e727";
+}
+
+.icon-ic_page_RealTime:before {
+  content: "\e728";
+}
+
+.icon-a-ic_page_R2RStateModeling:before {
+  content: "\e729";
+}
+
+.icon-a-ic_page_R2RStateModeling2:before {
+  content: "\e72a";
+}
+
+.icon-ic_page_Report4:before {
+  content: "\e72b";
+}
+
+.icon-ic_page_SPCDataAnalysis:before {
+  content: "\e72c";
+}
+
+.icon-ic_page_RecipeConfig:before {
+  content: "\e72d";
+}
+
+.icon-ic_page_SummaryDataAnalysis:before {
+  content: "\e72e";
+}
+
+.icon-ic_page_DCConfig2:before {
+  content: "\e72f";
+}
+
+.icon-ic_page_EqpRegister:before {
+  content: "\e730";
+}
+
+.icon-a-ic_page_TraceModelingUVA:before {
+  content: "\e731";
+}
+
+.icon-ic_page_EQPStatusReport-1:before {
+  content: "\e732";
+}
+
+.icon-ic_page_TraceDataAnalysis:before {
+  content: "\e733";
+}
+
+.icon-ic_page_SummaryDataAnalysis2:before {
+  content: "\e734";
+}
+
+.icon-ic_page_UserRegister:before {
+  content: "\e735";
+}
+
+.icon-ic_page_UserGroupRegister:before {
+  content: "\e736";
+}
+
+.icon-ic_page_TraceDataAnalysis-1:before {
+  content: "\e737";
+}
+
+.icon-ic_page_TraceDetailAnalysis:before {
+  content: "\e738";
+}
+
+.icon-ic_page_OCAPGroupSetting:before {
+  content: "\e739";
+}
+
+.icon-ic_page_config4:before {
+  content: "\e73a";
+}
+
+.icon-ic_page_EGHistoryReport2:before {
+  content: "\e73b";
+}
+
+.icon-ic_page_R2RFlowModeling:before {
+  content: "\e73c";
+}
+
+.icon-ic_tree_Chamber2:before {
+  content: "\e73d";
+}
+
+.icon-ic_tree_AlarmTest2:before {
+  content: "\e73e";
+}
+
+.icon-ic_tree_area:before {
+  content: "\e73f";
+}
+
+.icon-ic_page_PpkReport:before {
+  content: "\e740";
+}
+
+.icon-ic_page_SPCModeling:before {
+  content: "\e741";
+}
+
+.icon-ic_tree_dongjiexuanzedelie:before {
+  content: "\e742";
+}
+
+.icon-ic_tree_AlarmTest1:before {
+  content: "\e743";
+}
+
+.icon-ic_tree_EQPModeling:before {
+  content: "\e744";
+}
+
+.icon-ic_page_SPCModeling-1:before {
+  content: "\e745";
+}
+
+.icon-ic_page_R2RSystemSetting:before {
+  content: "\e746";
+}
+
+.icon-ic_tree_EDAEQP:before {
+  content: "\e747";
+}
+
+.icon-ic_tree_dongjiezhixuanzedelie:before {
+  content: "\e748";
+}
+
+.icon-a-ic_page_TraceLongtermAnalysis:before {
+  content: "\e749";
+}
+
+.icon-ic_tree_EQPGrey:before {
+  content: "\e74a";
+}
+
+.icon-ic_page_ApplicationRegister:before {
+  content: "\e74b";
+}
+
+.icon-ic_tree_ModelVersion:before {
+  content: "\e74c";
+}
+
+.icon-ic_tree_model:before {
+  content: "\e74d";
+}
+
+.icon-ic_tree_Chamber:before {
+  content: "\e74e";
+}
+
+.icon-ic_tree_BothModeling:before {
+  content: "\e74f";
+}
+
+.icon-ic_tree_Main:before {
+  content: "\e750";
+}
+
+.icon-ic_tree_name:before {
+  content: "\e751";
+}
+
+.icon-ic_tree_fab:before {
+  content: "\e752";
+}
+
+.icon-ic_tree_EQPBlue:before {
+  content: "\e753";
+}
+
+.icon-ic_tree_Measurement1:before {
+  content: "\e754";
+}
+
+.icon-ic_page_SummaryModeling:before {
+  content: "\e755";
+}
+
+.icon-ic_tree_RecipeID:before {
+  content: "\e756";
+}
+
+.icon-ic_tree_ModelGroup:before {
+  content: "\e757";
+}
+
+.icon-ic_tree_SummaryParameter:before {
+  content: "\e758";
+}
+
+.icon-ic_tree_Loader:before {
+  content: "\e759";
+}
+
+.icon-ic_tree_Parameter:before {
+  content: "\e75a";
+}
+
+.icon-ic_page_UserProfile:before {
+  content: "\e75b";
+}
+
+.icon-ic_tree_MainEQPGrey:before {
+  content: "\e75c";
+}
+
+.icon-ic_tree_SECSEQPdefuben:before {
+  content: "\e75d";
+}
+
+.icon-ic_tree_SECSWMainEQP:before {
+  content: "\e75e";
+}
+
+.icon-ic_tree_Interface:before {
+  content: "\e75f";
+}
+
+.icon-ic_tree_VirtualParameter:before {
+  content: "\e760";
+}
+
+.icon-ic_tree_NoModeling:before {
+  content: "\e761";
+}
+
+.icon-ic_tree_Port:before {
+  content: "\e762";
+}
+
+.icon-ic_tree_site:before {
+  content: "\e763";
+}
+
+.icon-ic_tree_ProductID:before {
+  content: "\e764";
+}
+
+.icon-ic_tree_ModuleID:before {
+  content: "\e765";
+}
+
+.icon-ic_page_Report2:before {
+  content: "\e766";
+}
+
+.icon-ic_page_Report3:before {
+  content: "\e767";
+}
+
+.icon-ic_page_Report1:before {
+  content: "\e768";
+}
+
+.icon-ic_page_modeling3:before {
+  content: "\e769";
+}
+
+.icon-ic_tree_TemplateModeling:before {
+  content: "\e76a";
+}
+
+.icon-ic_page_modeling4:before {
+  content: "\e76b";
+}
+
+.icon-ic_tree_DCPID:before {
+  content: "\e76c";
+}
+
+.icon-ic_tree_MainEQPBlue:before {
+  content: "\e76d";
+}
+
+.icon-ic_tree_SECSEQP:before {
+  content: "\e76e";
+}
+
+.icon-ic_page_modeling1:before {
+  content: "\e76f";
+}
+
+.icon-ic_page_modeling2:before {
+  content: "\e770";
+}
+
+.icon-ic_tree_line:before {
+  content: "\e771";
+}
+
+.icon-ic_page_DataCollectionPlan:before {
+  content: "\e772";
+}
+
+.icon-ic_page_WidgetRegister2:before {
+  content: "\e773";
+}
+
+.icon-ic_page_Admin:before {
+  content: "\e701";
+}
+
+.icon-ic_page_Dashboard1:before {
+  content: "\e702";
+}
+
+.icon-ic_page_Analysis:before {
+  content: "\e703";
+}
+
+.icon-ic_page_Report:before {
+  content: "\e704";
+}
+
+.icon-ic_page_Modeling:before {
+  content: "\e705";
+}
+
+.icon-ic_page_Configuration:before {
+  content: "\e706";
+}
+
+.icon-ic_page_DataCollection:before {
+  content: "\e707";
+}
+
+.icon-ic_page_Registration:before {
+  content: "\e708";
+}
+
+.icon-ic_page_Monitoring:before {
+  content: "\e709";
+}
+
+.icon-ic_User:before {
+  content: "\e70a";
+}
+
+.icon-ic_Tabble_Filter1:before {
+  content: "\e700";
+}
+
+.icon-Ic_x:before {
+  content: "\e6fe";
+}
+
+.icon-ic_page_avatar:before {
+  content: "\e6ff";
+}
+
+.icon-ic_page_check:before {
+  content: "\e6fd";
+}
+
+.icon-ic_plus:before {
+  content: "\e6f8";
+}
+
+.icon-ic_zhankai:before {
+  content: "\e6f9";
+}
+
+.icon-ic_minus:before {
+  content: "\e6fa";
+}
+
+.icon-ic_weizhankai:before {
+  content: "\e6fb";
+}
+
+.icon-ic_shouqi:before {
+  content: "\e6fc";
+}
+
+.icon-ic_theme:before {
+  content: "\e6f6";
+}
+
+.icon-ic_themechecked:before {
+  content: "\e6f7";
+}
+
+.icon-ic_CH_checked:before {
+  content: "\e6ec";
+}
+
+.icon-ic_CH:before {
+  content: "\e6ed";
+}
+
+.icon-ic_Kr_checked:before {
+  content: "\e6ee";
+}
+
+.icon-ic_EN:before {
+  content: "\e6ef";
+}
+
+.icon-ic_TC:before {
+  content: "\e6f0";
+}
+
+.icon-ic_Kr:before {
+  content: "\e6f1";
+}
+
+.icon-ic_EN_checked:before {
+  content: "\e6f2";
+}
+
+.icon-ic_TC_checked:before {
+  content: "\e6f3";
+}
+

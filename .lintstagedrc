@@ -1,0 +1,5 @@
+{
+    "**/*": "prettier --write --ignore-unknown",
+    "src/*.{js,ts,vue}": "eslint --fix",
+    "src/*.{scss,less,css,vue}": "stylelint --fix"
+}

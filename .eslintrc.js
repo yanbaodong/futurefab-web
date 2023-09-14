@@ -1,0 +1,37 @@
+module.exports = {
+    env: {
+        node: true,
+    },
+    extends: [
+        'eslint:recommended',
+        'plugin:vue/vue3-essential',
+        'plugin:@typescript-eslint/recommended',
+        'prettier',
+    ],
+    overrides: [],
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+    },
+    plugins: ['vue', '@typescript-eslint'],
+    rules: {
+        indent: ['error', 4],
+        'linebreak-style': ['error', 'windows'],
+        quotes: ['error', 'single'],
+        semi: ['error', 'always'],
+        'vue/no-multiple-template-root': 'off',
+        'no-debugger': 'off',
+        'no-console': 'off',
+        'vue/multi-word-component-names': 'off',
+        'vue/require-default-prop': 'off',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/ban-types': 'off',
+        'prefer-const': 'off',
+        'vue/no-mutating-props': 'warn',
+        'vue/no-dupe-keys': 'warn',
+    },
+};

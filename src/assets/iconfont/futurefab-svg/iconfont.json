@@ -1,0 +1,1976 @@
+{
+    "id": "3524348",
+    "name": "futurefab_svg",
+    "font_family": "iconfont",
+    "css_prefix_text": "icon-",
+    "description": "",
+    "glyphs": [
+        {
+            "icon_id": "35690602",
+            "name": "ic_Btn_undocheckout",
+            "font_class": "ic_Btn_undocheckout",
+            "unicode": "e7c7",
+            "unicode_decimal": 59335
+        },
+        {
+            "icon_id": "35690603",
+            "name": "ic_Btn_checkout",
+            "font_class": "ic_Btn_checkout",
+            "unicode": "e7c8",
+            "unicode_decimal": 59336
+        },
+        {
+            "icon_id": "35690604",
+            "name": "ic_Btn_checkin",
+            "font_class": "ic_Btn_checkin",
+            "unicode": "e7cb",
+            "unicode_decimal": 59339
+        },
+        {
+            "icon_id": "35677724",
+            "name": "config 3",
+            "font_class": "a-config3",
+            "unicode": "e755",
+            "unicode_decimal": 59221
+        },
+        {
+            "icon_id": "35677725",
+            "name": "ic_Btn__ClientInterface",
+            "font_class": "ic_Btn__ClientInterface",
+            "unicode": "e757",
+            "unicode_decimal": 59223
+        },
+        {
+            "icon_id": "35677726",
+            "name": "config 2",
+            "font_class": "a-config2",
+            "unicode": "e769",
+            "unicode_decimal": 59241
+        },
+        {
+            "icon_id": "35677727",
+            "name": "ic_Btn_Dispatching Config Edit",
+            "font_class": "a-ic_Btn_DispatchingConfigEdit",
+            "unicode": "e76b",
+            "unicode_decimal": 59243
+        },
+        {
+            "icon_id": "35677728",
+            "name": "ic_Btn_Dispatching Config Management",
+            "font_class": "a-ic_Btn_DispatchingConfigManagement",
+            "unicode": "e76f",
+            "unicode_decimal": 59247
+        },
+        {
+            "icon_id": "35677729",
+            "name": "ic_Btn__ClientInterface2",
+            "font_class": "ic_Btn__ClientInterface2",
+            "unicode": "e77e",
+            "unicode_decimal": 59262
+        },
+        {
+            "icon_id": "35677730",
+            "name": "config 1",
+            "font_class": "a-config1",
+            "unicode": "e7a9",
+            "unicode_decimal": 59305
+        },
+        {
+            "icon_id": "35677731",
+            "name": "config 4",
+            "font_class": "a-config4",
+            "unicode": "e7b0",
+            "unicode_decimal": 59312
+        },
+        {
+            "icon_id": "35677732",
+            "name": "ic_page_ClientInterface3",
+            "font_class": "ic_page_ClientInterface3",
+            "unicode": "e7bb",
+            "unicode_decimal": 59323
+        },
+        {
+            "icon_id": "35677733",
+            "name": "ic_Btn_Dispatching Config",
+            "font_class": "a-ic_Btn_DispatchingConfig",
+            "unicode": "e7bc",
+            "unicode_decimal": 59324
+        },
+        {
+            "icon_id": "35577378",
+            "name": "icon_Btn_verify",
+            "font_class": "icon_Btn_verify",
+            "unicode": "e752",
+            "unicode_decimal": 59218
+        },
+        {
+            "icon_id": "35517507",
+            "name": "ic_but_Add Category2",
+            "font_class": "a-ic_but_AddCategory2",
+            "unicode": "e74d",
+            "unicode_decimal": 59213
+        },
+        {
+            "icon_id": "35517508",
+            "name": "ic_but_Add Category",
+            "font_class": "a-ic_but_AddCategory",
+            "unicode": "e751",
+            "unicode_decimal": 59217
+        },
+        {
+            "icon_id": "35295536",
+            "name": "icon-wrapper-14px",
+            "font_class": "icon-wrapper-14px",
+            "unicode": "e74a",
+            "unicode_decimal": 59210
+        },
+        {
+            "icon_id": "34982777",
+            "name": "ic_but_Reset",
+            "font_class": "ic_but_Reset",
+            "unicode": "e73b",
+            "unicode_decimal": 59195
+        },
+        {
+            "icon_id": "34982778",
+            "name": "ic_but_Apply",
+            "font_class": "ic_but_Apply",
+            "unicode": "e73e",
+            "unicode_decimal": 59198
+        },
+        {
+            "icon_id": "34982779",
+            "name": "ic_But_Assign User Group",
+            "font_class": "a-ic_But_AssignUserGroup",
+            "unicode": "e749",
+            "unicode_decimal": 59209
+        },
+        {
+            "icon_id": "34093512",
+            "name": "ic_but_Delete",
+            "font_class": "ic_btn_clear",
+            "unicode": "e731",
+            "unicode_decimal": 59185
+        },
+        {
+            "icon_id": "34093513",
+            "name": "ic_but_MSPCCorrelation",
+            "font_class": "ic_but_MSPCCorrelation",
+            "unicode": "e736",
+            "unicode_decimal": 59190
+        },
+        {
+            "icon_id": "34093514",
+            "name": "ic_but_MSPCCorrelation-1",
+            "font_class": "ic_but_MSPCCorrelation-1",
+            "unicode": "e737",
+            "unicode_decimal": 59191
+        },
+        {
+            "icon_id": "34093515",
+            "name": "ic_button_Add-1",
+            "font_class": "ic_button_Add-1",
+            "unicode": "e738",
+            "unicode_decimal": 59192
+        },
+        {
+            "icon_id": "34093516",
+            "name": "ic_button_Add",
+            "font_class": "ic_button_Add",
+            "unicode": "e73a",
+            "unicode_decimal": 59194
+        },
+        {
+            "icon_id": "33819932",
+            "name": "ic_page_RealTime",
+            "font_class": "ic_btn_RealTime",
+            "unicode": "e72d",
+            "unicode_decimal": 59181
+        },
+        {
+            "icon_id": "33201439",
+            "name": "result",
+            "font_class": "result",
+            "unicode": "e722",
+            "unicode_decimal": 59170
+        },
+        {
+            "icon_id": "33148239",
+            "name": "ic_but_EQPHistory",
+            "font_class": "ic_btn_EQPHistory",
+            "unicode": "e820",
+            "unicode_decimal": 59424
+        },
+        {
+            "icon_id": "33148240",
+            "name": "ic_but_TempHistory",
+            "font_class": "ic_btn_TempHistory1",
+            "unicode": "e821",
+            "unicode_decimal": 59425
+        },
+        {
+            "icon_id": "33148241",
+            "name": "ic_but_TRackingHistory",
+            "font_class": "ic_btn_TRackingHistory1",
+            "unicode": "e822",
+            "unicode_decimal": 59426
+        },
+        {
+            "icon_id": "33148242",
+            "name": "ic_but_ViewValueHistory",
+            "font_class": "ic_btn_ViewValueHistory1",
+            "unicode": "e823",
+            "unicode_decimal": 59427
+        },
+        {
+            "icon_id": "33138898",
+            "name": "return",
+            "font_class": "ic_btn_return",
+            "unicode": "e81f",
+            "unicode_decimal": 59423
+        },
+        {
+            "icon_id": "33131418",
+            "name": "up",
+            "font_class": "ic_btn_fold_up",
+            "unicode": "e81d",
+            "unicode_decimal": 59421
+        },
+        {
+            "icon_id": "33131419",
+            "name": "down",
+            "font_class": "ic_btn_fold_down",
+            "unicode": "e81e",
+            "unicode_decimal": 59422
+        },
+        {
+            "icon_id": "33082701",
+            "name": "繁体默认",
+            "font_class": "ic_btn_fan",
+            "unicode": "e80e",
+            "unicode_decimal": 59406
+        },
+        {
+            "icon_id": "33082702",
+            "name": "中文默认",
+            "font_class": "ic_btn_chn",
+            "unicode": "e80f",
+            "unicode_decimal": 59407
+        },
+        {
+            "icon_id": "33082703",
+            "name": "默认",
+            "font_class": "ic_btn_option",
+            "unicode": "e810",
+            "unicode_decimal": 59408
+        },
+        {
+            "icon_id": "33082704",
+            "name": "繁体选中",
+            "font_class": "ic_btn_fan_sel",
+            "unicode": "e811",
+            "unicode_decimal": 59409
+        },
+        {
+            "icon_id": "33082705",
+            "name": "英文默认",
+            "font_class": "ic_btn_eng",
+            "unicode": "e812",
+            "unicode_decimal": 59410
+        },
+        {
+            "icon_id": "33082706",
+            "name": "韩文选中",
+            "font_class": "ic_btn_kr_sel",
+            "unicode": "e813",
+            "unicode_decimal": 59411
+        },
+        {
+            "icon_id": "33082707",
+            "name": "收起",
+            "font_class": "ic_btn_shouqi",
+            "unicode": "e814",
+            "unicode_decimal": 59412
+        },
+        {
+            "icon_id": "33082708",
+            "name": "英文选中",
+            "font_class": "ic_btn_en_sel",
+            "unicode": "e815",
+            "unicode_decimal": 59413
+        },
+        {
+            "icon_id": "33082709",
+            "name": "韩文默认",
+            "font_class": "ic_btn_kr",
+            "unicode": "e816",
+            "unicode_decimal": 59414
+        },
+        {
+            "icon_id": "33082710",
+            "name": "中文选中",
+            "font_class": "ic_btn_chn_sel",
+            "unicode": "e817",
+            "unicode_decimal": 59415
+        },
+        {
+            "icon_id": "33082711",
+            "name": "ic_minus sign",
+            "font_class": "ic_btn_minussign",
+            "unicode": "e818",
+            "unicode_decimal": 59416
+        },
+        {
+            "icon_id": "33082712",
+            "name": "展开",
+            "font_class": "ic_btn_zhankai",
+            "unicode": "e819",
+            "unicode_decimal": 59417
+        },
+        {
+            "icon_id": "33082713",
+            "name": "ic_plus",
+            "font_class": "ic_btn_plus",
+            "unicode": "e81a",
+            "unicode_decimal": 59418
+        },
+        {
+            "icon_id": "33082714",
+            "name": "ic_theme",
+            "font_class": "ic_btn_theme",
+            "unicode": "e81b",
+            "unicode_decimal": 59419
+        },
+        {
+            "icon_id": "33082715",
+            "name": "ic_themechoice",
+            "font_class": "ic_btn_themechoice",
+            "unicode": "e81c",
+            "unicode_decimal": 59420
+        },
+        {
+            "icon_id": "33082410",
+            "name": "ic_but_ResetHistory",
+            "font_class": "ic_btn_ResetHistory",
+            "unicode": "e748",
+            "unicode_decimal": 59208
+        },
+        {
+            "icon_id": "33082415",
+            "name": "ic_but_SaveModel",
+            "font_class": "ic_btn_SaveModel",
+            "unicode": "e80c",
+            "unicode_decimal": 59404
+        },
+        {
+            "icon_id": "33082416",
+            "name": "ic_but_Save",
+            "font_class": "ic_btn_Save",
+            "unicode": "e80d",
+            "unicode_decimal": 59405
+        },
+        {
+            "icon_id": "33082486",
+            "name": "ic_but_WorkflowCopy",
+            "font_class": "ic_btn_WorkflowCopy",
+            "unicode": "e7f5",
+            "unicode_decimal": 59381
+        },
+        {
+            "icon_id": "33082487",
+            "name": "ic_but_ViewValueHistory",
+            "font_class": "ic_btn_ViewValueHistory",
+            "unicode": "e7f6",
+            "unicode_decimal": 59382
+        },
+        {
+            "icon_id": "33082488",
+            "name": "ic_but_WorkflowExplorerView",
+            "font_class": "ic_btn_WorkflowExplorerView",
+            "unicode": "e7f7",
+            "unicode_decimal": 59383
+        },
+        {
+            "icon_id": "33082489",
+            "name": "ic_but_Variation-1",
+            "font_class": "ic_btn_Variation-1",
+            "unicode": "e7f8",
+            "unicode_decimal": 59384
+        },
+        {
+            "icon_id": "33082490",
+            "name": "ic_but_WorkflowExport",
+            "font_class": "ic_btn_WorkflowExport",
+            "unicode": "e7f9",
+            "unicode_decimal": 59385
+        },
+        {
+            "icon_id": "33082491",
+            "name": "ic_but_WorkflowImport",
+            "font_class": "ic_btn_WorkflowImport",
+            "unicode": "e7fa",
+            "unicode_decimal": 59386
+        },
+        {
+            "icon_id": "33082492",
+            "name": "ic_but_WorkflowHistory",
+            "font_class": "ic_btn_WorkflowHistory",
+            "unicode": "e7fb",
+            "unicode_decimal": 59387
+        },
+        {
+            "icon_id": "33082229",
+            "name": "ic_but_ActionHistory",
+            "font_class": "ic_btn_ActionHistory",
+            "unicode": "e6fc",
+            "unicode_decimal": 59132
+        },
+        {
+            "icon_id": "33082493",
+            "name": "ic_but_XAxisAlign",
+            "font_class": "ic_btn_XAxisAlign",
+            "unicode": "e7fc",
+            "unicode_decimal": 59388
+        },
+        {
+            "icon_id": "33082230",
+            "name": "ic_but_Activate",
+            "font_class": "ic_btn_Activate",
+            "unicode": "e6fd",
+            "unicode_decimal": 59133
+        },
+        {
+            "icon_id": "33082494",
+            "name": "ic_but_WorkflowExplorerEdit",
+            "font_class": "ic_btn_WorkflowExplorerEdit",
+            "unicode": "e7fd",
+            "unicode_decimal": 59389
+        },
+        {
+            "icon_id": "33082231",
+            "name": "ic_but_Active",
+            "font_class": "ic_btn_Active",
+            "unicode": "e6fe",
+            "unicode_decimal": 59134
+        },
+        {
+            "icon_id": "33082495",
+            "name": "Ic_but_Y",
+            "font_class": "ic_btn_Y",
+            "unicode": "e7fe",
+            "unicode_decimal": 59390
+        },
+        {
+            "icon_id": "33082232",
+            "name": "ic_AddLayer",
+            "font_class": "ic_btn_AddLayer",
+            "unicode": "e6ff",
+            "unicode_decimal": 59135
+        },
+        {
+            "icon_id": "33082233",
+            "name": "ic_but_Add",
+            "font_class": "ic_btn_Add",
+            "unicode": "e700",
+            "unicode_decimal": 59136
+        },
+        {
+            "icon_id": "33082498",
+            "name": "ic_button_Change history",
+            "font_class": "ic_btn_Changehistory",
+            "unicode": "e801",
+            "unicode_decimal": 59393
+        },
+        {
+            "icon_id": "33082499",
+            "name": "ic_but_ZoomIn",
+            "font_class": "ic_btn_ZoomIn",
+            "unicode": "e802",
+            "unicode_decimal": 59394
+        },
+        {
+            "icon_id": "33082236",
+            "name": "ic_but_AddExtenstionSequence InData",
+            "font_class": "ic_btn_AddExtenstionSequenceInData",
+            "unicode": "e703",
+            "unicode_decimal": 59139
+        },
+        {
+            "icon_id": "33082500",
+            "name": "ic_but_ZoomOut",
+            "font_class": "ic_btn_ZoomOut",
+            "unicode": "e803",
+            "unicode_decimal": 59395
+        },
+        {
+            "icon_id": "33082237",
+            "name": "ic_but_AddPLSModel",
+            "font_class": "ic_btn_AddPLSModel",
+            "unicode": "e704",
+            "unicode_decimal": 59140
+        },
+        {
+            "icon_id": "33082501",
+            "name": "ic_button_Add",
+            "font_class": "ic_btn_Adds",
+            "unicode": "e804",
+            "unicode_decimal": 59396
+        },
+        {
+            "icon_id": "33082238",
+            "name": "ic_but_AddNeuralNetworkModel",
+            "font_class": "ic_btn_AddNeuralNetworkModel",
+            "unicode": "e705",
+            "unicode_decimal": 59141
+        },
+        {
+            "icon_id": "33082502",
+            "name": "ic_button_Collaps-1",
+            "font_class": "ic_btn_SortAsc",
+            "unicode": "e805",
+            "unicode_decimal": 59397
+        },
+        {
+            "icon_id": "33082239",
+            "name": "ic_but_ActivityVersionCheck-3",
+            "font_class": "ic_btn_ActivityVersionCheck-3",
+            "unicode": "e706",
+            "unicode_decimal": 59142
+        },
+        {
+            "icon_id": "33082503",
+            "name": "ic_button_Collaps",
+            "font_class": "ic_btn_SortDesc",
+            "unicode": "e806",
+            "unicode_decimal": 59398
+        },
+        {
+            "icon_id": "33082240",
+            "name": "ic_but_ADDTEMPLATEMODEL",
+            "font_class": "ic_btn_AddTemplateModel",
+            "unicode": "e707",
+            "unicode_decimal": 59143
+        },
+        {
+            "icon_id": "33082504",
+            "name": "ic_button_Template",
+            "font_class": "ic_btn_Template",
+            "unicode": "e807",
+            "unicode_decimal": 59399
+        },
+        {
+            "icon_id": "33082241",
+            "name": "ic_but_Apply",
+            "font_class": "ic_btn_Apply",
+            "unicode": "e708",
+            "unicode_decimal": 59144
+        },
+        {
+            "icon_id": "33082242",
+            "name": "ic_but_ApplyStandardSPEC",
+            "font_class": "ic_btn_ApplyStandardSPEC",
+            "unicode": "e709",
+            "unicode_decimal": 59145
+        },
+        {
+            "icon_id": "33082512",
+            "name": "Export",
+            "font_class": "ic_btn_Export",
+            "unicode": "e809",
+            "unicode_decimal": 59401
+        },
+        {
+            "icon_id": "33082243",
+            "name": "ic_but_AddSubconfig",
+            "font_class": "ic_btn_AddSubconfig",
+            "unicode": "e70a",
+            "unicode_decimal": 59146
+        },
+        {
+            "icon_id": "33082244",
+            "name": "ic_but_AddRegressionModel",
+            "font_class": "ic_btn_AddRegressionModel",
+            "unicode": "e70b",
+            "unicode_decimal": 59147
+        },
+        {
+            "icon_id": "33082245",
+            "name": "ic_but_AddVirtualEventParameter",
+            "font_class": "ic_btn_AddVirtualEventParameter",
+            "unicode": "e70c",
+            "unicode_decimal": 59148
+        },
+        {
+            "icon_id": "33082246",
+            "name": "ic_but_AnalysisChart",
+            "font_class": "ic_btn_AnalysisChart",
+            "unicode": "e70d",
+            "unicode_decimal": 59149
+        },
+        {
+            "icon_id": "33082247",
+            "name": "ic_but_Add Aditional data",
+            "font_class": "ic_btn_AddAditionaldata",
+            "unicode": "e70e",
+            "unicode_decimal": 59150
+        },
+        {
+            "icon_id": "33082248",
+            "name": "ic_but_AddVirtualParameter",
+            "font_class": "ic_btn_AddVirtualParameter",
+            "unicode": "e70f",
+            "unicode_decimal": 59151
+        },
+        {
+            "icon_id": "33082249",
+            "name": "ic_but_CancelSelect",
+            "font_class": "ic_btn_CancelSelect",
+            "unicode": "e710",
+            "unicode_decimal": 59152
+        },
+        {
+            "icon_id": "33082250",
+            "name": "ic_but_AutoCalcultionSetting",
+            "font_class": "ic_btn_AutoCalcultionSetting",
+            "unicode": "e711",
+            "unicode_decimal": 59153
+        },
+        {
+            "icon_id": "33082251",
+            "name": "ic_but_AddVirtualEvent",
+            "font_class": "ic_btn_AddVirtualEvent",
+            "unicode": "e712",
+            "unicode_decimal": 59154
+        },
+        {
+            "icon_id": "33082253",
+            "name": "ic_but_BaseLine",
+            "font_class": "ic_btn_BaseLine",
+            "unicode": "e714",
+            "unicode_decimal": 59156
+        },
+        {
+            "icon_id": "33082254",
+            "name": "ic_but_ChangeAxis",
+            "font_class": "ic_btn_ChangeAxis",
+            "unicode": "e715",
+            "unicode_decimal": 59157
+        },
+        {
+            "icon_id": "33082255",
+            "name": "ic_but_Calculation",
+            "font_class": "ic_btn_Calculation",
+            "unicode": "e716",
+            "unicode_decimal": 59158
+        },
+        {
+            "icon_id": "33082256",
+            "name": "ic_but_AssignedEqp",
+            "font_class": "ic_btn_AssignedEqp",
+            "unicode": "e717",
+            "unicode_decimal": 59159
+        },
+        {
+            "icon_id": "33082257",
+            "name": "ic_but_ChangeSearchPeriod",
+            "font_class": "ic_btn_ChangeSearchPeriod",
+            "unicode": "e718",
+            "unicode_decimal": 59160
+        },
+        {
+            "icon_id": "33082258",
+            "name": "ic_but_ChangeXAxis",
+            "font_class": "ic_btn_ChangeXAxis",
+            "unicode": "e719",
+            "unicode_decimal": 59161
+        },
+        {
+            "icon_id": "33082259",
+            "name": "ic_but_ChamberMatching",
+            "font_class": "ic_btn_ChamberMatching",
+            "unicode": "e71a",
+            "unicode_decimal": 59162
+        },
+        {
+            "icon_id": "33082260",
+            "name": "ic_but_Chart 2",
+            "font_class": "ic_btn_Chart2",
+            "unicode": "e71b",
+            "unicode_decimal": 59163
+        },
+        {
+            "icon_id": "33082261",
+            "name": "ic_but_CheckChangeInVersion",
+            "font_class": "ic_btn_CheckChangeInVersion",
+            "unicode": "e71c",
+            "unicode_decimal": 59164
+        },
+        {
+            "icon_id": "33082262",
+            "name": "ic_but_ChangeOrder",
+            "font_class": "ic_btn_ChangeOrder",
+            "unicode": "e71d",
+            "unicode_decimal": 59165
+        },
+        {
+            "icon_id": "33082263",
+            "name": "ic_but_ChangeLegendLocation",
+            "font_class": "ic_btn_ChangeLegendLocation",
+            "unicode": "e71e",
+            "unicode_decimal": 59166
+        },
+        {
+            "icon_id": "33082264",
+            "name": "ic_but_ChangeXAxis-1",
+            "font_class": "ic_btn_ChangeXAxis-1",
+            "unicode": "e71f",
+            "unicode_decimal": 59167
+        },
+        {
+            "icon_id": "33082265",
+            "name": "ic_but_CheckInterlock",
+            "font_class": "ic_btn_CheckInterlock",
+            "unicode": "e720",
+            "unicode_decimal": 59168
+        },
+        {
+            "icon_id": "33082266",
+            "name": "ic_but_CheckOut",
+            "font_class": "ic_btn_CheckOut",
+            "unicode": "e721",
+            "unicode_decimal": 59169
+        },
+        {
+            "icon_id": "33082268",
+            "name": "ic_but_Chart 4",
+            "font_class": "ic_btn_scatter",
+            "unicode": "e723",
+            "unicode_decimal": 59171
+        },
+        {
+            "icon_id": "33082269",
+            "name": "ic_but_Chart 1",
+            "font_class": "ic_btn_TrendChart1",
+            "unicode": "e724",
+            "unicode_decimal": 59172
+        },
+        {
+            "icon_id": "33082270",
+            "name": "ic_but_AddSPEC",
+            "font_class": "ic_btn_AddSPEC",
+            "unicode": "e725",
+            "unicode_decimal": 59173
+        },
+        {
+            "icon_id": "33082271",
+            "name": "ic_but_CheckIn",
+            "font_class": "ic_btn_CheckIn",
+            "unicode": "e726",
+            "unicode_decimal": 59174
+        },
+        {
+            "icon_id": "33082272",
+            "name": "ic_but_Chart 3",
+            "font_class": "ic_btn_TrendChart2",
+            "unicode": "e727",
+            "unicode_decimal": 59175
+        },
+        {
+            "icon_id": "33082273",
+            "name": "ic_but_Copy",
+            "font_class": "ic_btn_Copy",
+            "unicode": "e728",
+            "unicode_decimal": 59176
+        },
+        {
+            "icon_id": "33082274",
+            "name": "ic_but_Close",
+            "font_class": "ic_btn_Close",
+            "unicode": "e729",
+            "unicode_decimal": 59177
+        },
+        {
+            "icon_id": "33082275",
+            "name": "ic_but_CommonChangeLegendLocation",
+            "font_class": "ic_btn_CommonChangeLegendLocation",
+            "unicode": "e72a",
+            "unicode_decimal": 59178
+        },
+        {
+            "icon_id": "33082276",
+            "name": "ic_but_CommonLegendVisibility",
+            "font_class": "ic_btn_CommonLegendVisibility",
+            "unicode": "e72b",
+            "unicode_decimal": 59179
+        },
+        {
+            "icon_id": "33082277",
+            "name": "ic_but_ComparePredictors",
+            "font_class": "ic_btn_ComparePredictors",
+            "unicode": "e72c",
+            "unicode_decimal": 59180
+        },
+        {
+            "icon_id": "33082279",
+            "name": "ic_but_CopyChart",
+            "font_class": "ic_btn_CopyChart",
+            "unicode": "e72e",
+            "unicode_decimal": 59182
+        },
+        {
+            "icon_id": "33082280",
+            "name": "ic_but_CommonRedrawChart",
+            "font_class": "ic_btn_CommonRedrawChart",
+            "unicode": "e72f",
+            "unicode_decimal": 59183
+        },
+        {
+            "icon_id": "33082281",
+            "name": "ic_but_DeActive",
+            "font_class": "ic_btn_DeActive",
+            "unicode": "e730",
+            "unicode_decimal": 59184
+        },
+        {
+            "icon_id": "33082283",
+            "name": "ic_but_DCPlanConfig",
+            "font_class": "ic_btn_DCPlanConfig",
+            "unicode": "e732",
+            "unicode_decimal": 59186
+        },
+        {
+            "icon_id": "33082284",
+            "name": "ic_but_CreateMainModel",
+            "font_class": "ic_btn_CreateMainModel",
+            "unicode": "e733",
+            "unicode_decimal": 59187
+        },
+        {
+            "icon_id": "33082285",
+            "name": "ic_but_DataHandling",
+            "font_class": "ic_btn_DataHandling",
+            "unicode": "e734",
+            "unicode_decimal": 59188
+        },
+        {
+            "icon_id": "33082286",
+            "name": "ic_but_CommonCopyChart",
+            "font_class": "ic_btn_CommonCopyChart",
+            "unicode": "e735",
+            "unicode_decimal": 59189
+        },
+        {
+            "icon_id": "33082290",
+            "name": "ic_but_DeleteBlank",
+            "font_class": "ic_btn_DeleteBlank",
+            "unicode": "e739",
+            "unicode_decimal": 59193
+        },
+        {
+            "icon_id": "33082293",
+            "name": "ic_but_DeleteModel",
+            "font_class": "ic_btn_DeleteModel",
+            "unicode": "e73c",
+            "unicode_decimal": 59196
+        },
+        {
+            "icon_id": "33082294",
+            "name": "ic_but_Deactivate",
+            "font_class": "ic_btn_Deactivate",
+            "unicode": "e73d",
+            "unicode_decimal": 59197
+        },
+        {
+            "icon_id": "33082296",
+            "name": "ic_but_DeleteSubconfig",
+            "font_class": "ic_btn_DeleteSubconfig",
+            "unicode": "e73f",
+            "unicode_decimal": 59199
+        },
+        {
+            "icon_id": "33082297",
+            "name": "ic_but_EQPHistory",
+            "font_class": "ic_btn_History2",
+            "unicode": "e740",
+            "unicode_decimal": 59200
+        },
+        {
+            "icon_id": "33082298",
+            "name": "ic_but_Delete",
+            "font_class": "ic_btn_Delete",
+            "unicode": "e741",
+            "unicode_decimal": 59201
+        },
+        {
+            "icon_id": "33082299",
+            "name": "ic_but_EventConfig",
+            "font_class": "ic_btn_EventConfig",
+            "unicode": "e742",
+            "unicode_decimal": 59202
+        },
+        {
+            "icon_id": "33082300",
+            "name": "ic_but_DrawChart",
+            "font_class": "ic_btn_DrawChart",
+            "unicode": "e743",
+            "unicode_decimal": 59203
+        },
+        {
+            "icon_id": "33082301",
+            "name": "ic_but_DrawSequence",
+            "font_class": "ic_btn_DrawSequence",
+            "unicode": "e744",
+            "unicode_decimal": 59204
+        },
+        {
+            "icon_id": "33082302",
+            "name": "ic_but_DetailViews",
+            "font_class": "ic_btn_DetailViews",
+            "unicode": "e745",
+            "unicode_decimal": 59205
+        },
+        {
+            "icon_id": "33082303",
+            "name": "ic_but_DeleteColumns",
+            "font_class": "ic_btn_DeleteColumns",
+            "unicode": "e746",
+            "unicode_decimal": 59206
+        },
+        {
+            "icon_id": "33082304",
+            "name": "ic_but_CreateSPECModelGroup",
+            "font_class": "ic_btn_CreateSPECModelGroup",
+            "unicode": "e747",
+            "unicode_decimal": 59207
+        },
+        {
+            "icon_id": "33082308",
+            "name": "ic_but_EQPList",
+            "font_class": "ic_btn_EQPList",
+            "unicode": "e74b",
+            "unicode_decimal": 59211
+        },
+        {
+            "icon_id": "33082309",
+            "name": "ic_but_Export",
+            "font_class": "ic_btn_ExportData",
+            "unicode": "e74c",
+            "unicode_decimal": 59212
+        },
+        {
+            "icon_id": "33082311",
+            "name": "ic_but_ExportChartData",
+            "font_class": "ic_btn_ExportChartData",
+            "unicode": "e74e",
+            "unicode_decimal": 59214
+        },
+        {
+            "icon_id": "33082312",
+            "name": "ic_but_FaultType",
+            "font_class": "ic_btn_FaultType",
+            "unicode": "e74f",
+            "unicode_decimal": 59215
+        },
+        {
+            "icon_id": "33082313",
+            "name": "ic_but_ExportRawdata",
+            "font_class": "ic_btn_ExportRawdata",
+            "unicode": "e750",
+            "unicode_decimal": 59216
+        },
+        {
+            "icon_id": "33082316",
+            "name": "ic_but_Filter",
+            "font_class": "ic_btn_Filter",
+            "unicode": "e753",
+            "unicode_decimal": 59219
+        },
+        {
+            "icon_id": "33082317",
+            "name": "ic_but_FNC_Chart_ ShiftHorizontal",
+            "font_class": "ic_btn_Chart_ShiftHorizontal",
+            "unicode": "e754",
+            "unicode_decimal": 59220
+        },
+        {
+            "icon_id": "33082319",
+            "name": "ic_but_FNC_Chart_ Grouping",
+            "font_class": "ic_btn_Chart_Grouping",
+            "unicode": "e756",
+            "unicode_decimal": 59222
+        },
+        {
+            "icon_id": "33082321",
+            "name": "ic_but_FNC_Chart_ ShiftVertical",
+            "font_class": "ic_btn_Chart_ShiftVertical",
+            "unicode": "e758",
+            "unicode_decimal": 59224
+        },
+        {
+            "icon_id": "33082322",
+            "name": "ic_but_FNC_Chart_ SlotToSlot",
+            "font_class": "ic_btn_Chart_SlotToSlot",
+            "unicode": "e759",
+            "unicode_decimal": 59225
+        },
+        {
+            "icon_id": "33082323",
+            "name": "ic_but_FNC_Chart_ DisplayEvent",
+            "font_class": "ic_btn_Chart_DisplayEvent",
+            "unicode": "e75a",
+            "unicode_decimal": 59226
+        },
+        {
+            "icon_id": "33082324",
+            "name": "ic_but_FNC_Chart_LotToLot",
+            "font_class": "ic_btn_Chart_LotToLot",
+            "unicode": "e75b",
+            "unicode_decimal": 59227
+        },
+        {
+            "icon_id": "33082325",
+            "name": "ic_but_FNC_Chart_YAxis-1",
+            "font_class": "ic_btn_Chart_YAxis-1",
+            "unicode": "e75c",
+            "unicode_decimal": 59228
+        },
+        {
+            "icon_id": "33082326",
+            "name": "ic_but_FNC_Chart_Property",
+            "font_class": "ic_but_FNC_Chart_Link",
+            "unicode": "e75d",
+            "unicode_decimal": 59229
+        },
+        {
+            "icon_id": "33082327",
+            "name": "ic_but_FNC_Chart_Expand",
+            "font_class": "ic_btn_Chart_Expand",
+            "unicode": "e75e",
+            "unicode_decimal": 59230
+        },
+        {
+            "icon_id": "33082328",
+            "name": "ic_but_FNC_Chart-1",
+            "font_class": "ic_btn_Chart-1",
+            "unicode": "e75f",
+            "unicode_decimal": 59231
+        },
+        {
+            "icon_id": "33082329",
+            "name": "ic_but_FNC_Chart_ AdditionalTool",
+            "font_class": "ic_btn_Chart_AdditionalTool",
+            "unicode": "e760",
+            "unicode_decimal": 59232
+        },
+        {
+            "icon_id": "33082330",
+            "name": "ic_but_FNC_Chart_Shift",
+            "font_class": "ic_btn_Chart_Shift",
+            "unicode": "e761",
+            "unicode_decimal": 59233
+        },
+        {
+            "icon_id": "33082331",
+            "name": "ic_but_FNC_Chart_XAxisAlign",
+            "font_class": "ic_btn_Chart_XAxisAlign",
+            "unicode": "e762",
+            "unicode_decimal": 59234
+        },
+        {
+            "icon_id": "33082332",
+            "name": "ic_but_FNC_Chart-3",
+            "font_class": "ic_btn_Chart-3",
+            "unicode": "e763",
+            "unicode_decimal": 59235
+        },
+        {
+            "icon_id": "33082333",
+            "name": "ic_but_FNC_Chart_ StepToStep-1",
+            "font_class": "ic_btn_Chart_StepToStep-1",
+            "unicode": "e764",
+            "unicode_decimal": 59236
+        },
+        {
+            "icon_id": "33082334",
+            "name": "ic_but_FNC_Chart_YAxis",
+            "font_class": "ic_btn_Chart_YAxis",
+            "unicode": "e765",
+            "unicode_decimal": 59237
+        },
+        {
+            "icon_id": "33082335",
+            "name": "ic_but_FormatTable",
+            "font_class": "ic_btn_FormatTable",
+            "unicode": "e766",
+            "unicode_decimal": 59238
+        },
+        {
+            "icon_id": "33082336",
+            "name": "ic_but_FNC_Chart",
+            "font_class": "ic_btn_Chart",
+            "unicode": "e767",
+            "unicode_decimal": 59239
+        },
+        {
+            "icon_id": "33082337",
+            "name": "ic_but_ForceRefresh",
+            "font_class": "ic_btn_ForceRefresh",
+            "unicode": "e768",
+            "unicode_decimal": 59240
+        },
+        {
+            "icon_id": "33082339",
+            "name": "ic_but_FNC_Chart_ StepToStep",
+            "font_class": "ic_btn_Chart_StepToStep",
+            "unicode": "e76a",
+            "unicode_decimal": 59242
+        },
+        {
+            "icon_id": "33082341",
+            "name": "ic_but_History",
+            "font_class": "ic_btn_History",
+            "unicode": "e76c",
+            "unicode_decimal": 59244
+        },
+        {
+            "icon_id": "33082342",
+            "name": "ic_but_Initialize",
+            "font_class": "ic_btn_Initialize",
+            "unicode": "e76d",
+            "unicode_decimal": 59245
+        },
+        {
+            "icon_id": "33082343",
+            "name": "ic_but_HilightResult",
+            "font_class": "ic_btn_HilightResult",
+            "unicode": "e76e",
+            "unicode_decimal": 59246
+        },
+        {
+            "icon_id": "33082345",
+            "name": "ic_but_Import",
+            "font_class": "ic_btn_Import",
+            "unicode": "e770",
+            "unicode_decimal": 59248
+        },
+        {
+            "icon_id": "33082346",
+            "name": "ic_but_FNC_Chart_SameStartPoint",
+            "font_class": "ic_btn_Chart_SameStartPoint",
+            "unicode": "e771",
+            "unicode_decimal": 59249
+        },
+        {
+            "icon_id": "33082347",
+            "name": "ic_but_LegendColor",
+            "font_class": "ic_btn_LegendColor",
+            "unicode": "e772",
+            "unicode_decimal": 59250
+        },
+        {
+            "icon_id": "33082348",
+            "name": "ic_but_Legend",
+            "font_class": "ic_btn_Legend",
+            "unicode": "e773",
+            "unicode_decimal": 59251
+        },
+        {
+            "icon_id": "33082349",
+            "name": "ic_but_HistoryParam",
+            "font_class": "ic_btn_HistoryParam",
+            "unicode": "e774",
+            "unicode_decimal": 59252
+        },
+        {
+            "icon_id": "33082350",
+            "name": "ic_but_LegendVisibility",
+            "font_class": "ic_btn_LegendVisibility",
+            "unicode": "e775",
+            "unicode_decimal": 59253
+        },
+        {
+            "icon_id": "33082351",
+            "name": "ic_but_LocalPublicSwitch",
+            "font_class": "ic_btn_LocalPublicSwitch",
+            "unicode": "e776",
+            "unicode_decimal": 59254
+        },
+        {
+            "icon_id": "33082352",
+            "name": "ic_but_LegendAllCheck",
+            "font_class": "ic_btn_LegendAllCheck",
+            "unicode": "e777",
+            "unicode_decimal": 59255
+        },
+        {
+            "icon_id": "33082353",
+            "name": "ic_but_LegendAllChecked",
+            "font_class": "ic_btn_LegendAllChecked",
+            "unicode": "e778",
+            "unicode_decimal": 59256
+        },
+        {
+            "icon_id": "33082354",
+            "name": "Ic_but_M",
+            "font_class": "ic_btn_M",
+            "unicode": "e779",
+            "unicode_decimal": 59257
+        },
+        {
+            "icon_id": "33082355",
+            "name": "ic_but_Help",
+            "font_class": "ic_btn_Help",
+            "unicode": "e77a",
+            "unicode_decimal": 59258
+        },
+        {
+            "icon_id": "33082356",
+            "name": "ic_but_Mandatory",
+            "font_class": "ic_btn_Mandatory",
+            "unicode": "e77b",
+            "unicode_decimal": 59259
+        },
+        {
+            "icon_id": "33082357",
+            "name": "ic_but_ModifyRecipe",
+            "font_class": "ic_btn_ModifyRecipe",
+            "unicode": "e77c",
+            "unicode_decimal": 59260
+        },
+        {
+            "icon_id": "33082358",
+            "name": "ic_but_LoadModel",
+            "font_class": "ic_btn_LoadModel",
+            "unicode": "e77d",
+            "unicode_decimal": 59261
+        },
+        {
+            "icon_id": "33082360",
+            "name": "ic_but_MSPCCorrelation",
+            "font_class": "ic_btn_Correlation",
+            "unicode": "e77f",
+            "unicode_decimal": 59263
+        },
+        {
+            "icon_id": "33082361",
+            "name": "ic_but_MSPCBuild",
+            "font_class": "ic_btn_Build",
+            "unicode": "e780",
+            "unicode_decimal": 59264
+        },
+        {
+            "icon_id": "33082362",
+            "name": "ic_but_MSPCExclude",
+            "font_class": "ic_btn_Exclude",
+            "unicode": "e781",
+            "unicode_decimal": 59265
+        },
+        {
+            "icon_id": "33082363",
+            "name": "ic_but_MSPCHotellingsT2",
+            "font_class": "ic_btn_HotellingsT2",
+            "unicode": "e782",
+            "unicode_decimal": 59266
+        },
+        {
+            "icon_id": "33082364",
+            "name": "ic_but_FNC_Chart_ DetailAnalysis",
+            "font_class": "ic_btn_Chart_DetailAnalysis",
+            "unicode": "e783",
+            "unicode_decimal": 59267
+        },
+        {
+            "icon_id": "33082365",
+            "name": "ic_but_DeleteRows",
+            "font_class": "ic_btn_DeleteRows",
+            "unicode": "e784",
+            "unicode_decimal": 59268
+        },
+        {
+            "icon_id": "33082366",
+            "name": "ic_but_ModifyRecipe-1",
+            "font_class": "ic_btn_ModifyRecipe-1",
+            "unicode": "e785",
+            "unicode_decimal": 59269
+        },
+        {
+            "icon_id": "33082367",
+            "name": "ic_but_Modify",
+            "font_class": "ic_btn_Modify",
+            "unicode": "e786",
+            "unicode_decimal": 59270
+        },
+        {
+            "icon_id": "33082368",
+            "name": "ic_but_ManualCalculationSetting",
+            "font_class": "ic_btn_ManualCalculationSetting",
+            "unicode": "e787",
+            "unicode_decimal": 59271
+        },
+        {
+            "icon_id": "33082369",
+            "name": "ic_but_FNC_Chart-2",
+            "font_class": "ic_btn_Chart-2",
+            "unicode": "e788",
+            "unicode_decimal": 59272
+        },
+        {
+            "icon_id": "33082370",
+            "name": "ic_but_FNC_Chart_PointMarking",
+            "font_class": "ic_btn_Chart_PointMarking",
+            "unicode": "e789",
+            "unicode_decimal": 59273
+        },
+        {
+            "icon_id": "33082371",
+            "name": "ic_but_MSPCDataset",
+            "font_class": "ic_btn_Dataset",
+            "unicode": "e78a",
+            "unicode_decimal": 59274
+        },
+        {
+            "icon_id": "33082372",
+            "name": "ic_but_Hide",
+            "font_class": "ic_btn_Hide",
+            "unicode": "e78b",
+            "unicode_decimal": 59275
+        },
+        {
+            "icon_id": "33082373",
+            "name": "ic_but_ModifyTemplateModel",
+            "font_class": "ic_btn_ModifyTemplateModel",
+            "unicode": "e78c",
+            "unicode_decimal": 59276
+        },
+        {
+            "icon_id": "33082374",
+            "name": "ic_but_MSPCLayloutCascade",
+            "font_class": "ic_btn_LayloutCascade",
+            "unicode": "e78d",
+            "unicode_decimal": 59277
+        },
+        {
+            "icon_id": "33082375",
+            "name": "ic_but_MSPCLayoutClose",
+            "font_class": "ic_btn_LayoutClose",
+            "unicode": "e78e",
+            "unicode_decimal": 59278
+        },
+        {
+            "icon_id": "33082376",
+            "name": "Ic_but_M-1",
+            "font_class": "ic_btn_M-1",
+            "unicode": "e78f",
+            "unicode_decimal": 59279
+        },
+        {
+            "icon_id": "33082377",
+            "name": "ic_but_MSPCLayoutCloseAllButAct",
+            "font_class": "ic_btn_LayoutCloseAllButAct",
+            "unicode": "e790",
+            "unicode_decimal": 59280
+        },
+        {
+            "icon_id": "33082378",
+            "name": "ic_but_MSPCLoadings",
+            "font_class": "ic_btn_MSPCLoadings",
+            "unicode": "e791",
+            "unicode_decimal": 59281
+        },
+        {
+            "icon_id": "33082379",
+            "name": "ic_but_MSPCLayoutVertical",
+            "font_class": "ic_btn_LayoutVertical",
+            "unicode": "e792",
+            "unicode_decimal": 59282
+        },
+        {
+            "icon_id": "33082380",
+            "name": "ic_but_MSPCLayoutHorizontal",
+            "font_class": "ic_btn_LayoutHorizontal",
+            "unicode": "e793",
+            "unicode_decimal": 59283
+        },
+        {
+            "icon_id": "33082381",
+            "name": "ic_but_MSPCOption",
+            "font_class": "ic_btn_MSPCOption",
+            "unicode": "e794",
+            "unicode_decimal": 59284
+        },
+        {
+            "icon_id": "33082382",
+            "name": "ic_but_MSPCOverride",
+            "font_class": "ic_btn_Override",
+            "unicode": "e795",
+            "unicode_decimal": 59285
+        },
+        {
+            "icon_id": "33082383",
+            "name": "ic_but_MSPCRemoveOutlier",
+            "font_class": "ic_btn_MSPCRemoveOutlier",
+            "unicode": "e796",
+            "unicode_decimal": 59286
+        },
+        {
+            "icon_id": "33082384",
+            "name": "ic_but_MSPCScores",
+            "font_class": "ic_btn_Scores",
+            "unicode": "e797",
+            "unicode_decimal": 59287
+        },
+        {
+            "icon_id": "33082385",
+            "name": "ic_but_MSPCOverview",
+            "font_class": "ic_btn_Overview",
+            "unicode": "e798",
+            "unicode_decimal": 59288
+        },
+        {
+            "icon_id": "33082386",
+            "name": "ic_but_MSPCStatistics",
+            "font_class": "ic_btn_Statistics",
+            "unicode": "e799",
+            "unicode_decimal": 59289
+        },
+        {
+            "icon_id": "33082387",
+            "name": "ic_but_MSPCSelectPoint",
+            "font_class": "ic_btn_SelectPoint",
+            "unicode": "e79a",
+            "unicode_decimal": 59290
+        },
+        {
+            "icon_id": "33082388",
+            "name": "ic_but_MSPCVariance",
+            "font_class": "ic_btn_Variance",
+            "unicode": "e79b",
+            "unicode_decimal": 59291
+        },
+        {
+            "icon_id": "33082389",
+            "name": "ic_but_MultiCopy",
+            "font_class": "ic_btn_MultiCopy",
+            "unicode": "e79c",
+            "unicode_decimal": 59292
+        },
+        {
+            "icon_id": "33082390",
+            "name": "ic_but_MultiToolTip",
+            "font_class": "ic_btn_Modeling",
+            "unicode": "e79d",
+            "unicode_decimal": 59293
+        },
+        {
+            "icon_id": "33082391",
+            "name": "ic_but_PointMaking",
+            "font_class": "ic_btn_PointMaking",
+            "unicode": "e79e",
+            "unicode_decimal": 59294
+        },
+        {
+            "icon_id": "33082392",
+            "name": "ic_but_NewCheckOut",
+            "font_class": "ic_btn_NewCheckOut",
+            "unicode": "e79f",
+            "unicode_decimal": 59295
+        },
+        {
+            "icon_id": "33082393",
+            "name": "ic_but_OCAPModify",
+            "font_class": "ic_btn_OCAPModify",
+            "unicode": "e7a0",
+            "unicode_decimal": 59296
+        },
+        {
+            "icon_id": "33082394",
+            "name": "ic_but_Ordering",
+            "font_class": "ic_btn_Ordering",
+            "unicode": "e7a1",
+            "unicode_decimal": 59297
+        },
+        {
+            "icon_id": "33082395",
+            "name": "ic_but_OptionalInput",
+            "font_class": "ic_btn_OptionalInput",
+            "unicode": "e7a2",
+            "unicode_decimal": 59298
+        },
+        {
+            "icon_id": "33082396",
+            "name": "ic_but_MultiUpload",
+            "font_class": "ic_btn_MultiUpload",
+            "unicode": "e7a3",
+            "unicode_decimal": 59299
+        },
+        {
+            "icon_id": "33082397",
+            "name": "ic_but_PredictionModel",
+            "font_class": "ic_btn_PredictionModel",
+            "unicode": "e7a4",
+            "unicode_decimal": 59300
+        },
+        {
+            "icon_id": "33082398",
+            "name": "ic_but_PointSelection",
+            "font_class": "ic_btn_PointSelection",
+            "unicode": "e7a5",
+            "unicode_decimal": 59301
+        },
+        {
+            "icon_id": "33082399",
+            "name": "ic_but_Property",
+            "font_class": "ic_btn_Property",
+            "unicode": "e7a6",
+            "unicode_decimal": 59302
+        },
+        {
+            "icon_id": "33082400",
+            "name": "ic_but_RawData",
+            "font_class": "ic_btn_RawData",
+            "unicode": "e7a7",
+            "unicode_decimal": 59303
+        },
+        {
+            "icon_id": "33082401",
+            "name": "ic_but_Refresh",
+            "font_class": "ic_btn_Refresh",
+            "unicode": "e7a8",
+            "unicode_decimal": 59304
+        },
+        {
+            "icon_id": "33082403",
+            "name": "ic_but_Remove",
+            "font_class": "ic_btn_Remove",
+            "unicode": "e7aa",
+            "unicode_decimal": 59306
+        },
+        {
+            "icon_id": "33082404",
+            "name": "ic_but_Release",
+            "font_class": "ic_btn_Release",
+            "unicode": "e7ab",
+            "unicode_decimal": 59307
+        },
+        {
+            "icon_id": "33082405",
+            "name": "ic_but_ReloadDataset",
+            "font_class": "ic_btn_ReloadDataset",
+            "unicode": "e7ac",
+            "unicode_decimal": 59308
+        },
+        {
+            "icon_id": "33082406",
+            "name": "ic_but_RemoveLayer",
+            "font_class": "ic_btn_RemoveLayer",
+            "unicode": "e7ad",
+            "unicode_decimal": 59309
+        },
+        {
+            "icon_id": "33082407",
+            "name": "ic_but_Reset-1",
+            "font_class": "ic_btn_Reset-1",
+            "unicode": "e7ae",
+            "unicode_decimal": 59310
+        },
+        {
+            "icon_id": "33082413",
+            "name": "ic_but_RemoveOutlier",
+            "font_class": "ic_btn_RemoveOutlier",
+            "unicode": "e7af",
+            "unicode_decimal": 59311
+        },
+        {
+            "icon_id": "33082418",
+            "name": "ic_but_Search",
+            "font_class": "ic_btn_Search",
+            "unicode": "e7b1",
+            "unicode_decimal": 59313
+        },
+        {
+            "icon_id": "33082419",
+            "name": "ic_but_Select All",
+            "font_class": "ic_btn_SelectAll",
+            "unicode": "e7b2",
+            "unicode_decimal": 59314
+        },
+        {
+            "icon_id": "33082420",
+            "name": "ic_but_SelectPointMode",
+            "font_class": "ic_btn_SelectPointMode",
+            "unicode": "e7b3",
+            "unicode_decimal": 59315
+        },
+        {
+            "icon_id": "33082421",
+            "name": "ic_but_SelectData",
+            "font_class": "ic_btn_SelectData",
+            "unicode": "e7b4",
+            "unicode_decimal": 59316
+        },
+        {
+            "icon_id": "33082422",
+            "name": "ic_but_SeriesDetailAnalysis",
+            "font_class": "ic_btn_SeriesDetailAnalysis",
+            "unicode": "e7b5",
+            "unicode_decimal": 59317
+        },
+        {
+            "icon_id": "33082423",
+            "name": "ic_but_SeriesOverlap",
+            "font_class": "ic_btn_SeriesOverlap",
+            "unicode": "e7b6",
+            "unicode_decimal": 59318
+        },
+        {
+            "icon_id": "33082424",
+            "name": "ic_but_SeriesShift",
+            "font_class": "ic_btn_SeriesShift",
+            "unicode": "e7b7",
+            "unicode_decimal": 59319
+        },
+        {
+            "icon_id": "33082425",
+            "name": "ic_but_SeriesDetailAnaltsis",
+            "font_class": "ic_btn__SeriesDetailAnaltsis",
+            "unicode": "e7b8",
+            "unicode_decimal": 59320
+        },
+        {
+            "icon_id": "33082426",
+            "name": "ic_but_SeriesShiftVertical",
+            "font_class": "ic_btn_SeriesShiftVertical",
+            "unicode": "e7b9",
+            "unicode_decimal": 59321
+        },
+        {
+            "icon_id": "33082427",
+            "name": "ic_but_SeriesGrouping",
+            "font_class": "ic_btn_Clustering",
+            "unicode": "e7ba",
+            "unicode_decimal": 59322
+        },
+        {
+            "icon_id": "33082430",
+            "name": "ic_but_Set",
+            "font_class": "ic_btn_Set",
+            "unicode": "e7bd",
+            "unicode_decimal": 59325
+        },
+        {
+            "icon_id": "33082431",
+            "name": "ic_but_SetManualSuspensionAllGroup",
+            "font_class": "ic_btn_SetManualSuspensionAllGroup",
+            "unicode": "e7be",
+            "unicode_decimal": 59326
+        },
+        {
+            "icon_id": "33082432",
+            "name": "ic_but_Show",
+            "font_class": "ic_btn_Show",
+            "unicode": "e7bf",
+            "unicode_decimal": 59327
+        },
+        {
+            "icon_id": "33082433",
+            "name": "ic_but_Show SPEC Data",
+            "font_class": "ic_btn_ShowSPECData",
+            "unicode": "e7c0",
+            "unicode_decimal": 59328
+        },
+        {
+            "icon_id": "33082434",
+            "name": "ic_but_ShiftHorizontal",
+            "font_class": "ic_btn_ShiftHorizontal",
+            "unicode": "e7c1",
+            "unicode_decimal": 59329
+        },
+        {
+            "icon_id": "33082435",
+            "name": "ic_but_ShowBaseline",
+            "font_class": "ic_btn_ShowBaseline",
+            "unicode": "e7c2",
+            "unicode_decimal": 59330
+        },
+        {
+            "icon_id": "33082436",
+            "name": "ic_but_ShowBaseline-1",
+            "font_class": "ic_but_ShowBaseline-1",
+            "unicode": "e7c3",
+            "unicode_decimal": 59331
+        },
+        {
+            "icon_id": "33082437",
+            "name": "ic_but_ShowToolTip",
+            "font_class": "ic_but_ShowToolTip",
+            "unicode": "e7c4",
+            "unicode_decimal": 59332
+        },
+        {
+            "icon_id": "33082438",
+            "name": "ic_but_SeriesShift-1",
+            "font_class": "ic_btn_SeriesShift-1",
+            "unicode": "e7c5",
+            "unicode_decimal": 59333
+        },
+        {
+            "icon_id": "33082439",
+            "name": "ic_but_Show Step Line",
+            "font_class": "ic_btn_ShowStepLine",
+            "unicode": "e7c6",
+            "unicode_decimal": 59334
+        },
+        {
+            "icon_id": "33082442",
+            "name": "ic_but_SnapShot",
+            "font_class": "ic_btn_SnapShot",
+            "unicode": "e7c9",
+            "unicode_decimal": 59337
+        },
+        {
+            "icon_id": "33082443",
+            "name": "ic_but_Sort",
+            "font_class": "ic_btn_Sort",
+            "unicode": "e7ca",
+            "unicode_decimal": 59338
+        },
+        {
+            "icon_id": "33082445",
+            "name": "ic_but_SPCFindAnnotation",
+            "font_class": "ic_but_FindAnnotation",
+            "unicode": "e7cc",
+            "unicode_decimal": 59340
+        },
+        {
+            "icon_id": "33082447",
+            "name": "ic_but_Simulation",
+            "font_class": "ic_btn_Simulation",
+            "unicode": "e7ce",
+            "unicode_decimal": 59342
+        },
+        {
+            "icon_id": "33082449",
+            "name": "ic_but_SPCSelectChartToView",
+            "font_class": "ic_but_SPCSelectChartToView",
+            "unicode": "e7d0",
+            "unicode_decimal": 59344
+        },
+        {
+            "icon_id": "33082450",
+            "name": "ic_but_SPCShowExcluded",
+            "font_class": "ic_btn_ShowExcluded",
+            "unicode": "e7d1",
+            "unicode_decimal": 59345
+        },
+        {
+            "icon_id": "33082452",
+            "name": "ic_but_SPECHistory",
+            "font_class": "ic_btn_SPECHistory",
+            "unicode": "e7d3",
+            "unicode_decimal": 59347
+        },
+        {
+            "icon_id": "33082453",
+            "name": "ic_but_SPCGrouping",
+            "font_class": "ic_btn_SPCGrouping",
+            "unicode": "e7d4",
+            "unicode_decimal": 59348
+        },
+        {
+            "icon_id": "33082455",
+            "name": "ic_but_SPECDataView",
+            "font_class": "ic_btn_SPECDataView",
+            "unicode": "e7d6",
+            "unicode_decimal": 59350
+        },
+        {
+            "icon_id": "33082456",
+            "name": "ic_but_SuspensionAllReset",
+            "font_class": "ic_btn_SuspensionAllReset",
+            "unicode": "e7d7",
+            "unicode_decimal": 59351
+        },
+        {
+            "icon_id": "33082457",
+            "name": "ic_but_Time base or  Sequence base-2",
+            "font_class": "ic_btn_TimebaseorSequencebase-2",
+            "unicode": "e7d8",
+            "unicode_decimal": 59352
+        },
+        {
+            "icon_id": "33082458",
+            "name": "ic_but_TempHistory",
+            "font_class": "ic_btn_TempHistory",
+            "unicode": "e7d9",
+            "unicode_decimal": 59353
+        },
+        {
+            "icon_id": "33082459",
+            "name": "ic_but_Time base or  Sequence base-3",
+            "font_class": "ic_btn_MultiToolTips",
+            "unicode": "e7da",
+            "unicode_decimal": 59354
+        },
+        {
+            "icon_id": "33082460",
+            "name": "ic_but_Time base or  Sequence base-1",
+            "font_class": "a-ic_but_TimebaseorSequencebase-1",
+            "unicode": "e7db",
+            "unicode_decimal": 59355
+        },
+        {
+            "icon_id": "33082461",
+            "name": "ic_but_Time base or  Sequence base",
+            "font_class": "ic_btn_TimebaseorSequencebase",
+            "unicode": "e7dc",
+            "unicode_decimal": 59356
+        },
+        {
+            "icon_id": "33082462",
+            "name": "ic_but_ToolTipComment",
+            "font_class": "ic_btn_Grouping",
+            "unicode": "e7dd",
+            "unicode_decimal": 59357
+        },
+        {
+            "icon_id": "33082463",
+            "name": "ic_but_TraceDetailAnalysis",
+            "font_class": "ic_btn_TraceDetailAnalysis",
+            "unicode": "e7de",
+            "unicode_decimal": 59358
+        },
+        {
+            "icon_id": "33082464",
+            "name": "ic_but_Time base or  Sequence base-4",
+            "font_class": "ic_btn_TooltipComments",
+            "unicode": "e7df",
+            "unicode_decimal": 59359
+        },
+        {
+            "icon_id": "33082465",
+            "name": "ic_but_TracelongTermAnalysis",
+            "font_class": "ic_btn_TracelongTermAnalysis",
+            "unicode": "e7e0",
+            "unicode_decimal": 59360
+        },
+        {
+            "icon_id": "33082466",
+            "name": "ic_but_TraceWorkflowExplorer",
+            "font_class": "ic_btn_TraceWorkflowExplorer",
+            "unicode": "e7e1",
+            "unicode_decimal": 59361
+        },
+        {
+            "icon_id": "33082467",
+            "name": "ic_but_Training",
+            "font_class": "ic_btn_Training",
+            "unicode": "e7e2",
+            "unicode_decimal": 59362
+        },
+        {
+            "icon_id": "33082468",
+            "name": "ic_but_UncheckInterlock",
+            "font_class": "ic_btn_UncheckInterlock",
+            "unicode": "e7e3",
+            "unicode_decimal": 59363
+        },
+        {
+            "icon_id": "33082469",
+            "name": "ic_but_TRackingHistory",
+            "font_class": "ic_btn_TRackingHistory",
+            "unicode": "e7e4",
+            "unicode_decimal": 59364
+        },
+        {
+            "icon_id": "33082470",
+            "name": "ic_but_TSPEC",
+            "font_class": "ic_btn_TSPEC",
+            "unicode": "e7e5",
+            "unicode_decimal": 59365
+        },
+        {
+            "icon_id": "33082471",
+            "name": "ic_but_Unrelease",
+            "font_class": "ic_btn_Unrelease",
+            "unicode": "e7e6",
+            "unicode_decimal": 59366
+        },
+        {
+            "icon_id": "33082472",
+            "name": "ic_but_UndoCheckOut",
+            "font_class": "ic_btn_UndoCheckOut",
+            "unicode": "e7e7",
+            "unicode_decimal": 59367
+        },
+        {
+            "icon_id": "33082473",
+            "name": "ic_but_UpdateModel",
+            "font_class": "ic_btn_UpdateModel",
+            "unicode": "e7e8",
+            "unicode_decimal": 59368
+        },
+        {
+            "icon_id": "33082474",
+            "name": "ic_but_UserGroup",
+            "font_class": "ic_btn_UserGroup",
+            "unicode": "e7e9",
+            "unicode_decimal": 59369
+        },
+        {
+            "icon_id": "33082475",
+            "name": "ic_but_Upload",
+            "font_class": "ic_btn_Upload",
+            "unicode": "e7ea",
+            "unicode_decimal": 59370
+        },
+        {
+            "icon_id": "33082476",
+            "name": "ic_but_UserComment",
+            "font_class": "ic_btn_UserComment",
+            "unicode": "e7eb",
+            "unicode_decimal": 59371
+        },
+        {
+            "icon_id": "33082477",
+            "name": "ic_but_UserAuthority",
+            "font_class": "ic_btn_UserAuthority",
+            "unicode": "e7ec",
+            "unicode_decimal": 59372
+        },
+        {
+            "icon_id": "33082479",
+            "name": "ic_but_UserRightAxis",
+            "font_class": "ic_btn_UserRightAxis",
+            "unicode": "e7ee",
+            "unicode_decimal": 59374
+        },
+        {
+            "icon_id": "33082480",
+            "name": "ic_but_ValueFilter",
+            "font_class": "ic_btn_ValueFilter",
+            "unicode": "e7ef",
+            "unicode_decimal": 59375
+        },
+        {
+            "icon_id": "33082481",
+            "name": "ic_but_Validation",
+            "font_class": "ic_btn_Validation",
+            "unicode": "e7f0",
+            "unicode_decimal": 59376
+        },
+        {
+            "icon_id": "33082482",
+            "name": "ic_but_Variation",
+            "font_class": "ic_btn_Variation",
+            "unicode": "e7f1",
+            "unicode_decimal": 59377
+        },
+        {
+            "icon_id": "33082483",
+            "name": "ic_but_ViewFDC",
+            "font_class": "ic_btn_View",
+            "unicode": "e7f2",
+            "unicode_decimal": 59378
+        }
+    ]
+}

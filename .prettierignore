@@ -1,0 +1,5 @@
+build/
+dcp/
+public/
+node_modules/
+vue.config.js

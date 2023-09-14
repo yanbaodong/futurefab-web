@@ -1,0 +1,84 @@
+{
+    "name": "eseed",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "update": "pnpm update @futurefab/components @futurefab/vxe-table --latest",
+        "serve": "vue-cli-service serve",
+        "serve:lang": "npm run buildLang && npm run serve",
+        "build": "npm run update && npm run buildLang && vue-cli-service build --mode prod",
+        "buildSingle": "npm run update && npm run buildLang && vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "buildLang": "webpack --progress --config ./build/webpack.lang.config.js",
+        "prepare": "husky install",
+        "prettierCode": "prettier --config .prettierrc --write ./**/**/*.{js,css,vue,ts}"
+    },
+    "dependencies": {
+        "@futurefab/components": "^1.1.2",
+        "@futurefab/vxe-table": "^2.0.3"
+    },
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.18.9",
+        "@commitlint/cli": "^17.4.2",
+        "@commitlint/config-conventional": "^17.4.2",
+        "@kangc/v-md-editor": "next",
+        "@types/node": "^18.7.15",
+        "@typescript-eslint/eslint-plugin": "^5.50.0",
+        "@typescript-eslint/parser": "^5.50.0",
+        "@vue/cli-plugin-babel": "~5.0.8",
+        "@vue/cli-plugin-eslint": "~5.0.8",
+        "@vue/cli-plugin-router": "~5.0.8",
+        "@vue/cli-plugin-typescript": "~5.0.8",
+        "@vue/cli-plugin-vuex": "~5.0.8",
+        "@vue/cli-service": "~5.0.8",
+        "@vue/compiler-sfc": "3.2.37",
+        "@vue/eslint-config-typescript": "11.0.0",
+        "axios": "^0.27.2",
+        "babel-loader": "8.2.5",
+        "babel-plugin-import": "^1.13.5",
+        "compression-webpack-plugin": "^10.0.0",
+        "core-js": "^3.25.0",
+        "dayjs": "^1.11.9",
+        "eslint": "8.21.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-vue": "9.9.0",
+        "husky": "^8.0.3",
+        "less": "4.1.3",
+        "less-loader": "11.0.0",
+        "lint-staged": "^13.1.0",
+        "prettier": "^2.8.3",
+        "splitpanes": "^3.1.0",
+        "stylelint": "^14.16.1",
+        "stylelint-config-prettier": "^9.0.4",
+        "stylelint-config-standard": "^29.0.0",
+        "terser-webpack-plugin": "^5.3.6",
+        "ts-loader": "9.3.1",
+        "typescript": "4.7.4",
+        "vue": "3.2.37",
+        "vue-i18n": "9.2.0-beta.35",
+        "vue-router": "4.1.3",
+        "vuedraggable": "^2.24.3",
+        "vuex": "4.0.2",
+        "vuex-persistedstate": "^4.1.0",
+        "webpack": "^5.74.0",
+        "webpack-bundle-analyzer": "^4.8.0",
+        "webpack-cli": "^4.10.0",
+        "webpack-dev-server": "^4.10.1",
+        "xe-utils": "^3.5.6"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead",
+        "not ie 11"
+    ],
+    "engines": {
+        "node": ">=16",
+        "pnpm": ">=7"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
+    }
+}

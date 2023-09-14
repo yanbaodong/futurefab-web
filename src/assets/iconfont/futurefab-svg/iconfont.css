@@ -1,0 +1,1138 @@
+@font-face {
+    font-family: 'iconfont'; /* Project id 3524348 */
+    src: url('iconfont.woff2?t=1685344727677') format('woff2'),
+        url('iconfont.woff?t=1685344727677') format('woff'),
+        url('iconfont.ttf?t=1685344727677') format('truetype');
+}
+
+.iconfont {
+    font-family: 'iconfont' !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ic_Btn_undocheckout:before {
+    content: '\e7c7';
+}
+
+.icon-ic_Btn_checkout:before {
+    content: '\e7c8';
+}
+
+.icon-ic_Btn_checkin:before {
+    content: '\e7cb';
+}
+
+.icon-a-config3:before {
+    content: '\e755';
+}
+
+.icon-ic_Btn__ClientInterface:before {
+    content: '\e757';
+}
+
+.icon-a-config2:before {
+    content: '\e769';
+}
+
+.icon-a-ic_Btn_DispatchingConfigEdit:before {
+    content: '\e76b';
+}
+
+.icon-a-ic_Btn_DispatchingConfigManagement:before {
+    content: '\e76f';
+}
+
+.icon-ic_Btn__ClientInterface2:before {
+    content: '\e77e';
+}
+
+.icon-a-config1:before {
+    content: '\e7a9';
+}
+
+.icon-a-config4:before {
+    content: '\e7b0';
+}
+
+.icon-ic_page_ClientInterface3:before {
+    content: '\e7bb';
+}
+
+.icon-a-ic_Btn_DispatchingConfig:before {
+    content: '\e7bc';
+}
+
+.icon-icon_Btn_verify:before {
+    content: '\e752';
+}
+
+.icon-a-ic_but_AddCategory2:before {
+    content: '\e74d';
+}
+
+.icon-a-ic_but_AddCategory:before {
+    content: '\e751';
+}
+
+.icon-icon-wrapper-14px:before {
+    content: '\e74a';
+}
+
+.icon-ic_but_Reset:before {
+    content: '\e73b';
+}
+
+.icon-ic_but_Apply:before {
+    content: '\e73e';
+}
+
+.icon-a-ic_But_AssignUserGroup:before {
+    content: '\e749';
+}
+
+.icon-ic_btn_clear:before {
+    content: '\e731';
+}
+
+.icon-ic_but_MSPCCorrelation:before {
+    content: '\e736';
+}
+
+.icon-ic_but_MSPCCorrelation-1:before {
+    content: '\e737';
+}
+
+.icon-ic_button_Add-1:before {
+    content: '\e738';
+}
+
+.icon-ic_button_Add:before {
+    content: '\e73a';
+}
+
+.icon-ic_btn_RealTime:before {
+    content: '\e72d';
+}
+
+.icon-result:before {
+    content: '\e722';
+}
+
+.icon-ic_btn_EQPHistory:before {
+    content: '\e820';
+}
+
+.icon-ic_btn_TempHistory1:before {
+    content: '\e821';
+}
+
+.icon-ic_btn_TRackingHistory1:before {
+    content: '\e822';
+}
+
+.icon-ic_btn_ViewValueHistory1:before {
+    content: '\e823';
+}
+
+.icon-ic_btn_return:before {
+    content: '\e81f';
+}
+
+.icon-ic_btn_fold_up:before {
+    content: '\e81d';
+}
+
+.icon-ic_btn_fold_down:before {
+    content: '\e81e';
+}
+
+.icon-ic_btn_fan:before {
+    content: '\e80e';
+}
+
+.icon-ic_btn_chn:before {
+    content: '\e80f';
+}
+
+.icon-ic_btn_option:before {
+    content: '\e810';
+}
+
+.icon-ic_btn_fan_sel:before {
+    content: '\e811';
+}
+
+.icon-ic_btn_eng:before {
+    content: '\e812';
+}
+
+.icon-ic_btn_kr_sel:before {
+    content: '\e813';
+}
+
+.icon-ic_btn_shouqi:before {
+    content: '\e814';
+}
+
+.icon-ic_btn_en_sel:before {
+    content: '\e815';
+}
+
+.icon-ic_btn_kr:before {
+    content: '\e816';
+}
+
+.icon-ic_btn_chn_sel:before {
+    content: '\e817';
+}
+
+.icon-ic_btn_minussign:before {
+    content: '\e818';
+}
+
+.icon-ic_btn_zhankai:before {
+    content: '\e819';
+}
+
+.icon-ic_btn_plus:before {
+    content: '\e81a';
+}
+
+.icon-ic_btn_theme:before {
+    content: '\e81b';
+}
+
+.icon-ic_btn_themechoice:before {
+    content: '\e81c';
+}
+
+.icon-ic_btn_ResetHistory:before {
+    content: '\e748';
+}
+
+.icon-ic_btn_SaveModel:before {
+    content: '\e80c';
+}
+
+.icon-ic_btn_Save:before {
+    content: '\e80d';
+}
+
+.icon-ic_btn_WorkflowCopy:before {
+    content: '\e7f5';
+}
+
+.icon-ic_btn_ViewValueHistory:before {
+    content: '\e7f6';
+}
+
+.icon-ic_btn_WorkflowExplorerView:before {
+    content: '\e7f7';
+}
+
+.icon-ic_btn_Variation-1:before {
+    content: '\e7f8';
+}
+
+.icon-ic_btn_WorkflowExport:before {
+    content: '\e7f9';
+}
+
+.icon-ic_btn_WorkflowImport:before {
+    content: '\e7fa';
+}
+
+.icon-ic_btn_WorkflowHistory:before {
+    content: '\e7fb';
+}
+
+.icon-ic_btn_ActionHistory:before {
+    content: '\e6fc';
+}
+
+.icon-ic_btn_XAxisAlign:before {
+    content: '\e7fc';
+}
+
+.icon-ic_btn_Activate:before {
+    content: '\e6fd';
+}
+
+.icon-ic_btn_WorkflowExplorerEdit:before {
+    content: '\e7fd';
+}
+
+.icon-ic_btn_Active:before {
+    content: '\e6fe';
+}
+
+.icon-ic_btn_Y:before {
+    content: '\e7fe';
+}
+
+.icon-ic_btn_AddLayer:before {
+    content: '\e6ff';
+}
+
+.icon-ic_btn_Add:before {
+    content: '\e700';
+}
+
+.icon-ic_btn_Changehistory:before {
+    content: '\e801';
+}
+
+.icon-ic_btn_ZoomIn:before {
+    content: '\e802';
+}
+
+.icon-ic_btn_AddExtenstionSequenceInData:before {
+    content: '\e703';
+}
+
+.icon-ic_btn_ZoomOut:before {
+    content: '\e803';
+}
+
+.icon-ic_btn_AddPLSModel:before {
+    content: '\e704';
+}
+
+.icon-ic_btn_Adds:before {
+    content: '\e804';
+}
+
+.icon-ic_btn_AddNeuralNetworkModel:before {
+    content: '\e705';
+}
+
+.icon-ic_btn_SortAsc:before {
+    content: '\e805';
+}
+
+.icon-ic_btn_ActivityVersionCheck-3:before {
+    content: '\e706';
+}
+
+.icon-ic_btn_SortDesc:before {
+    content: '\e806';
+}
+
+.icon-ic_btn_AddTemplateModel:before {
+    content: '\e707';
+}
+
+.icon-ic_btn_Template:before {
+    content: '\e807';
+}
+
+.icon-ic_btn_Apply:before {
+    content: '\e708';
+}
+
+.icon-ic_btn_ApplyStandardSPEC:before {
+    content: '\e709';
+}
+
+.icon-ic_btn_Export:before {
+    content: '\e809';
+}
+
+.icon-ic_btn_AddSubconfig:before {
+    content: '\e70a';
+}
+
+.icon-ic_btn_AddRegressionModel:before {
+    content: '\e70b';
+}
+
+.icon-ic_btn_AddVirtualEventParameter:before {
+    content: '\e70c';
+}
+
+.icon-ic_btn_AnalysisChart:before {
+    content: '\e70d';
+}
+
+.icon-ic_btn_AddAditionaldata:before {
+    content: '\e70e';
+}
+
+.icon-ic_btn_AddVirtualParameter:before {
+    content: '\e70f';
+}
+
+.icon-ic_btn_CancelSelect:before {
+    content: '\e710';
+}
+
+.icon-ic_btn_AutoCalcultionSetting:before {
+    content: '\e711';
+}
+
+.icon-ic_btn_AddVirtualEvent:before {
+    content: '\e712';
+}
+
+.icon-ic_btn_BaseLine:before {
+    content: '\e714';
+}
+
+.icon-ic_btn_ChangeAxis:before {
+    content: '\e715';
+}
+
+.icon-ic_btn_Calculation:before {
+    content: '\e716';
+}
+
+.icon-ic_btn_AssignedEqp:before {
+    content: '\e717';
+}
+
+.icon-ic_btn_ChangeSearchPeriod:before {
+    content: '\e718';
+}
+
+.icon-ic_btn_ChangeXAxis:before {
+    content: '\e719';
+}
+
+.icon-ic_btn_ChamberMatching:before {
+    content: '\e71a';
+}
+
+.icon-ic_btn_Chart2:before {
+    content: '\e71b';
+}
+
+.icon-ic_btn_CheckChangeInVersion:before {
+    content: '\e71c';
+}
+
+.icon-ic_btn_ChangeOrder:before {
+    content: '\e71d';
+}
+
+.icon-ic_btn_ChangeLegendLocation:before {
+    content: '\e71e';
+}
+
+.icon-ic_btn_ChangeXAxis-1:before {
+    content: '\e71f';
+}
+
+.icon-ic_btn_CheckInterlock:before {
+    content: '\e720';
+}
+
+.icon-ic_btn_CheckOut:before {
+    content: '\e721';
+}
+
+.icon-ic_btn_scatter:before {
+    content: '\e723';
+}
+
+.icon-ic_btn_TrendChart1:before {
+    content: '\e724';
+}
+
+.icon-ic_btn_AddSPEC:before {
+    content: '\e725';
+}
+
+.icon-ic_btn_CheckIn:before {
+    content: '\e726';
+}
+
+.icon-ic_btn_TrendChart2:before {
+    content: '\e727';
+}
+
+.icon-ic_btn_Copy:before {
+    content: '\e728';
+}
+
+.icon-ic_btn_Close:before {
+    content: '\e729';
+}
+
+.icon-ic_btn_CommonChangeLegendLocation:before {
+    content: '\e72a';
+}
+
+.icon-ic_btn_CommonLegendVisibility:before {
+    content: '\e72b';
+}
+
+.icon-ic_btn_ComparePredictors:before {
+    content: '\e72c';
+}
+
+.icon-ic_btn_CopyChart:before {
+    content: '\e72e';
+}
+
+.icon-ic_btn_CommonRedrawChart:before {
+    content: '\e72f';
+}
+
+.icon-ic_btn_DeActive:before {
+    content: '\e730';
+}
+
+.icon-ic_btn_DCPlanConfig:before {
+    content: '\e732';
+}
+
+.icon-ic_btn_CreateMainModel:before {
+    content: '\e733';
+}
+
+.icon-ic_btn_DataHandling:before {
+    content: '\e734';
+}
+
+.icon-ic_btn_CommonCopyChart:before {
+    content: '\e735';
+}
+
+.icon-ic_btn_DeleteBlank:before {
+    content: '\e739';
+}
+
+.icon-ic_btn_DeleteModel:before {
+    content: '\e73c';
+}
+
+.icon-ic_btn_Deactivate:before {
+    content: '\e73d';
+}
+
+.icon-ic_btn_DeleteSubconfig:before {
+    content: '\e73f';
+}
+
+.icon-ic_btn_History2:before {
+    content: '\e740';
+}
+
+.icon-ic_btn_Delete:before {
+    content: '\e741';
+}
+
+.icon-ic_btn_EventConfig:before {
+    content: '\e742';
+}
+
+.icon-ic_btn_DrawChart:before {
+    content: '\e743';
+}
+
+.icon-ic_btn_DrawSequence:before {
+    content: '\e744';
+}
+
+.icon-ic_btn_DetailViews:before {
+    content: '\e745';
+}
+
+.icon-ic_btn_DeleteColumns:before {
+    content: '\e746';
+}
+
+.icon-ic_btn_CreateSPECModelGroup:before {
+    content: '\e747';
+}
+
+.icon-ic_btn_EQPList:before {
+    content: '\e74b';
+}
+
+.icon-ic_btn_ExportData:before {
+    content: '\e74c';
+}
+
+.icon-ic_btn_ExportChartData:before {
+    content: '\e74e';
+}
+
+.icon-ic_btn_FaultType:before {
+    content: '\e74f';
+}
+
+.icon-ic_btn_ExportRawdata:before {
+    content: '\e750';
+}
+
+.icon-ic_btn_Filter:before {
+    content: '\e753';
+}
+
+.icon-ic_btn_Chart_ShiftHorizontal:before {
+    content: '\e754';
+}
+
+.icon-ic_btn_Chart_Grouping:before {
+    content: '\e756';
+}
+
+.icon-ic_btn_Chart_ShiftVertical:before {
+    content: '\e758';
+}
+
+.icon-ic_btn_Chart_SlotToSlot:before {
+    content: '\e759';
+}
+
+.icon-ic_btn_Chart_DisplayEvent:before {
+    content: '\e75a';
+}
+
+.icon-ic_btn_Chart_LotToLot:before {
+    content: '\e75b';
+}
+
+.icon-ic_btn_Chart_YAxis-1:before {
+    content: '\e75c';
+}
+
+.icon-ic_but_FNC_Chart_Link:before {
+    content: '\e75d';
+}
+
+.icon-ic_btn_Chart_Expand:before {
+    content: '\e75e';
+}
+
+.icon-ic_btn_Chart-1:before {
+    content: '\e75f';
+}
+
+.icon-ic_btn_Chart_AdditionalTool:before {
+    content: '\e760';
+}
+
+.icon-ic_btn_Chart_Shift:before {
+    content: '\e761';
+}
+
+.icon-ic_btn_Chart_XAxisAlign:before {
+    content: '\e762';
+}
+
+.icon-ic_btn_Chart-3:before {
+    content: '\e763';
+}
+
+.icon-ic_btn_Chart_StepToStep-1:before {
+    content: '\e764';
+}
+
+.icon-ic_btn_Chart_YAxis:before {
+    content: '\e765';
+}
+
+.icon-ic_btn_FormatTable:before {
+    content: '\e766';
+}
+
+.icon-ic_btn_Chart:before {
+    content: '\e767';
+}
+
+.icon-ic_btn_ForceRefresh:before {
+    content: '\e768';
+}
+
+.icon-ic_btn_Chart_StepToStep:before {
+    content: '\e76a';
+}
+
+.icon-ic_btn_History:before {
+    content: '\e76c';
+}
+
+.icon-ic_btn_Initialize:before {
+    content: '\e76d';
+}
+
+.icon-ic_btn_HilightResult:before {
+    content: '\e76e';
+}
+
+.icon-ic_btn_Import:before {
+    content: '\e770';
+}
+
+.icon-ic_btn_Chart_SameStartPoint:before {
+    content: '\e771';
+}
+
+.icon-ic_btn_LegendColor:before {
+    content: '\e772';
+}
+
+.icon-ic_btn_Legend:before {
+    content: '\e773';
+}
+
+.icon-ic_btn_HistoryParam:before {
+    content: '\e774';
+}
+
+.icon-ic_btn_LegendVisibility:before {
+    content: '\e775';
+}
+
+.icon-ic_btn_LocalPublicSwitch:before {
+    content: '\e776';
+}
+
+.icon-ic_btn_LegendAllCheck:before {
+    content: '\e777';
+}
+
+.icon-ic_btn_LegendAllChecked:before {
+    content: '\e778';
+}
+
+.icon-ic_btn_M:before {
+    content: '\e779';
+}
+
+.icon-ic_btn_Help:before {
+    content: '\e77a';
+}
+
+.icon-ic_btn_Mandatory:before {
+    content: '\e77b';
+}
+
+.icon-ic_btn_ModifyRecipe:before {
+    content: '\e77c';
+}
+
+.icon-ic_btn_LoadModel:before {
+    content: '\e77d';
+}
+
+.icon-ic_btn_Correlation:before {
+    content: '\e77f';
+}
+
+.icon-ic_btn_Build:before {
+    content: '\e780';
+}
+
+.icon-ic_btn_Exclude:before {
+    content: '\e781';
+}
+
+.icon-ic_btn_HotellingsT2:before {
+    content: '\e782';
+}
+
+.icon-ic_btn_Chart_DetailAnalysis:before {
+    content: '\e783';
+}
+
+.icon-ic_btn_DeleteRows:before {
+    content: '\e784';
+}
+
+.icon-ic_btn_ModifyRecipe-1:before {
+    content: '\e785';
+}
+
+.icon-ic_btn_Modify:before {
+    content: '\e786';
+}
+
+.icon-ic_btn_ManualCalculationSetting:before {
+    content: '\e787';
+}
+
+.icon-ic_btn_Chart-2:before {
+    content: '\e788';
+}
+
+.icon-ic_btn_Chart_PointMarking:before {
+    content: '\e789';
+}
+
+.icon-ic_btn_Dataset:before {
+    content: '\e78a';
+}
+
+.icon-ic_btn_Hide:before {
+    content: '\e78b';
+}
+
+.icon-ic_btn_ModifyTemplateModel:before {
+    content: '\e78c';
+}
+
+.icon-ic_btn_LayloutCascade:before {
+    content: '\e78d';
+}
+
+.icon-ic_btn_LayoutClose:before {
+    content: '\e78e';
+}
+
+.icon-ic_btn_M-1:before {
+    content: '\e78f';
+}
+
+.icon-ic_btn_LayoutCloseAllButAct:before {
+    content: '\e790';
+}
+
+.icon-ic_btn_MSPCLoadings:before {
+    content: '\e791';
+}
+
+.icon-ic_btn_LayoutVertical:before {
+    content: '\e792';
+}
+
+.icon-ic_btn_LayoutHorizontal:before {
+    content: '\e793';
+}
+
+.icon-ic_btn_MSPCOption:before {
+    content: '\e794';
+}
+
+.icon-ic_btn_Override:before {
+    content: '\e795';
+}
+
+.icon-ic_btn_MSPCRemoveOutlier:before {
+    content: '\e796';
+}
+
+.icon-ic_btn_Scores:before {
+    content: '\e797';
+}
+
+.icon-ic_btn_Overview:before {
+    content: '\e798';
+}
+
+.icon-ic_btn_Statistics:before {
+    content: '\e799';
+}
+
+.icon-ic_btn_SelectPoint:before {
+    content: '\e79a';
+}
+
+.icon-ic_btn_Variance:before {
+    content: '\e79b';
+}
+
+.icon-ic_btn_MultiCopy:before {
+    content: '\e79c';
+}
+
+.icon-ic_btn_Modeling:before {
+    content: '\e79d';
+}
+
+.icon-ic_btn_PointMaking:before {
+    content: '\e79e';
+}
+
+.icon-ic_btn_NewCheckOut:before {
+    content: '\e79f';
+}
+
+.icon-ic_btn_OCAPModify:before {
+    content: '\e7a0';
+}
+
+.icon-ic_btn_Ordering:before {
+    content: '\e7a1';
+}
+
+.icon-ic_btn_OptionalInput:before {
+    content: '\e7a2';
+}
+
+.icon-ic_btn_MultiUpload:before {
+    content: '\e7a3';
+}
+
+.icon-ic_btn_PredictionModel:before {
+    content: '\e7a4';
+}
+
+.icon-ic_btn_PointSelection:before {
+    content: '\e7a5';
+}
+
+.icon-ic_btn_Property:before {
+    content: '\e7a6';
+}
+
+.icon-ic_btn_RawData:before {
+    content: '\e7a7';
+}
+
+.icon-ic_btn_Refresh:before {
+    content: '\e7a8';
+}
+
+.icon-ic_btn_Remove:before {
+    content: '\e7aa';
+}
+
+.icon-ic_btn_Release:before {
+    content: '\e7ab';
+}
+
+.icon-ic_btn_ReloadDataset:before {
+    content: '\e7ac';
+}
+
+.icon-ic_btn_RemoveLayer:before {
+    content: '\e7ad';
+}
+
+.icon-ic_btn_Reset-1:before {
+    content: '\e7ae';
+}
+
+.icon-ic_btn_RemoveOutlier:before {
+    content: '\e7af';
+}
+
+.icon-ic_btn_Search:before {
+    content: '\e7b1';
+}
+
+.icon-ic_btn_SelectAll:before {
+    content: '\e7b2';
+}
+
+.icon-ic_btn_SelectPointMode:before {
+    content: '\e7b3';
+}
+
+.icon-ic_btn_SelectData:before {
+    content: '\e7b4';
+}
+
+.icon-ic_btn_SeriesDetailAnalysis:before {
+    content: '\e7b5';
+}
+
+.icon-ic_btn_SeriesOverlap:before {
+    content: '\e7b6';
+}
+
+.icon-ic_btn_SeriesShift:before {
+    content: '\e7b7';
+}
+
+.icon-ic_btn__SeriesDetailAnaltsis:before {
+    content: '\e7b8';
+}
+
+.icon-ic_btn_SeriesShiftVertical:before {
+    content: '\e7b9';
+}
+
+.icon-ic_btn_Clustering:before {
+    content: '\e7ba';
+}
+
+.icon-ic_btn_Set:before {
+    content: '\e7bd';
+}
+
+.icon-ic_btn_SetManualSuspensionAllGroup:before {
+    content: '\e7be';
+}
+
+.icon-ic_btn_Show:before {
+    content: '\e7bf';
+}
+
+.icon-ic_btn_ShowSPECData:before {
+    content: '\e7c0';
+}
+
+.icon-ic_btn_ShiftHorizontal:before {
+    content: '\e7c1';
+}
+
+.icon-ic_btn_ShowBaseline:before {
+    content: '\e7c2';
+}
+
+.icon-ic_but_ShowBaseline-1:before {
+    content: '\e7c3';
+}
+
+.icon-ic_but_ShowToolTip:before {
+    content: '\e7c4';
+}
+
+.icon-ic_btn_SeriesShift-1:before {
+    content: '\e7c5';
+}
+
+.icon-ic_btn_ShowStepLine:before {
+    content: '\e7c6';
+}
+
+.icon-ic_btn_SnapShot:before {
+    content: '\e7c9';
+}
+
+.icon-ic_btn_Sort:before {
+    content: '\e7ca';
+}
+
+.icon-ic_but_FindAnnotation:before {
+    content: '\e7cc';
+}
+
+.icon-ic_btn_Simulation:before {
+    content: '\e7ce';
+}
+
+.icon-ic_but_SPCSelectChartToView:before {
+    content: '\e7d0';
+}
+
+.icon-ic_btn_ShowExcluded:before {
+    content: '\e7d1';
+}
+
+.icon-ic_btn_SPECHistory:before {
+    content: '\e7d3';
+}
+
+.icon-ic_btn_SPCGrouping:before {
+    content: '\e7d4';
+}
+
+.icon-ic_btn_SPECDataView:before {
+    content: '\e7d6';
+}
+
+.icon-ic_btn_SuspensionAllReset:before {
+    content: '\e7d7';
+}
+
+.icon-ic_btn_TimebaseorSequencebase-2:before {
+    content: '\e7d8';
+}
+
+.icon-ic_btn_TempHistory:before {
+    content: '\e7d9';
+}
+
+.icon-ic_btn_MultiToolTips:before {
+    content: '\e7da';
+}
+
+.icon-a-ic_but_TimebaseorSequencebase-1:before {
+    content: '\e7db';
+}
+
+.icon-ic_btn_TimebaseorSequencebase:before {
+    content: '\e7dc';
+}
+
+.icon-ic_btn_Grouping:before {
+    content: '\e7dd';
+}
+
+.icon-ic_btn_TraceDetailAnalysis:before {
+    content: '\e7de';
+}
+
+.icon-ic_btn_TooltipComments:before {
+    content: '\e7df';
+}
+
+.icon-ic_btn_TracelongTermAnalysis:before {
+    content: '\e7e0';
+}
+
+.icon-ic_btn_TraceWorkflowExplorer:before {
+    content: '\e7e1';
+}
+
+.icon-ic_btn_Training:before {
+    content: '\e7e2';
+}
+
+.icon-ic_btn_UncheckInterlock:before {
+    content: '\e7e3';
+}
+
+.icon-ic_btn_TRackingHistory:before {
+    content: '\e7e4';
+}
+
+.icon-ic_btn_TSPEC:before {
+    content: '\e7e5';
+}
+
+.icon-ic_btn_Unrelease:before {
+    content: '\e7e6';
+}
+
+.icon-ic_btn_UndoCheckOut:before {
+    content: '\e7e7';
+}
+
+.icon-ic_btn_UpdateModel:before {
+    content: '\e7e8';
+}
+
+.icon-ic_btn_UserGroup:before {
+    content: '\e7e9';
+}
+
+.icon-ic_btn_Upload:before {
+    content: '\e7ea';
+}
+
+.icon-ic_btn_UserComment:before {
+    content: '\e7eb';
+}
+
+.icon-ic_btn_UserAuthority:before {
+    content: '\e7ec';
+}
+
+.icon-ic_btn_UserRightAxis:before {
+    content: '\e7ee';
+}
+
+.icon-ic_btn_ValueFilter:before {
+    content: '\e7ef';
+}
+
+.icon-ic_btn_Validation:before {
+    content: '\e7f0';
+}
+
+.icon-ic_btn_Variation:before {
+    content: '\e7f1';
+}
+
+.icon-ic_btn_View:before {
+    content: '\e7f2';
+}
