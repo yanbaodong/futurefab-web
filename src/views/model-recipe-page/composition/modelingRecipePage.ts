@@ -1,12 +1,13 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-14 15:28:41
+ * @LastEditTime: 2023-09-14 16:58:56
  */
 
 import { ref, reactive, watchEffect } from 'vue';
 import { defaultYnMap } from '../config/globalSetting';
 import { getModelDetails } from '@/api/seed';
+import { showWarning } from '@futurefab/components/dist/utils';
 export default function useModelingRecipe() {
     // 新增和编辑
     const sidebar = reactive({
@@ -89,8 +90,16 @@ export default function useModelingRecipe() {
     const handleDelete = (checkboxRecords: any[]) => {
         console.log('handleDelete:', checkboxRecords);
         // 至少选中一行数据，删除选中的Modeling Recipe。
-        //如果选中了Default为Y的Modeling recipe，则弹窗警告，不能删除。
+        //如果选中了Default 为Y的Modeling recipe，则弹窗警告，不能删除。
         //删除Modeling Recipe时，需要检查是否被引用，不能删除正在被引用的recipe，需弹窗警告。
+        let result = checkboxRecords.some(item => {
+            return item.defaultYn === 'Y';
+        });
+        if (result) {
+            // 则弹窗警告，不能删除。
+            showWarning('Default YN 为Y的数据不可删除');
+            return;
+        }
     };
     // model 区域
     const panes = ref<{ title: string; key: string; content: object; closable?: boolean }[]>([
