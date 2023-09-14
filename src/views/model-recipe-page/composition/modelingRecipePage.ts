@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-14 14:34:38
+ * @LastEditTime: 2023-09-14 15:08:36
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -94,7 +94,6 @@ export default function useModelingRecipe() {
         // model 卡片支持编辑
         sidebar.tabCardType = 'editable-card';
         sidebar.show = true;
-        sidebar.title = 'Add';
     };
 
     const remove = (targetKey: string) => {
