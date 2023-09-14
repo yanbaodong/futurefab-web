@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-14 15:08:36
+ * @LastEditTime: 2023-09-14 15:15:22
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -44,7 +44,20 @@ export default function useModelingRecipe() {
     // 新增方法
     const handleAdd = () => {
         console.log('handleAdd');
+
+        // 新增逻辑
+        sidebar.readonly = false;
+        sidebar.title = 'Add';
         sidebar.show = true;
+        // model 卡片支持编辑
+        sidebar.tabCardType = 'editable-card';
+        // 默认填充一个model
+        let paneItem = {
+            title: 'Model 1',
+            key: '1',
+            content: {},
+        };
+        panes.value.push(paneItem);
     };
 
     const handleView = (checkboxRecords: any[]) => {
