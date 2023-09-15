@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-15 15:21:37
+ * @LastEditTime: 2023-09-15 16:16:43
 -->
 <template>
     <div class="model-setting-container">
@@ -15,8 +15,8 @@
                     </p>
 
                     <!-- <a-input v-model:value="settingValue.GlobalModel" placeholder="" /> -->
-                    <a-select v-model:value="settingValue.GlobalModel" :placeholder="$t('common.tip.selectTip')"
-                        :options="DecorrectionProcessCorrections"></a-select>
+                    <a-select :disabled="globalModelDisabled" v-model:value="globalModel"
+                        :placeholder="$t('common.tip.selectTip')" :options="globalModelList"></a-select>
                 </div>
             </div>
             <div class="right-model-box">
@@ -27,8 +27,8 @@
                     </p>
 
                     <!-- <a-input v-model:value="settingValue.RefinementModel" placeholder="" /> -->
-                    <a-select :disabled="readonly" v-model:value="settingValue.RefinementModel"
-                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
+                    <a-select :disabled="refinementModelDisabled" v-model:value="refinementModel"
+                        :placeholder="$t('common.tip.selectTip')" :options="globalModelList"></a-select>
                 </div>
             </div>
         </header>
@@ -188,10 +188,11 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, watchEffect } from 'vue';
+import { ref, reactive, watchEffect, computed } from 'vue';
 import {
     DecorrectionCPEViaSubrecipeList,
     DecorrectionProcessCorrections,
+    globalModelList,
 } from '../config/globalSetting';
 // const settingValue = reactive({
 //     Seq: '1',
@@ -251,6 +252,9 @@ const checkForm = reactive({
     SampleSchemeName: false,
     ActuatorRanges_SetName: false,
 });
+
+const globalModel = ref('')
+const refinementModel = ref('')
 const props = defineProps({
     settingValue: {
         type: Object,
@@ -266,35 +270,82 @@ const props = defineProps({
         default: false,
     },
 });
+
 watchEffect(() => {
     // console.log(props.settingValue, 'watchEffect配置的回调执行了')
     if (Object.keys(props.settingValue).length > 0) {
+        if (props.settingValue.GlobalModel) {
+            globalModel.value = props.settingValue.GlobalModel
+        }
+        if (props.settingValue.RefinementModel) {
+            globalModel.value = props.settingValue.RefinementModel
+        }
         // 存在
-        console.log(props.settingValue, 'props.settingValue 存在');
-        CommonSetting.HealthFilter_Max = props.settingValue.CommonSetting.HealthFilter_Max;
-        CommonSetting.HealthFilter_NSigma = props.settingValue.CommonSetting.HealthFilter_NSigma;
-        CommonSetting.HealthFilter_X_Max = props.settingValue.CommonSetting.HealthFilter_X_Max;
-        CommonSetting.HealthFilter_X_NSigma = props.settingValue.CommonSetting.HealthFilter_X_NSigma;
-        CommonSetting.HealthFilter_Y_Max = props.settingValue.CommonSetting.HealthFilter_Y_Max;
-        CommonSetting.HealthFilter_Y_NSigma = props.settingValue.CommonSetting.HealthFilter_Y_NSigma;
-        CommonSetting.HealthFilter_EdgeClearance = props.settingValue.CommonSetting.HealthFilter_EdgeClearance;
-        CommonSetting.ResidualOutlierRemoval_NSigma = props.settingValue.CommonSetting.ResidualOutlierRemoval_NSigma;
-        CommonSetting.Granularity = props.settingValue.CommonSetting.Granularity;
-        CommonSetting.Decorrection_CPE_ViaSecs = props.settingValue.CommonSetting.Decorrection_CPE_ViaSecs;
-        CommonSetting.Decorrection_CPE_ViaSubrecipe = props.settingValue.CommonSetting.Decorrection_CPE_ViaSubrecipe;
-        CommonSetting.Decorrection_ProcessCorrections = props.settingValue.CommonSetting.Decorrection_ProcessCorrections;
-        CommonSetting.TargetLabel = props.settingValue.CommonSetting.TargetLabel;
-        CommonSetting.SampleSchemeName = props.settingValue.CommonSetting.SampleSchemeName;
-        // RefinementSetting
-        RefinementSetting.ModelParameterReduction = props.settingValue.RefinementSetting.ModelParameterReduction;
-        RefinementSetting.MUBPR = props.settingValue.RefinementSetting.MUBPR;
-        RefinementSetting.MUBPR_X_Max = props.settingValue.RefinementSetting.MUBPR_X_Max;
-        RefinementSetting.MUBPR_Y_Max = props.settingValue.RefinementSetting.MUBPR_Y_Max;
-        RefinementSetting.ActuatorRanges_SetName = props.settingValue.RefinementSetting.ActuatorRanges_SetName;
+        // console.log(props.settingValue, 'props.settingValue 存在');
+        // CommonSetting.HealthFilter_Max = props.settingValue.CommonSetting.HealthFilter_Max;
+        // CommonSetting.HealthFilter_NSigma = props.settingValue.CommonSetting.HealthFilter_NSigma;
+        // CommonSetting.HealthFilter_X_Max = props.settingValue.CommonSetting.HealthFilter_X_Max;
+        // CommonSetting.HealthFilter_X_NSigma = props.settingValue.CommonSetting.HealthFilter_X_NSigma;
+        // CommonSetting.HealthFilter_Y_Max = props.settingValue.CommonSetting.HealthFilter_Y_Max;
+        // CommonSetting.HealthFilter_Y_NSigma = props.settingValue.CommonSetting.HealthFilter_Y_NSigma;
+        // CommonSetting.HealthFilter_EdgeClearance = props.settingValue.CommonSetting.HealthFilter_EdgeClearance;
+        // CommonSetting.ResidualOutlierRemoval_NSigma = props.settingValue.CommonSetting.ResidualOutlierRemoval_NSigma;
+        // CommonSetting.Granularity = props.settingValue.CommonSetting.Granularity;
+        // CommonSetting.Decorrection_CPE_ViaSecs = props.settingValue.CommonSetting.Decorrection_CPE_ViaSecs;
+        // CommonSetting.Decorrection_CPE_ViaSubrecipe = props.settingValue.CommonSetting.Decorrection_CPE_ViaSubrecipe;
+        // CommonSetting.Decorrection_ProcessCorrections = props.settingValue.CommonSetting.Decorrection_ProcessCorrections;
+        // CommonSetting.TargetLabel = props.settingValue.CommonSetting.TargetLabel;
+        // CommonSetting.SampleSchemeName = props.settingValue.CommonSetting.SampleSchemeName;
+        // // RefinementSetting
+        // RefinementSetting.ModelParameterReduction = props.settingValue.RefinementSetting.ModelParameterReduction;
+        // RefinementSetting.MUBPR = props.settingValue.RefinementSetting.MUBPR;
+        // RefinementSetting.MUBPR_X_Max = props.settingValue.RefinementSetting.MUBPR_X_Max;
+        // RefinementSetting.MUBPR_Y_Max = props.settingValue.RefinementSetting.MUBPR_Y_Max;
+        // RefinementSetting.ActuatorRanges_SetName = props.settingValue.RefinementSetting.ActuatorRanges_SetName;
     }
+    // Global Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值
+    // Refinement Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值。如果已选中Is default modeling recipe，则不能勾选Refinement Model【Default recipe中不允许维护refinement model】
+    // 下拉列表的值来源于LIS文件库。以HOC或LIS前缀查询LIS文件库中的Global Model名称，以CPE前缀查询LIS文件库中的Refinement Model名称
+    // if (checkForm.GlobalModel && !props.readonly) {
+    //     globalModelDisabled.value = false
+    // }
+    // if (!checkForm.GlobalModel) {
+    //     globalModelDisabled.value = true
+    // }
+    // if (props.readonly) {
+    //     globalModelDisabled.value = false
+    //     refinementModelDisabled.value = false
+    // } else if (checkForm.GlobalModel && !props.readonly) {
+    //     globalModelDisabled.value = false
+    // } else {
+    //     globalModelDisabled.value = true
+    // }
 
 })
+const globalModelDisabled = computed(() => {
 
+    if (props.readonly) {
+        return true
+    }
+    if (!checkForm.GlobalModel) {
+        // 清空值
+        globalModel.value = ''
+        return true
+    }
+    return false
+})
+const refinementModelDisabled = computed(() => {
+
+    if (props.readonly) {
+        return true
+    }
+    if (!checkForm.RefinementModel) {
+        // 清空值
+        refinementModel.value = ''
+        return true
+    }
+    return false
+})
 </script>
 
 <style scoped lang="less">

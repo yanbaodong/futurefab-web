@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 16:37:38
- * @LastEditTime: 2023-09-15 14:10:25
+ * @LastEditTime: 2023-09-15 15:50:11
  */
 export const OverlayComponentList = [
     {
@@ -101,5 +101,31 @@ export const createByList = [
     {
         label: 'Fary',
         value: 'Fary',
+    },
+];
+export const globalModelList = [
+    {
+        label: '10Par',
+        value: '10Par',
+    },
+    {
+        label: '20Par',
+        value: '20Par',
+    },
+    {
+        label: '30Par',
+        value: '30Par',
+    },
+    {
+        label: '40Par',
+        value: '40Par',
+    },
+    {
+        label: '50Par',
+        value: '50Par',
+    },
+    {
+        label: '60Par',
+        value: '60Par',
     },
 ];
