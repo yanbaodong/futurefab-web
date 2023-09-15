@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:19:22
- * @LastEditTime: 2023-09-15 10:11:09
+ * @LastEditTime: 2023-09-15 15:01:54
 -->
 <template>
     <div class="global-setting-container">
@@ -10,10 +10,10 @@
             <div class="health-form">
                 <div class="top-box">
                     <div class="input-box">
-                        <span class="label">Modeling Recipe Name</span>
+                        <span class="label">{{ $t('modelRecipePage.field.modelingRecipe') }}</span>
                         <!-- 数字,可以小数 -->
-                        <a-input :disabled="readonly" v-model:value="settingValue.HealthFilter_XYPairingRange"
-                            placeholder="" />
+                        <a-input class="no-number" type="number" :disabled="readonly"
+                            v-model:value="settingValue.HealthFilter_XYPairingRange" placeholder="" />
                     </div>
                 </div>
                 <div class="bottom-box">
@@ -42,7 +42,8 @@
                     <div class="input-box">
                         <span class="label">EvaluationRegion(mm)</span>
                         <!-- 数字,可以小数 -->
-                        <a-input :disabled="disabled" v-model:value="settingValue.EvaluationRegion" placeholder="" />
+                        <a-input class="no-number" type="number" :disabled="disabled"
+                            v-model:value="settingValue.EvaluationRegion" placeholder="" />
                     </div>
                     <div class="input-box">
                         <span class="label">ValidDataFraction-MinPercentage(%)</span>
@@ -51,8 +52,8 @@
                         <!-- readonly = true  时 都不可填  -->
                         <!--readonly = true  时 overruleMetrologyValidityDisabled 等于true 可以填  -->
                         <!--readonly = true  时 overruleMetrologyValidityDisabled false  不可以填  -->
-                        <a-input :disabled="disabled" v-model:value="settingValue.ValidDataFraction_MinPercentage"
-                            placeholder="" />
+                        <a-input class="no-number" type="number" :disabled="disabled"
+                            v-model:value="settingValue.ValidDataFraction_MinPercentage" placeholder="" />
                     </div>
                 </div>
             </div>

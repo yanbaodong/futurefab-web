@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-14 15:27:30
+ * @LastEditTime: 2023-09-15 14:48:52
 -->
 <template>
     <div class="model-recipe-page">
@@ -26,15 +26,16 @@
                     <!-- 头部 -->
                     <header class="modeling-header">
                         <div class="left-input-box">
-                            <span class="label">Modeling Recipe Name</span>
+                            <span class="label">{{ $t('modelRecipePage.field.modelingRecipe') }}</span>
                             <a-input :disabled="sidebar.readonly" v-model:value="modelingForm.recipeName" placeholder="" />
                         </div>
                         <div class="right-radio-box">
-                            <a-checkbox :disabled="sidebar.readonly" v-model:checked="modelingForm.defaultYn">Is default
-                                modeling recipe</a-checkbox>
+                            <a-checkbox :disabled="sidebar.readonly" v-model:checked="modelingForm.defaultYn">{{
+                                $t('modelRecipePage.field.isDefaultModelingRecipe') }}</a-checkbox>
                         </div>
                         <div class="save-btn">
-                            <ff-basic-button-tip v-if="!sidebar.readonly" text="Save" type="button" @onClick="saveData" />
+                            <ff-basic-button-tip v-if="!sidebar.readonly" :text="$t('common.btn.save')" type="button"
+                                @onClick="saveData" />
                         </div>
                     </header>
                     <p class="border-line"></p>

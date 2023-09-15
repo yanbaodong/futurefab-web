@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-15 10:10:06
+ * @LastEditTime: 2023-09-15 14:52:32
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -11,7 +11,7 @@ import { showWarning, successInfo } from '@futurefab/components/dist/utils';
 export default function useModelingRecipe() {
     // 新增和编辑
     const sidebar = reactive({
-        title: 'Add',
+        title: 'modelRecipePage.field.add',
         show: false,
         readonly: false, // 标记是否是只读
         tabCardType: 'card', // model 卡片是否支持新增删除 card 不支持 'editable-card' 支持
@@ -35,7 +35,14 @@ export default function useModelingRecipe() {
     const handleClick = (code: string) => {
         if (code == 'closeCancel' || code == 'cancel') {
             // 清空panes
-            panes.value = [{ title: 'Global Setting', key: '0', content: {}, closable: false }];
+            panes.value = [
+                {
+                    title: 'modelRecipePage.field.globalSetting',
+                    key: '0',
+                    content: {},
+                    closable: false,
+                },
+            ];
             // 初始化actives
             activeKey.value = panes.value[0].key;
             sidebar.show = false;
@@ -50,10 +57,9 @@ export default function useModelingRecipe() {
     // 新增方法
     const handleAdd = () => {
         console.log('handleAdd');
-
         // 新增逻辑
         sidebar.readonly = false;
-        sidebar.title = 'Add';
+        sidebar.title = 'modelRecipePage.field.add';
         sidebar.show = true;
         // model 卡片支持编辑
         sidebar.tabCardType = 'editable-card';
@@ -73,7 +79,7 @@ export default function useModelingRecipe() {
         // model 卡片不支持编辑
         sidebar.tabCardType = 'card';
         sidebar.show = true;
-        sidebar.title = 'View';
+        sidebar.title = 'modelRecipePage.field.view';
         // 赋值
         modelingForm.recipeName = checkboxRecords[0].recipeName;
         modelingForm.defaultYn = defaultYnMap[checkboxRecords[0].defaultYn];
@@ -83,7 +89,7 @@ export default function useModelingRecipe() {
         console.log('handleModify');
         // 选中唯一一行数据，以修改方式打开Modeling Recipe配置页面
         sidebar.readonly = false;
-        sidebar.title = 'Modify';
+        sidebar.title = 'modelRecipePage.field.modify';
         // model 卡片支持编辑
         sidebar.tabCardType = 'editable-card';
         sidebar.show = true;

@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-14 13:21:22
+ * @LastEditTime: 2023-09-15 15:00:57
 -->
 <template>
     <div class="model-setting-container">
@@ -39,50 +39,57 @@
                 <div class="input-box">
                     <p class="label-name">HealthFilter-Max(nm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-NSigma -->
                 <div class="input-box">
                     <p class="label-name">HealthFilter-NSigma</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_NSigma" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-X-Max(nm) -->
                 <div class="input-box">
                     <p class="label-name">HealthFilter-X-Max(nm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_X_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_X_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-X-NSigma -->
                 <div class="input-box">
                     <p class="label-name">HealthFilter-X-NSigma</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_X_NSigma" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_X_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-Y-Max(nm) -->
                 <div class="input-box">
                     <p class="label-name">HealthFilter-Y-Max(nm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_Y_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_Y_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-Y-NSigma -->
                 <div class="input-box">
                     <p class="label-name">HealthFilter-Y-NSigma</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_Y_NSigma" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_Y_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-EdgeClearance(mm) -->
                 <div class="input-box">
                     <p class="label-name">HealthFilter-EdgeClearance(mm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_EdgeClearance" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_EdgeClearance" placeholder="" />
                 </div>
                 <!-- ResidualOutlierRemoval-NSigma -->
                 <div class="input-box">
                     <p class="label-name">ResidualOutlierRemoval-NSigma</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.ResidualOutlierRemoval_NSigma"
-                        placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.ResidualOutlierRemoval_NSigma" placeholder="" />
                 </div>
                 <!-- Granularity -->
                 <div class="input-box">
@@ -154,13 +161,15 @@
                 <div class="input-box">
                     <p class="label-name">MUBPR-X-Max</p>
 
-                    <a-input :disabled="readonly" v-model:value="RefinementSetting.MUBPR_X_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="RefinementSetting.MUBPR_X_Max" placeholder="" />
                 </div>
                 <!--MUBPR-Y-Max -->
                 <div class="input-box">
                     <p class="label-name">MUBPR-Y-Max</p>
 
-                    <a-input :disabled="readonly" v-model:value="RefinementSetting.MUBPR_Y_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="RefinementSetting.MUBPR_Y_Max" placeholder="" />
                 </div>
                 <!-- ActuatorRanges-SetName -->
                 <div class="check-select-box">

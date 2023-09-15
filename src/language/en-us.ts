@@ -50,7 +50,6 @@ const en: any = {
             modelingRecipe: 'Modeling Recipe Name',
             createBy: 'Create By',
 
-            modelingRecipeList: 'Modeling Recipe List',
             modelingRecipeName: 'MODELING RECIPE NAME',
             defaultYn: 'DEFAULT YN',
             createTime: 'CREATE TIME',
