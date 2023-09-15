@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 16:37:38
- * @LastEditTime: 2023-09-13 15:36:31
+ * @LastEditTime: 2023-09-15 11:13:14
  */
 export const OverlayComponentList = [
     {
@@ -19,31 +19,31 @@ export const OverlayComponentList = [
 ];
 export const InvalidateXYAsPairList = [
     {
-        value: 'true',
+        value: true,
         label: 'true',
     },
     {
-        value: 'false',
+        value: false,
         label: 'false',
     },
 ];
 export const DecorrectionCPEViaSubrecipeList = [
     {
-        value: 'true',
+        value: true,
         label: 'true',
     },
     {
-        value: 'false',
+        value: false,
         label: 'false',
     },
 ];
 export const DecorrectionProcessCorrections = [
     {
-        value: 'true',
+        value: true,
         label: 'true',
     },
     {
-        value: 'false',
+        value: false,
         label: 'false',
     },
 ];
