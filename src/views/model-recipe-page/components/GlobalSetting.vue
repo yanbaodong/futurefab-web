@@ -1,12 +1,12 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:19:22
- * @LastEditTime: 2023-09-15 15:01:54
+ * @LastEditTime: 2023-09-15 15:09:50
 -->
 <template>
     <div class="global-setting-container">
         <div class="health-filter">
-            <p class="text-label">HealthFilter</p>
+            <p class="text-label">{{ $t('modelRecipePage.field.healthFilter') }}</p>
             <div class="health-form">
                 <div class="top-box">
                     <div class="input-box">
@@ -18,12 +18,12 @@
                 </div>
                 <div class="bottom-box">
                     <div class="select-global-box">
-                        <span class="label">UsedOverlayComponent</span>
+                        <span class="label">{{ $t('modelRecipePage.field.usedOverlayComponent') }}</span>
                         <a-select :disabled="readonly" v-model:value="settingValue.HealthFilter_UsedOverlayComponent"
                             placeholder="Please select" :options="OverlayComponentList"></a-select>
                     </div>
                     <div class="select-global-box">
-                        <span class="label">InvalidateXYAsPair</span>
+                        <span class="label">{{ $t('modelRecipePage.field.invalidateXYAsPair') }}</span>
                         <a-select :disabled="invalidateXYAsPairDisabled"
                             v-model:value="settingValue.HealthFilter_InvalidateXYAsPair" placeholder="Please select"
                             :options="InvalidateXYAsPairList"></a-select>
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="overrule-metrology-validity">
-            <p class="text-label overrule-optional">OverruleMetrologyValidity(Optional)</p>
+            <p class="text-label overrule-optional">{{ $t('modelRecipePage.field.overruleMetrologyValidity') }}</p>
             <div class="Overrule-form">
                 <div class="top-toggle">
                     <a-switch :disabled="readonly || overruleMetrologyValidityDisabled"
@@ -40,13 +40,13 @@
                 </div>
                 <div class="bottom-input-box">
                     <div class="input-box">
-                        <span class="label">EvaluationRegion(mm)</span>
+                        <span class="label">{{ $t('modelRecipePage.field.evaluationRegion') }}(mm)</span>
                         <!-- 数字,可以小数 -->
                         <a-input class="no-number" type="number" :disabled="disabled"
                             v-model:value="settingValue.EvaluationRegion" placeholder="" />
                     </div>
                     <div class="input-box">
-                        <span class="label">ValidDataFraction-MinPercentage(%)</span>
+                        <span class="label">{{ $t('modelRecipePage.field.validDataFractionMinPercentage') }}(%)</span>
                         <!-- 数字,可以小数 -->
                         <!-- defaultYn 勾选= true 并且 overruleMetrologyValidityDisabled = true 并且 readonly = false-->
                         <!-- readonly = true  时 都不可填  -->
