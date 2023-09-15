@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-15 16:40:03
+ * @LastEditTime: 2023-09-15 16:42:27
 -->
 <template>
     <div class="model-setting-container">
@@ -181,7 +181,10 @@
                             $t('modelRecipePage.field.actuatorRangesSetName') }}</a-checkbox>
                     </p>
 
-                    <a-input :disabled="readonly" v-model:value="RefinementSetting.ActuatorRanges_SetName" placeholder="" />
+                    <!-- <a-input :disabled="readonly" v-model:value="RefinementSetting.ActuatorRanges_SetName" placeholder="" /> -->
+                    <a-select :disabled="!checkForm.ActuatorRanges_SetName || readonly"
+                        v-model:value="RefinementSetting.ActuatorRanges_SetName" :placeholder="$t('common.tip.selectTip')"
+                        :options="globalModelList"></a-select>
                 </div>
             </div>
         </section>
