@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-15 14:48:52
+ * @LastEditTime: 2023-09-15 16:21:23
 -->
 <template>
     <div class="model-recipe-page">
@@ -58,6 +58,7 @@
                                     <!-- {{ pane.content }} -->
                                     <div class="global-setting-box" v-show="pane.key !== '0'">
                                         <model-setting :settingValue="pane.content"
+                                            v-model:overruleMetrologyValidityDisabled="overruleMetrologyValidityDisabled"
                                             :readonly="sidebar.readonly"></model-setting>
                                     </div>
                                 </a-tab-pane>

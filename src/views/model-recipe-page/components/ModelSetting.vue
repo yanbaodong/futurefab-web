@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-15 16:16:43
+ * @LastEditTime: 2023-09-15 16:26:49
 -->
 <template>
     <div class="model-setting-container">
@@ -22,8 +22,9 @@
             <div class="right-model-box">
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.RefinementModel">{{
-                            $t('modelRecipePage.field.refinementModel') }}</a-checkbox>
+                        <a-checkbox :disabled="readonly || !overruleMetrologyValidityDisabled"
+                            v-model:checked="checkForm.RefinementModel">{{
+                                $t('modelRecipePage.field.refinementModel') }}</a-checkbox>
                     </p>
 
                     <!-- <a-input v-model:value="settingValue.RefinementModel" placeholder="" /> -->
@@ -269,6 +270,10 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    overruleMetrologyValidityDisabled: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 watchEffect(() => {
@@ -320,6 +325,11 @@ watchEffect(() => {
     // } else {
     //     globalModelDisabled.value = true
     // }
+    if (!props.overruleMetrologyValidityDisabled) {
+        // 不允许修改  Refinement Model
+        checkForm.RefinementModel = false
+        globalModel.value = ''
+    }
 
 })
 const globalModelDisabled = computed(() => {
@@ -339,6 +349,11 @@ const refinementModelDisabled = computed(() => {
     if (props.readonly) {
         return true
     }
+    // if (!props.overruleMetrologyValidityDisabled) {
+    //     // 清空值
+    //     refinementModel.value = ''
+    //     return true
+    // }
     if (!checkForm.RefinementModel) {
         // 清空值
         refinementModel.value = ''
