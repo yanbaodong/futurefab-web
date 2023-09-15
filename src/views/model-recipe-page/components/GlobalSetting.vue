@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:19:22
- * @LastEditTime: 2023-09-14 14:30:11
+ * @LastEditTime: 2023-09-15 10:11:09
 -->
 <template>
     <div class="global-setting-container">
@@ -75,7 +75,14 @@ const props = defineProps({
     settingValue: {
         type: Object,
         default() {
-            return {};
+            return {
+                // "HealthFilter_XYPairingRange": "1",
+                // "HealthFilter_UsedOverlayComponent": "X and Y",
+                // "HealthFilter_InvalidateXYAsPair": 'true',
+                // "EvaluationRegion": "135",
+                // "ValidDataFraction_MinPercentage": "60",
+
+            };
         },
     },
     defaultYn: {

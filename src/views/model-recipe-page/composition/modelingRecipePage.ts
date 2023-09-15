@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-15 09:29:58
+ * @LastEditTime: 2023-09-15 10:10:06
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -23,7 +23,12 @@ export default function useModelingRecipe() {
     const modelingForm = reactive({
         recipeName: '',
         defaultYn: false,
-        GlobalSetting: {},
+        // 默认值
+        GlobalSetting: {
+            HealthFilter_XYPairingRange: '1',
+            HealthFilter_UsedOverlayComponent: 'X and Y',
+            HealthFilter_InvalidateXYAsPair: 'true',
+        },
         ModelList: [],
     });
     const overruleMetrologyValidityDisabled = ref(true);
