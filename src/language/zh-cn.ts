@@ -8,6 +8,8 @@ const cn: any = {
             modify: '修改',
             view: '查看',
             delete: '删除',
+            search: '搜索',
+            reset: '重置',
         },
         field: {
             createdBy: 'CREATED BY',
@@ -21,6 +23,7 @@ const cn: any = {
         title: {
             seedPage: 'Seed Page',
             customEvent: 'Custom Event',
+            modelingRecipeList: 'Modeling Recipe',
         },
         tip: {
             searchFirst: '请先搜索再新增',
@@ -28,6 +31,7 @@ const cn: any = {
             delSuccess: '删除成功',
             saveSuccess: '保存成功',
             deleteTip: '未保存的数据将会丢失! 确定要删除吗?',
+            selectTip: 'Please select',
         },
     },
     seedPage: {
@@ -47,7 +51,7 @@ const cn: any = {
             createBy: 'Create By',
             search: 'Search',
             reset: 'Reset',
-            modelingRecipeList: 'Modeling Recipe List',
+
             modelingRecipeName: 'MODELING RECIPE NAME',
             defaultYn: 'DEFAULT YN',
             createTime: 'CREATE TIME',

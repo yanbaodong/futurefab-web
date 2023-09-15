@@ -8,6 +8,8 @@ const en: any = {
             delete: 'Delete',
             modify: 'modify',
             view: 'view',
+            search: 'Search',
+            reset: 'Reset',
         },
         field: {
             createdBy: 'CREATED BY',
@@ -28,6 +30,7 @@ const en: any = {
             delSuccess: 'Delete successfully.',
             saveSuccess: 'Save successfully.',
             deleteTip: 'UnSaved data will be lost! Are you sure delete?',
+            selectTip: 'Please select',
         },
     },
     seedPage: {
@@ -45,8 +48,7 @@ const en: any = {
         field: {
             modelingRecipe: 'Modeling Recipe Name',
             createBy: 'Create By',
-            search: 'Search',
-            reset: 'Reset',
+
             modelingRecipeList: 'Modeling Recipe List',
             modelingRecipeName: 'MODELING RECIPE NAME',
             defaultYn: 'DEFAULT YN',

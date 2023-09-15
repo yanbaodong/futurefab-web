@@ -2,57 +2,31 @@
     <div class="search-group-container">
         <div class="serach-item">
             <p class="search-label">Modeling Recipe Name</p>
-            <a-select
-                v-model:value="recipeName"
-                mode="multiple"
-                style="width: 100%"
-                placeholder="Please select"
-                :options="
-                    [...Array(25)].map((_, i) => ({ value: (i + 10).toString(36) + (i + 1) }))
-                "
-            ></a-select>
+            <a-select v-model:value="recipeName" mode="multiple" style="width: 100%"
+                :placeholder="$t('common.tip.selectTip')" :options="modelingList"></a-select>
         </div>
 
         <div class="serach-item">
             <p class="search-label">Create By</p>
-            <a-select
-                v-model:value="createBy"
-                mode="multiple"
-                style="width: 100%"
-                placeholder="Please select"
-                :options="
-                    [...Array(25)].map((_, i) => ({ value: (i + 10).toString(36) + (i + 1) }))
-                "
-            ></a-select>
+            <a-select v-model:value="createBy" mode="multiple" style="width: 100%" :placeholder="$t('common.tip.selectTip')"
+                :options="createByList"></a-select>
         </div>
-        <div class="serach-item time-select">
+        <div class=" serach-item time-select">
             <!-- <p class="search-label">
                 Create Time
             </p> -->
-            <ff-basic-custom-time
-                ref="refTime"
-                :showShiftMonth="false"
-                @time-pop="timePop"
-                :timeArea="searchParams.timeAreaBind"
-            ></ff-basic-custom-time>
+            <ff-basic-custom-time ref="refTime" :showShiftMonth="false" @time-pop="timePop"
+                :timeArea="searchParams.timeAreaBind"></ff-basic-custom-time>
         </div>
         <div class="serach-item search-box">
             <div class="search-left">
-                <ff-basic-button-tip
-                    :disabled="searchDisabled"
-                    text="Search"
-                    type="button"
-                    @onClick="search"
-                />
+                <ff-basic-button-tip :disabled="searchDisabled" :text="$t('common.btn.search')" type="button"
+                    @onClick="search" />
             </div>
 
             <div class="reset">
-                <ff-basic-button-tip
-                    :disabled="resetDisabled"
-                    text="Reset"
-                    type="button"
-                    @onClick="reset"
-                />
+                <ff-basic-button-tip :disabled="resetDisabled" :text="$t('common.btn.reset')" type="button"
+                    @onClick="reset" />
             </div>
         </div>
     </div>
@@ -60,6 +34,8 @@
 
 <script lang="ts" setup>
 import dayjs from 'dayjs';
+// mock 数据
+import { modelingList, createByList } from "../config/globalSetting";
 import { reactive, onMounted, ref, nextTick } from 'vue';
 
 let searchParams = reactive({
