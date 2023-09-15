@@ -1,13 +1,13 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-14 16:58:56
+ * @LastEditTime: 2023-09-15 09:29:58
  */
 
 import { ref, reactive, watchEffect } from 'vue';
 import { defaultYnMap } from '../config/globalSetting';
 import { getModelDetails } from '@/api/seed';
-import { showWarning } from '@futurefab/components/dist/utils';
+import { showWarning, successInfo } from '@futurefab/components/dist/utils';
 export default function useModelingRecipe() {
     // 新增和编辑
     const sidebar = reactive({
@@ -100,6 +100,8 @@ export default function useModelingRecipe() {
             showWarning('Default YN 为Y的数据不可删除');
             return;
         }
+        // 删除逻辑 需要检查是否被引用
+        successInfo('删除成功');
     };
     // model 区域
     const panes = ref<{ title: string; key: string; content: object; closable?: boolean }[]>([
