@@ -1,13 +1,13 @@
 <template>
     <div class="search-group-container">
         <div class="serach-item">
-            <p class="search-label">Modeling Recipe Name</p>
+            <p class="search-label">{{ $t("modelRecipePage.field.modelingRecipe") }}</p>
             <a-select v-model:value="recipeName" mode="multiple" style="width: 100%"
                 :placeholder="$t('common.tip.selectTip')" :options="modelingList"></a-select>
         </div>
 
         <div class="serach-item">
-            <p class="search-label">Create By</p>
+            <p class="search-label">{{ $t("modelRecipePage.field.createBy") }}</p>
             <a-select v-model:value="createBy" mode="multiple" style="width: 100%" :placeholder="$t('common.tip.selectTip')"
                 :options="createByList"></a-select>
         </div>

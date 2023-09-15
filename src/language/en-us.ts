@@ -23,6 +23,7 @@ const en: any = {
         title: {
             seedPage: 'Seed Page',
             customEvent: 'Custom Event',
+            modelingRecipeList: 'Modeling Recipe',
         },
         tip: {
             searchFirst: 'Please search first and then add',
