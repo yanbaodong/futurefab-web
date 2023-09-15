@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-15 15:00:57
+ * @LastEditTime: 2023-09-15 15:21:37
 -->
 <template>
     <div class="model-setting-container">
@@ -10,118 +10,120 @@
             <div class="left-model-box">
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.GlobalModel">Global Model</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.GlobalModel">{{
+                            $t('modelRecipePage.field.globalModel') }}</a-checkbox>
                     </p>
 
                     <!-- <a-input v-model:value="settingValue.GlobalModel" placeholder="" /> -->
-                    <a-select v-model:value="settingValue.GlobalModel" placeholder="Please select"
+                    <a-select v-model:value="settingValue.GlobalModel" :placeholder="$t('common.tip.selectTip')"
                         :options="DecorrectionProcessCorrections"></a-select>
                 </div>
             </div>
             <div class="right-model-box">
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.RefinementModel">Refinement
-                            Model</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.RefinementModel">{{
+                            $t('modelRecipePage.field.refinementModel') }}</a-checkbox>
                     </p>
 
                     <!-- <a-input v-model:value="settingValue.RefinementModel" placeholder="" /> -->
-                    <a-select :disabled="readonly" v-model:value="settingValue.RefinementModel" placeholder="Please select"
-                        :options="DecorrectionProcessCorrections"></a-select>
+                    <a-select :disabled="readonly" v-model:value="settingValue.RefinementModel"
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
             </div>
         </header>
         <section class="common-setting">
             <!--Common Setting -->
-            <p class="title-1">Common Setting</p>
+            <p class="title-1">{{ $t('modelRecipePage.field.commonSetting') }}</p>
             <div class="setting-box">
                 <!-- HealthFilter-Max(nm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-Max(nm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterMax') }}(nm)</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.HealthFilter_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterNSigma') }}</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.HealthFilter_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-X-Max(nm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-X-Max(nm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterXMax') }}(nm)</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.HealthFilter_X_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-X-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-X-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterXNSigma') }}</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.HealthFilter_X_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-Y-Max(nm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-Y-Max(nm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterYMax') }}(nm)</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.HealthFilter_Y_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-Y-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-Y-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterYNSigma') }}</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.HealthFilter_Y_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-EdgeClearance(mm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-EdgeClearance(mm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterEdgeClearance') }}(mm)</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.HealthFilter_EdgeClearance" placeholder="" />
                 </div>
                 <!-- ResidualOutlierRemoval-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">ResidualOutlierRemoval-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.residualOutlierRemovalNSigma') }}</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="CommonSetting.ResidualOutlierRemoval_NSigma" placeholder="" />
                 </div>
                 <!-- Granularity -->
                 <div class="input-box">
-                    <p class="label-name">Granularity</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.granularity') }}</p>
 
                     <a-input :disabled="readonly" v-model:value="CommonSetting.Granularity" placeholder="" />
                 </div>
                 <!-- Decorrection-CPE-ViaSecs -->
                 <div class="select-box">
-                    <p class="label-name">Decorrection-CPE-ViaSecs</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.decorrectionCPEViaSecs') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="CommonSetting.Decorrection_CPE_ViaSecs"
-                        placeholder="Please select" :options="DecorrectionCPEViaSubrecipeList"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionCPEViaSubrecipeList"></a-select>
                 </div>
                 <!-- Decorrection-CPE-ViaSubrecipe -->
                 <div class="select-box">
-                    <p class="label-name">Decorrection-CPE-ViaSubrecipe</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.decorrectionCPEViaSubrecipe') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="CommonSetting.Decorrection_CPE_ViaSubrecipe"
-                        placeholder="Please select" :options="DecorrectionProcessCorrections"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
                 <!-- Decorrection-ProcessCorrections -->
                 <div class="select-box">
-                    <p class="label-name">Decorrection-ProcessCorrections</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.decorrectionProcessCorrections') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="CommonSetting.Decorrection_ProcessCorrections"
-                        placeholder="Please select" :options="DecorrectionProcessCorrections"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
                 <!-- TargetLabel -->
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.TargetLabel">TargetLabel</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.TargetLabel">{{
+                            $t('modelRecipePage.field.targetLabel') }}</a-checkbox>
                     </p>
 
                     <a-input :disabled="readonly" v-model:value="CommonSetting.TargetLabel" placeholder="" />
@@ -129,8 +131,8 @@
                 <!-- SampleSchemeName -->
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly"
-                            v-model:checked="checkForm.SampleSchemeName">SampleSchemeName</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.SampleSchemeName">{{
+                            $t('modelRecipePage.field.sampleSchemeName') }}</a-checkbox>
                     </p>
 
                     <a-input :disabled="readonly" v-model:value="CommonSetting.SampleSchemeName" placeholder="" />
@@ -139,34 +141,34 @@
         </section>
         <section class="refinement-setting">
             <!-- Refinement Setting -->
-            <p class="title-1">Refinement Setting</p>
+            <p class="title-1">{{ $t('modelRecipePage.field.refinementSetting') }}</p>
 
             <div class="setting-box">
                 <!-- ModelParameterReduction -->
                 <div class="select-box">
-                    <p class="label-name">ModelParameterReduction</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.modelParameterReduction') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="RefinementSetting.ModelParameterReduction"
-                        placeholder="Please select" :options="DecorrectionProcessCorrections"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
 
                 <!-- MUBPR -->
                 <div class="select-box">
-                    <p class="label-name">MUBPR</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.mubpr') }}</p>
 
-                    <a-select :disabled="readonly" v-model:value="RefinementSetting.MUBPR" placeholder="Please select"
-                        :options="DecorrectionProcessCorrections"></a-select>
+                    <a-select :disabled="readonly" v-model:value="RefinementSetting.MUBPR"
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
                 <!--MUBPR-X-Max  -->
                 <div class="input-box">
-                    <p class="label-name">MUBPR-X-Max</p>
+                    <p class="label-name">M{{ $t('modelRecipePage.field.mubprXMax') }}</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="RefinementSetting.MUBPR_X_Max" placeholder="" />
                 </div>
                 <!--MUBPR-Y-Max -->
                 <div class="input-box">
-                    <p class="label-name">MUBPR-Y-Max</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.mubprYMax') }}</p>
 
                     <a-input class="no-number" type="number" :disabled="readonly"
                         v-model:value="RefinementSetting.MUBPR_Y_Max" placeholder="" />
@@ -174,8 +176,8 @@
                 <!-- ActuatorRanges-SetName -->
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly"
-                            v-model:checked="checkForm.ActuatorRanges_SetName">ActuatorRanges-SetName</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.ActuatorRanges_SetName">{{
+                            $t('modelRecipePage.field.actuatorRangesSetName') }}</a-checkbox>
                     </p>
 
                     <a-input :disabled="readonly" v-model:value="RefinementSetting.ActuatorRanges_SetName" placeholder="" />

@@ -49,7 +49,6 @@ const en: any = {
         field: {
             modelingRecipe: 'Modeling Recipe Name',
             createBy: 'Create By',
-
             modelingRecipeName: 'MODELING RECIPE NAME',
             defaultYn: 'DEFAULT YN',
             createTime: 'CREATE TIME',
