@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-18 10:33:18
+ * @LastEditTime: 2023-09-18 11:24:04
 -->
 <template>
     <div class="model-setting-container">
@@ -263,7 +263,7 @@ watchEffect(() => {
         globalModel.value = props.settingValue.GlobalModel
     }
     if (props.settingValue.RefinementModel) {
-        globalModel.value = props.settingValue.RefinementModel
+        refinementModel.value = props.settingValue.RefinementModel
     }
     // 填充默认值
     // Common Setting中，除了TargetLabel和SampleSchemeName，其他item都需要填充默认值。
@@ -304,7 +304,7 @@ watchEffect(() => {
 
 })
 watch(() => [globalModel, refinementModel, CommonSetting, RefinementSetting], (newVal, oldVal) => {
-    console.log('改变了', newVal)
+    // console.log('改变了', newVal)
     // 这里可以收到改动之后的值, 要把这些值传回去,绑定到content上
     emit('asyncValue', newVal, props.keyID)
 }, {

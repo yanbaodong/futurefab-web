@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 16:37:38
- * @LastEditTime: 2023-09-18 10:44:40
+ * @LastEditTime: 2023-09-18 11:17:37
  */
 export const OverlayComponentList = [
     {
@@ -105,28 +105,28 @@ export const createByList = [
 ];
 export const globalModelList = [
     {
-        label: '10Par',
-        value: '10Par',
+        label: '10par',
+        value: '10par',
     },
     {
-        label: '20Par',
-        value: '20Par',
+        label: '20par',
+        value: '20par',
     },
     {
-        label: '30Par',
-        value: '30Par',
+        label: '30par',
+        value: '30par',
     },
     {
-        label: '40Par',
-        value: '40Par',
+        label: '40par',
+        value: '40par',
     },
     {
-        label: '50Par',
-        value: '50Par',
+        label: '50par',
+        value: '50par',
     },
     {
-        label: '60Par',
-        value: '60Par',
+        label: '60par',
+        value: '60par',
     },
 ];
 export const basicForm = {

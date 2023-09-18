@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-18 11:05:48
+ * @LastEditTime: 2023-09-18 11:27:16
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -112,6 +112,18 @@ export default function useModelingRecipe() {
         console.log(modelValue[3], 'RefinementSetting');
         console.log(keyID, 'keyID');
         // 保存值
+        let index = panes.value.findIndex(function (value) {
+            return value.key === keyID; // 返回a数组中所有大于18的元素
+        });
+        panes.value[index].content.GlobalModel = modelValue[0];
+        panes.value[index].content.RefinementModel = modelValue[1];
+        panes.value[index].content.CommonSetting = {
+            ...modelValue[2],
+        };
+        panes.value[index].content.RefinementSetting = {
+            ...modelValue[3],
+        };
+        console.log(panes.value, '修改后的值');
     };
     const handleView = (checkboxRecords: any[]) => {
         console.log('handleView:', checkboxRecords);
