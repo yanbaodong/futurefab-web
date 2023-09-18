@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-18 14:41:13
+ * @LastEditTime: 2023-09-18 15:04:57
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -183,30 +183,72 @@ export default function useModelingRecipe() {
         if (!GlobalSetting.HealthFilter_XYPairingRange) {
             showWarning('XYPairingRange 不能为空!');
             checkResult = false;
+            return;
         }
         // 校验3 HealthFilter_XYPairingRange 不能为空
         if (!GlobalSetting.HealthFilter_XYPairingRange) {
             showWarning('XYPairingRange 不能为空!');
             checkResult = false;
+            return;
         }
         // 至少有一个model
         if (panes.value.length < 2) {
             showWarning('至少有一个model !');
+            return;
         }
         let modelList = JSON.parse(JSON.stringify(panes.value));
         console.log(modelList, 'modelList');
 
-        var res = modelList.every((item: any) => {
+        let res = modelList.every((item: any, index: number) => {
             let checkRes = true;
-            // 至少有一个global model 或者refinement model
-            if (!item.content.GlobalModel && !item.content.RefinementModel) {
-                showWarning('Model 配置中 Global Model和 Refinement Model 至少选择其中一个  !');
-                checkRes = false;
+            if (index > 0) {
+                // 至少有一个global model 或者refinement model
+                if (!item.content.GlobalModel && !item.content.RefinementModel) {
+                    showWarning('Model 配置中 Global Model和 Refinement Model 至少选择其中一个  !');
+                    checkRes = false;
+                }
+                const { CommonSetting } = item.content;
+                if (!CommonSetting.HealthFilter_Max) {
+                    showWarning('Model 配置中HealthFilter-Max不能为空!');
+                }
+                if (!CommonSetting.HealthFilter_NSigma) {
+                    showWarning('Model 配置中HealthFilter-NSigma不能为空!');
+                }
+                if (!CommonSetting.HealthFilter_X_Max) {
+                    showWarning('Model 配置中HealthFilter-X-Max不能为空!');
+                }
+                if (!CommonSetting.HealthFilter_X_NSigma) {
+                    showWarning('Model 配置中HealthFilter-X-NSigma不能为空!');
+                }
+                if (!CommonSetting.HealthFilter_Y_Max) {
+                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                }
+                if (!CommonSetting.HealthFilter_Y_NSigma) {
+                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                }
+                if (!CommonSetting.HealthFilter_EdgeClearance) {
+                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                }
+                if (!CommonSetting.ResidualOutlierRemoval_NSigma) {
+                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                }
+                if (!CommonSetting.Granularity) {
+                }
+                showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                if (!CommonSetting.Decorrection_CPE_ViaSecs) {
+                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                }
+                if (!CommonSetting.Decorrection_CPE_ViaSubrecipe) {
+                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                }
+                if (!CommonSetting.Decorrection_ProcessCorrections) {
+                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                }
             }
             return checkRes;
         });
 
-        if (!checkResult || !res) return false;
+        if (!checkResult) return false;
     };
     // model 区域
     const panes = ref<{ title: string; key: string; content: any; closable?: boolean }[]>([
