@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-18 11:38:05
+ * @LastEditTime: 2023-09-18 14:41:13
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -84,6 +84,8 @@ export default function useModelingRecipe() {
             },
         };
         console.log(params, 'params');
+        // successInfo('保存成功');
+        handelSaveRules(params);
     };
 
     // 新增方法
@@ -102,6 +104,7 @@ export default function useModelingRecipe() {
             content: {
                 ...basicForm,
             },
+            // closable: false,
         };
         panes.value.push(paneItem);
     };
@@ -168,9 +171,47 @@ export default function useModelingRecipe() {
         // 删除逻辑 需要检查是否被引用
         successInfo('删除成功');
     };
+    const handelSaveRules = (params: any) => {
+        const { recipeName, GlobalSetting } = params;
+        let checkResult = true;
+        // 校验1 modeling Recipe Name 不能为空
+        if (!recipeName) {
+            showWarning('Modeling Recipe Name 不能为空!');
+            checkResult = false;
+        }
+        // 校验2 HealthFilter_XYPairingRange 不能为空
+        if (!GlobalSetting.HealthFilter_XYPairingRange) {
+            showWarning('XYPairingRange 不能为空!');
+            checkResult = false;
+        }
+        // 校验3 HealthFilter_XYPairingRange 不能为空
+        if (!GlobalSetting.HealthFilter_XYPairingRange) {
+            showWarning('XYPairingRange 不能为空!');
+            checkResult = false;
+        }
+        // 至少有一个model
+        if (panes.value.length < 2) {
+            showWarning('至少有一个model !');
+        }
+        let modelList = JSON.parse(JSON.stringify(panes.value));
+        console.log(modelList, 'modelList');
+
+        var res = modelList.every((item: any) => {
+            let checkRes = true;
+            // 至少有一个global model 或者refinement model
+            if (!item.content.GlobalModel && !item.content.RefinementModel) {
+                showWarning('Model 配置中 Global Model和 Refinement Model 至少选择其中一个  !');
+                checkRes = false;
+            }
+            return checkRes;
+        });
+
+        if (!checkResult || !res) return false;
+    };
     // model 区域
     const panes = ref<{ title: string; key: string; content: any; closable?: boolean }[]>([
         { title: 'Global Setting', key: '0', content: {}, closable: false },
+        // { title: 'Model 1', key: '1', content: { ...basicForm }, closable: false },
     ]);
 
     const activeKey = ref(panes.value[0].key);

@@ -64,6 +64,7 @@ const cn: any = {
             globalSetting: 'Global Setting',
             model: 'Model',
             healthFilter: 'HealthFilter',
+            xYPairingRange: 'XYPairingRange',
             usedOverlayComponent: 'UsedOverlayComponent',
             invalidateXYAsPair: 'InvalidateXYAsPair',
             overruleMetrologyValidity: 'OverruleMetrologyValidity(Optional)',

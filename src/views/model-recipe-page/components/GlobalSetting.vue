@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:19:22
- * @LastEditTime: 2023-09-18 13:09:07
+ * @LastEditTime: 2023-09-18 14:06:24
 -->
 <template>
     <div class="global-setting-container">
@@ -10,7 +10,7 @@
             <div class="health-form">
                 <div class="top-box">
                     <div class="input-box">
-                        <span class="label">{{ $t('modelRecipePage.field.modelingRecipe') }}</span>
+                        <span class="label">{{ $t('modelRecipePage.field.xYPairingRange') }}(mm)</span>
                         <!-- 数字,可以小数 -->
                         <a-input class="no-number" type="number" :disabled="readonly"
                             v-model:value="settingValue.HealthFilter_XYPairingRange" placeholder="" />
