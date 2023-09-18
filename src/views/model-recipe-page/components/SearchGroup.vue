@@ -48,7 +48,7 @@ const recipeName = ref([]);
 const createBy = ref([]);
 const searchDisabled = ref(false);
 const resetDisabled = ref(false);
-// const emit = defineEmits(["update:searchParams"]);
+const emit = defineEmits(["onSearch"]);
 const refTime = ref();
 
 const timePop = (params: any) => {
@@ -72,6 +72,7 @@ const search = () => {
     nextTick(() => {
         console.log('searchParam', searchParams);
         // getCustomEvent();
+        emit('onSearch', searchParams)
     });
 };
 const reset = () => {

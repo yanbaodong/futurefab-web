@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-18 15:04:57
+ * @LastEditTime: 2023-09-18 17:03:40
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -221,7 +221,7 @@ export default function useModelingRecipe() {
                     showWarning('Model 配置中HealthFilter-X-NSigma不能为空!');
                 }
                 if (!CommonSetting.HealthFilter_Y_Max) {
-                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                    showWarning('Model 配置中HealthFilter-Y-Max 不能为空!');
                 }
                 if (!CommonSetting.HealthFilter_Y_NSigma) {
                     showWarning('Model 配置中HealthFilter-Max 不能为空!');

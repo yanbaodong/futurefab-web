@@ -1,12 +1,12 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-18 10:32:47
+ * @LastEditTime: 2023-09-18 17:20:10
 -->
 <template>
     <div class="model-recipe-page">
         <header class="header-search">
-            <search-group></search-group>
+            <search-group @onSearch="onSearch"></search-group>
         </header>
         <div class="border-line"></div>
         <main class="main-grid">
@@ -137,10 +137,10 @@ onMounted(async () => {
         responents,
         columns: gridOptions.columns as Array<VxeTableDefines.ColumnInfo>,
     });
-    getModelRecipe();
+    // getModelRecipe();
 });
 
-const getModelRecipe = () => {
+const getModelRecipe = (params: any) => {
     data.loading = true;
     controller = new AbortController();
     const param = {
@@ -200,6 +200,11 @@ const handleSave = () => {
         },
     });
 };
+const onSearch = (params: object) => {
+
+    getModelRecipe(params)
+
+}
 // const handleDelete = async () => {
 //     const $table: any = xGrid.value;
 //     const radioRecords = $table.getradioRecords();
