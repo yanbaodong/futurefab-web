@@ -1,11 +1,11 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-15 16:39:26
+ * @LastEditTime: 2023-09-18 11:05:48
  */
 
 import { ref, reactive, watchEffect } from 'vue';
-import { defaultYnMap } from '../config/globalSetting';
+import { defaultYnMap, basicForm } from '../config/globalSetting';
 import { getModelDetails } from '@/api/seed';
 import { showWarning, successInfo } from '@futurefab/components/dist/utils';
 import { useI18n } from 'vue-i18n';
@@ -28,11 +28,19 @@ export default function useModelingRecipe() {
         defaultYn: false,
         // 默认值
         GlobalSetting: {
+            EvaluationRegion: '',
             HealthFilter_XYPairingRange: '1',
             HealthFilter_UsedOverlayComponent: 'X and Y',
             HealthFilter_InvalidateXYAsPair: 'true',
+            OverruleMetrologyValidityChecked: 'false',
+            ValidDataFraction_MinPercentage: '',
         },
-        ModelList: [],
+        ModelList: [
+            // 默认值
+            {
+                ...basicForm,
+            },
+        ],
     });
     const overruleMetrologyValidityDisabled = ref(true);
     const handleClick = (code: string) => {
@@ -55,7 +63,28 @@ export default function useModelingRecipe() {
     const handleShow = () => {
         sidebar.show = true;
     };
-    const saveData = () => {};
+    const saveData = () => {
+        //  保存数据
+        // debugger;
+        console.log(modelingForm, 'modelingForm');
+        const params = {
+            recipeName: modelingForm.recipeName,
+            defaultYn: modelingForm.defaultYn,
+            GlobalSetting: {
+                EvaluationRegion: modelingForm.GlobalSetting.EvaluationRegion,
+                HealthFilter_InvalidateXYAsPair:
+                    modelingForm.GlobalSetting.HealthFilter_InvalidateXYAsPair,
+                HealthFilter_UsedOverlayComponent:
+                    modelingForm.GlobalSetting.HealthFilter_UsedOverlayComponent,
+                HealthFilter_XYPairingRange: modelingForm.GlobalSetting.HealthFilter_XYPairingRange,
+                OverruleMetrologyValidityChecked:
+                    modelingForm.GlobalSetting.OverruleMetrologyValidityChecked,
+                ValidDataFraction_MinPercentage:
+                    modelingForm.GlobalSetting.ValidDataFraction_MinPercentage,
+            },
+        };
+        console.log(params, 'params');
+    };
 
     // 新增方法
     const handleAdd = () => {
@@ -70,11 +99,20 @@ export default function useModelingRecipe() {
         let paneItem = {
             title: 'Model 1',
             key: '1',
-            content: {},
+            content: {
+                ...basicForm,
+            },
         };
         panes.value.push(paneItem);
     };
-
+    const asyncValue = (modelValue: Array<any>, keyID: string) => {
+        console.log(modelValue[0], 'GlobalModel');
+        console.log(modelValue[1], 'RefinementModel');
+        console.log(modelValue[2], 'CommonSetting');
+        console.log(modelValue[3], 'RefinementSetting');
+        console.log(keyID, 'keyID');
+        // 保存值
+    };
     const handleView = (checkboxRecords: any[]) => {
         console.log('handleView:', checkboxRecords);
         // 选中唯一一行数据，以只读方式打开Modeling Recipe配置页面
@@ -118,7 +156,7 @@ export default function useModelingRecipe() {
         successInfo('删除成功');
     };
     // model 区域
-    const panes = ref<{ title: string; key: string; content: object; closable?: boolean }[]>([
+    const panes = ref<{ title: string; key: string; content: any; closable?: boolean }[]>([
         { title: 'Global Setting', key: '0', content: {}, closable: false },
     ]);
 
@@ -131,7 +169,7 @@ export default function useModelingRecipe() {
         // 获取当前newTabIndex
         activeKey.value = `${++newTabIndex.value}`;
         const tabName = `Model ${newTabIndex.value}`;
-        panes.value.push({ title: tabName, key: activeKey.value, content: {} });
+        panes.value.push({ title: tabName, key: activeKey.value, content: { ...basicForm } });
         // model 卡片支持编辑
         sidebar.tabCardType = 'editable-card';
         sidebar.show = true;
@@ -164,11 +202,11 @@ export default function useModelingRecipe() {
     // tab 切换时候触发
     const changeTab = (activeKey: string) => {
         console.log(activeKey, 'activeKey)');
+        // console.log(keyID, 'keyID)'); // 确定是哪一个model 要改
     };
     // 查询setting 函数
     const getDetailSetting = () => {
         let controller: AbortController | undefined = undefined;
-
         controller = new AbortController();
         const param = {
             signal: controller.signal,
@@ -179,6 +217,8 @@ export default function useModelingRecipe() {
             if (res.status == 'SUCCESS') {
                 modelingForm.GlobalSetting = res.data?.GlobalSetting;
 
+                // 先清空
+                modelingForm.ModelList = [];
                 modelingForm.ModelList = res.data?.ModelList;
                 handelModelList();
             }
@@ -190,6 +230,7 @@ export default function useModelingRecipe() {
             return false;
         }
         let length = modelingForm.ModelList.length;
+
         //设置初始化的 tab
         for (var i = 0; i < length; i++) {
             const paneItem = {
@@ -223,6 +264,7 @@ export default function useModelingRecipe() {
         activeKey,
         overruleMetrologyValidityDisabled,
         changeTab,
+        asyncValue,
         onEdit,
         saveData,
         handleClick,

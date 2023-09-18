@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-15 16:42:27
+ * @LastEditTime: 2023-09-18 10:33:18
 -->
 <template>
     <div class="model-setting-container">
@@ -192,40 +192,14 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, watchEffect, computed } from 'vue';
+import { ref, reactive, watchEffect, computed, watch } from 'vue';
 import {
     DecorrectionCPEViaSubrecipeList,
     DecorrectionProcessCorrections,
     globalModelList,
 } from '../config/globalSetting';
-// const settingValue = reactive({
-//     Seq: '1',
-//     GlobalModel: '10par',
-//     RefinementModel: 'CPE6',
-//     CommonSetting: {
-//         HealthFilter_Max: '100',
-//         HealthFilter_NSigma: '4',
-//         HealthFilter_X_Max: '100',
-//         HealthFilter_X_NSigma: '4',
-//         HealthFilter_Y_Max: '100',
-//         HealthFilter_Y_NSigma: '4',
-//         HealthFilter_EdgeClearance: '3',
-//         ResidualOutlierRemoval_NSigma: '10',
-//         Granularity: 'Per wafer',
-//         Decorrection_CPE_ViaSecs: 'false',
-//         Decorrection_CPE_ViaSubrecipe: 'false',
-//         Decorrection_ProcessCorrections: 'false',
-//         TargetLabel: 'T1',
-//         SampleSchemeName: 'Sample1',
-//     },
-//     RefinementSetting: {
-//         ModelParameterReduction: 'true',
-//         MUBPR: 'true',
-//         MUBPR_X_Max: '2',
-//         MUBPR_Y_Max: '2',
-//         ActuatorRanges_SetName: 'OVO2_enlarge',
-//     },
-// });
+const emit = defineEmits(["asyncValue"]);
+
 const CommonSetting = reactive({
     HealthFilter_Max: 100,
     HealthFilter_NSigma: 4,
@@ -277,6 +251,10 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    keyID: {
+        type: String,
+        default: '',
+    },
 });
 
 watchEffect(() => {
@@ -314,54 +292,23 @@ watchEffect(() => {
         RefinementSetting.MUBPR_Y_Max = props.settingValue.RefinementSetting.MUBPR_Y_Max
         RefinementSetting.ActuatorRanges_SetName = props.settingValue.RefinementSetting.ActuatorRanges_SetName
     }
-
-
-    // 存在
-    // console.log(props.settingValue, 'props.settingValue 存在');
-    // CommonSetting.HealthFilter_Max = props.settingValue.CommonSetting.HealthFilter_Max;
-    // CommonSetting.HealthFilter_NSigma = props.settingValue.CommonSetting.HealthFilter_NSigma;
-    // CommonSetting.HealthFilter_X_Max = props.settingValue.CommonSetting.HealthFilter_X_Max;
-    // CommonSetting.HealthFilter_X_NSigma = props.settingValue.CommonSetting.HealthFilter_X_NSigma;
-    // CommonSetting.HealthFilter_Y_Max = props.settingValue.CommonSetting.HealthFilter_Y_Max;
-    // CommonSetting.HealthFilter_Y_NSigma = props.settingValue.CommonSetting.HealthFilter_Y_NSigma;
-    // CommonSetting.HealthFilter_EdgeClearance = props.settingValue.CommonSetting.HealthFilter_EdgeClearance;
-    // CommonSetting.ResidualOutlierRemoval_NSigma = props.settingValue.CommonSetting.ResidualOutlierRemoval_NSigma;
-    // CommonSetting.Granularity = props.settingValue.CommonSetting.Granularity;
-    // CommonSetting.Decorrection_CPE_ViaSecs = props.settingValue.CommonSetting.Decorrection_CPE_ViaSecs;
-    // CommonSetting.Decorrection_CPE_ViaSubrecipe = props.settingValue.CommonSetting.Decorrection_CPE_ViaSubrecipe;
-    // CommonSetting.Decorrection_ProcessCorrections = props.settingValue.CommonSetting.Decorrection_ProcessCorrections;
-    // CommonSetting.TargetLabel = props.settingValue.CommonSetting.TargetLabel;
-    // CommonSetting.SampleSchemeName = props.settingValue.CommonSetting.SampleSchemeName;
-    // // RefinementSetting
-    // RefinementSetting.ModelParameterReduction = props.settingValue.RefinementSetting.ModelParameterReduction;
-    // RefinementSetting.MUBPR = props.settingValue.RefinementSetting.MUBPR;
-    // RefinementSetting.MUBPR_X_Max = props.settingValue.RefinementSetting.MUBPR_X_Max;
-    // RefinementSetting.MUBPR_Y_Max = props.settingValue.RefinementSetting.MUBPR_Y_Max;
-    // RefinementSetting.ActuatorRanges_SetName = props.settingValue.RefinementSetting.ActuatorRanges_SetName;
-
     // Global Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值
     // Refinement Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值。如果已选中Is default modeling recipe，则不能勾选Refinement Model【Default recipe中不允许维护refinement model】
     // 下拉列表的值来源于LIS文件库。以HOC或LIS前缀查询LIS文件库中的Global Model名称，以CPE前缀查询LIS文件库中的Refinement Model名称
-    // if (checkForm.GlobalModel && !props.readonly) {
-    //     globalModelDisabled.value = false
-    // }
-    // if (!checkForm.GlobalModel) {
-    //     globalModelDisabled.value = true
-    // }
-    // if (props.readonly) {
-    //     globalModelDisabled.value = false
-    //     refinementModelDisabled.value = false
-    // } else if (checkForm.GlobalModel && !props.readonly) {
-    //     globalModelDisabled.value = false
-    // } else {
-    //     globalModelDisabled.value = true
-    // }
     if (!props.overruleMetrologyValidityDisabled) {
         // 不允许修改  Refinement Model
         checkForm.RefinementModel = false
         globalModel.value = ''
     }
 
+
+})
+watch(() => [globalModel, refinementModel, CommonSetting, RefinementSetting], (newVal, oldVal) => {
+    console.log('改变了', newVal)
+    // 这里可以收到改动之后的值, 要把这些值传回去,绑定到content上
+    emit('asyncValue', newVal, props.keyID)
+}, {
+    deep: true // 深度监听的参数
 })
 const globalModelDisabled = computed(() => {
 
@@ -376,15 +323,9 @@ const globalModelDisabled = computed(() => {
     return false
 })
 const refinementModelDisabled = computed(() => {
-
     if (props.readonly) {
         return true
     }
-    // if (!props.overruleMetrologyValidityDisabled) {
-    //     // 清空值
-    //     refinementModel.value = ''
-    //     return true
-    // }
     if (!checkForm.RefinementModel) {
         // 清空值
         refinementModel.value = ''
