@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-18 11:27:16
+ * @LastEditTime: 2023-09-18 11:38:05
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -32,7 +32,7 @@ export default function useModelingRecipe() {
             HealthFilter_XYPairingRange: '1',
             HealthFilter_UsedOverlayComponent: 'X and Y',
             HealthFilter_InvalidateXYAsPair: 'true',
-            OverruleMetrologyValidityChecked: 'false',
+            OverruleMetrologyValidityChecked: false,
             ValidDataFraction_MinPercentage: '',
         },
         ModelList: [
@@ -136,6 +136,7 @@ export default function useModelingRecipe() {
         // 赋值
         modelingForm.recipeName = checkboxRecords[0].recipeName;
         modelingForm.defaultYn = defaultYnMap[checkboxRecords[0].defaultYn];
+
         getDetailSetting();
     };
     const handleModify = (checkboxRecords: any[]) => {
@@ -228,8 +229,10 @@ export default function useModelingRecipe() {
             console.log('res', res);
             if (res.status == 'SUCCESS') {
                 modelingForm.GlobalSetting = res.data?.GlobalSetting;
-
                 // 先清空
+                if (modelingForm.defaultYn) {
+                    modelingForm.GlobalSetting.OverruleMetrologyValidityChecked = true;
+                }
                 modelingForm.ModelList = [];
                 modelingForm.ModelList = res.data?.ModelList;
                 handelModelList();

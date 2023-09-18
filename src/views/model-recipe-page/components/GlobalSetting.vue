@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:19:22
- * @LastEditTime: 2023-09-15 15:09:50
+ * @LastEditTime: 2023-09-18 13:09:07
 -->
 <template>
     <div class="global-setting-container">
@@ -145,6 +145,9 @@ watchEffect(() => {
     // if (['X', 'Y'].includes(UsedOverlayComponent)) {
     //     props.settingValue.HealthFilter_InvalidateXYAsPair = 'false'
     // }
+    if (props.defaultYn) {
+
+    }
 });
 </script>
 

@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 16:37:38
- * @LastEditTime: 2023-09-18 11:17:37
+ * @LastEditTime: 2023-09-18 13:38:00
  */
 export const OverlayComponentList = [
     {
@@ -109,24 +109,40 @@ export const globalModelList = [
         value: '10par',
     },
     {
-        label: '20par',
-        value: '20par',
+        label: '10par_no_filter',
+        value: '10par_no_filter',
+    },
+];
+export const refinementModelList = [
+    {
+        label: 'CPE6',
+        value: 'CPE6',
     },
     {
-        label: '30par',
-        value: '30par',
+        label: 'CPE7',
+        value: 'CPE7',
     },
     {
-        label: '40par',
-        value: '40par',
+        label: 'CPE8',
+        value: 'CPE8',
     },
     {
-        label: '50par',
-        value: '50par',
+        label: 'CPE9',
+        value: 'CPE9',
+    },
+];
+export const actuatorRangesSetNameList = [
+    {
+        label: 'OVO2_enlarge',
+        value: 'OVO2_enlarge',
     },
     {
-        label: '60par',
-        value: '60par',
+        label: 'OVO3_enlarge',
+        value: 'OVO3_enlarge',
+    },
+    {
+        label: 'OVO4_enlarge',
+        value: 'OVO4_enlarge',
     },
 ];
 export const basicForm = {
