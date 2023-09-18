@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-18 13:38:15
+ * @LastEditTime: 2023-09-18 13:53:34
 -->
 <template>
     <div class="model-setting-container">
@@ -261,7 +261,7 @@ const props = defineProps({
 });
 
 watchEffect(() => {
-    console.log(props.settingValue, 'watchEffect配置的回调执行了')
+    // console.log(props.settingValue, 'watchEffect配置的回调执行了')
     if (props.settingValue.GlobalModel) {
 
         globalModel.value = props.settingValue.GlobalModel
@@ -290,9 +290,9 @@ watchEffect(() => {
         CommonSetting.Decorrection_CPE_ViaSubrecipe = props.settingValue.CommonSetting.Decorrection_CPE_ViaSubrecipe
         CommonSetting.Decorrection_ProcessCorrections = props.settingValue.CommonSetting.Decorrection_ProcessCorrections
         CommonSetting.TargetLabel = props.settingValue.CommonSetting.TargetLabel
-        if (CommonSetting.TargetLabel) checkForm.TargetLabel = true
+        // if (CommonSetting.TargetLabel) checkForm.TargetLabel = true
         CommonSetting.SampleSchemeName = props.settingValue.CommonSetting.SampleSchemeName
-        if (CommonSetting.SampleSchemeName) checkForm.SampleSchemeName = true
+        // if (CommonSetting.SampleSchemeName) checkForm.SampleSchemeName = true
 
     }
     // RefinementSetting
@@ -302,23 +302,36 @@ watchEffect(() => {
         RefinementSetting.MUBPR_X_Max = props.settingValue.RefinementSetting.MUBPR_X_Max
         RefinementSetting.MUBPR_Y_Max = props.settingValue.RefinementSetting.MUBPR_Y_Max
         RefinementSetting.ActuatorRanges_SetName = props.settingValue.RefinementSetting.ActuatorRanges_SetName
-        if (RefinementSetting.ActuatorRanges_SetName) checkForm.ActuatorRanges_SetName = true
+        // if (RefinementSetting.ActuatorRanges_SetName) checkForm.ActuatorRanges_SetName = true
     }
     // Global Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值
     // Refinement Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值。如果已选中Is default modeling recipe，则不能勾选Refinement Model【Default recipe中不允许维护refinement model】
     // 下拉列表的值来源于LIS文件库。以HOC或LIS前缀查询LIS文件库中的Global Model名称，以CPE前缀查询LIS文件库中的Refinement Model名称
-    // if (!props.overruleMetrologyValidityDisabled) {
-    //     // 不允许修改  Refinement Model
-    //     checkForm.RefinementModel = false
-    //     globalModel.value = ''
-    // }
+    if (!props.overruleMetrologyValidityDisabled) {
+        // 不允许修改  Refinement Model
+        checkForm.RefinementModel = false
+        refinementModel.value = ''
+    }
 
 })
-// watch(props.settingValue, () => {
-//     console.log('=================');
+if (CommonSetting.TargetLabel) checkForm.TargetLabel = true
+if (CommonSetting.SampleSchemeName) checkForm.SampleSchemeName = true
+if (RefinementSetting.ActuatorRanges_SetName) checkForm.ActuatorRanges_SetName = true
+watch(checkForm, (newValue) => {
 
-// })
-watch(() => [globalModel, refinementModel, CommonSetting, RefinementSetting], (newVal, oldVal) => {
+    if (!newValue.TargetLabel) {
+        CommonSetting.TargetLabel = ''
+    }
+    if (!newValue.SampleSchemeName) {
+        CommonSetting.SampleSchemeName = ''
+    }
+    if (!newValue.ActuatorRanges_SetName) {
+        RefinementSetting.ActuatorRanges_SetName = ''
+    }
+
+})
+
+watch(() => [globalModel, refinementModel, CommonSetting, RefinementSetting], (newVal) => {
     // console.log('改变了', newVal)
     // 这里可以收到改动之后的值, 要把这些值传回去,绑定到content上
     emit('asyncValue', newVal, props.keyID)
@@ -346,6 +359,7 @@ const refinementModelDisabled = computed(() => {
         refinementModel.value = ''
         return true
     }
+
     return false
 })
 </script>
