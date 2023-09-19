@@ -1,12 +1,7 @@
 <template>
     <div v-if="isDev" id="seed-app" style="position: fixed; top: 0; left: 0; margin-left: 20px">
-        <router-link
-            style="margin-left: 20px"
-            v-for="(route, index) in routes"
-            :key="index"
-            :to="route.path"
-            >{{ route.name }}</router-link
-        >
+        <router-link style="margin-left: 20px" v-for="(route, index) in routes" :key="index" :to="route.path">{{ route.name
+        }}</router-link>
         <button @click="changeLanguage">切换语言</button>
         <span>
             <a-dropdown :trigger="['click']">

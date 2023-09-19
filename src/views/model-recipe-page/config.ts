@@ -1,14 +1,14 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 11:18:33
- * @LastEditTime: 2023-09-14 13:22:41
+ * @LastEditTime: 2023-09-15 14:36:53
  */
 import { VXETable } from '@futurefab/vxe-table';
 
 export const getGridOption = () => {
     return VXETable.tableFun.tableDefaultConfig({
         toolbarConfig: {
-            tableName: 'Modeling Recipe List',
+            tableName: 'common.title.modelingRecipeList',
             import: false, // 隐藏导入
             export: false, //隐藏导出
             tools: [
@@ -48,7 +48,7 @@ export const getGridOption = () => {
             { field: 'rawId', type: 'checkbox', width: 40, title: 'SEL', headerClassName: 'sel' },
             {
                 field: 'recipeName',
-                title: 'Modeling Recipe Name',
+                title: 'modelRecipePage.field.modelingRecipeName',
                 sortable: true,
                 sortType: 'string',
                 minWidth: 123,
@@ -56,29 +56,28 @@ export const getGridOption = () => {
             },
             {
                 field: 'defaultYn',
-                title: 'Default YN',
+                title: 'modelRecipePage.field.defaultYn',
                 sortable: true,
                 sortType: 'string',
-                minWidth: 142,
+                minWidth: 123,
                 filters: [{}],
             },
 
             {
                 field: 'createBy',
-                title: 'Create By',
+                title: 'common.field.createdBy',
                 sortable: true,
                 sortType: 'string',
-                minWidth: 142,
-
+                minWidth: 123,
                 filters: [{}],
                 filterRender: {},
             },
             {
                 field: 'createDtts',
-                title: 'Create Time',
+                title: 'common.field.createdTime',
                 sortable: true,
                 sortType: 'string',
-                minWidth: 169,
+                minWidth: 123,
                 // editRender: {// 绿色 的点
                 //     name: '$input',
                 //     props: {
@@ -92,10 +91,10 @@ export const getGridOption = () => {
             },
             {
                 field: 'lastUpdateBy',
-                title: 'Last Update By',
+                title: 'modelRecipePage.field.lastUpdateBy',
                 sortable: true,
                 sortType: 'string',
-                minWidth: 166,
+                minWidth: 123,
                 filters: [{}],
                 filterRender: {
                     // name: '$input',
@@ -103,9 +102,9 @@ export const getGridOption = () => {
             },
             {
                 field: 'LastUpdateTime',
-                title: ' Last Update Time',
+                title: 'modelRecipePage.field.lastUpdateTime',
                 sortable: true,
-                minWidth: 148,
+                minWidth: 123,
                 // filters: [{}],
                 filterRender: {
                     name: '$input',

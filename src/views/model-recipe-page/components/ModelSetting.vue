@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-14 13:21:22
+ * @LastEditTime: 2023-09-19 09:29:24
 -->
 <template>
     <div class="model-setting-container">
@@ -10,166 +10,183 @@
             <div class="left-model-box">
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.GlobalModel">Global Model</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.GlobalModel">{{
+                            $t('modelRecipePage.field.globalModel') }}</a-checkbox>
                     </p>
 
                     <!-- <a-input v-model:value="settingValue.GlobalModel" placeholder="" /> -->
-                    <a-select v-model:value="settingValue.GlobalModel" placeholder="Please select"
-                        :options="DecorrectionProcessCorrections"></a-select>
+                    <a-select :disabled="globalModelDisabled" v-model:value="globalModel"
+                        :placeholder="$t('common.tip.selectTip')" :options="globalModelList"></a-select>
                 </div>
             </div>
             <div class="right-model-box">
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.RefinementModel">Refinement
-                            Model</a-checkbox>
+                        <a-checkbox :disabled="readonly || !overruleMetrologyValidityDisabled"
+                            v-model:checked="checkForm.RefinementModel">{{
+                                $t('modelRecipePage.field.refinementModel') }}</a-checkbox>
                     </p>
 
                     <!-- <a-input v-model:value="settingValue.RefinementModel" placeholder="" /> -->
-                    <a-select :disabled="readonly" v-model:value="settingValue.RefinementModel" placeholder="Please select"
-                        :options="DecorrectionProcessCorrections"></a-select>
+                    <a-select :disabled="refinementModelDisabled" v-model:value="refinementModel"
+                        :placeholder="$t('common.tip.selectTip')" :options="refinementModelList"></a-select>
                 </div>
             </div>
         </header>
         <section class="common-setting">
             <!--Common Setting -->
-            <p class="title-1">Common Setting</p>
+            <p class="title-1">{{ $t('modelRecipePage.field.commonSetting') }}</p>
             <div class="setting-box">
                 <!-- HealthFilter-Max(nm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-Max(nm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterMax') }}(nm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterNSigma') }}</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_NSigma" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-X-Max(nm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-X-Max(nm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterXMax') }}(nm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_X_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_X_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-X-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-X-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterXNSigma') }}</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_X_NSigma" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_X_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-Y-Max(nm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-Y-Max(nm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterYMax') }}(nm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_Y_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_Y_Max" placeholder="" />
                 </div>
                 <!-- HealthFilter-Y-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-Y-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterYNSigma') }}</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_Y_NSigma" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_Y_NSigma" placeholder="" />
                 </div>
                 <!-- HealthFilter-EdgeClearance(mm) -->
                 <div class="input-box">
-                    <p class="label-name">HealthFilter-EdgeClearance(mm)</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.healthFilterEdgeClearance') }}(mm)</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.HealthFilter_EdgeClearance" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.HealthFilter_EdgeClearance" placeholder="" />
                 </div>
                 <!-- ResidualOutlierRemoval-NSigma -->
                 <div class="input-box">
-                    <p class="label-name">ResidualOutlierRemoval-NSigma</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.residualOutlierRemovalNSigma') }}</p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.ResidualOutlierRemoval_NSigma"
-                        placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="CommonSetting.ResidualOutlierRemoval_NSigma" placeholder="" />
                 </div>
                 <!-- Granularity -->
                 <div class="input-box">
-                    <p class="label-name">Granularity</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.granularity') }}</p>
 
                     <a-input :disabled="readonly" v-model:value="CommonSetting.Granularity" placeholder="" />
                 </div>
                 <!-- Decorrection-CPE-ViaSecs -->
                 <div class="select-box">
-                    <p class="label-name">Decorrection-CPE-ViaSecs</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.decorrectionCPEViaSecs') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="CommonSetting.Decorrection_CPE_ViaSecs"
-                        placeholder="Please select" :options="DecorrectionCPEViaSubrecipeList"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionCPEViaSubrecipeList"></a-select>
                 </div>
                 <!-- Decorrection-CPE-ViaSubrecipe -->
                 <div class="select-box">
-                    <p class="label-name">Decorrection-CPE-ViaSubrecipe</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.decorrectionCPEViaSubrecipe') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="CommonSetting.Decorrection_CPE_ViaSubrecipe"
-                        placeholder="Please select" :options="DecorrectionProcessCorrections"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
                 <!-- Decorrection-ProcessCorrections -->
                 <div class="select-box">
-                    <p class="label-name">Decorrection-ProcessCorrections</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.decorrectionProcessCorrections') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="CommonSetting.Decorrection_ProcessCorrections"
-                        placeholder="Please select" :options="DecorrectionProcessCorrections"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
                 <!-- TargetLabel -->
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.TargetLabel">TargetLabel</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.TargetLabel">{{
+                            $t('modelRecipePage.field.targetLabel') }}</a-checkbox>
                     </p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.TargetLabel" placeholder="" />
+                    <a-input :disabled="readonly || !checkForm.TargetLabel" v-model:value="CommonSetting.TargetLabel"
+                        placeholder="" />
                 </div>
                 <!-- SampleSchemeName -->
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly"
-                            v-model:checked="checkForm.SampleSchemeName">SampleSchemeName</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.SampleSchemeName">{{
+                            $t('modelRecipePage.field.sampleSchemeName') }}</a-checkbox>
                     </p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.SampleSchemeName" placeholder="" />
+                    <a-input :disabled="readonly || !checkForm.SampleSchemeName"
+                        v-model:value="CommonSetting.SampleSchemeName" placeholder="" />
                 </div>
             </div>
         </section>
-        <section class="refinement-setting">
+        <section class="refinement-setting" v-show="checkForm.RefinementModel">
             <!-- Refinement Setting -->
-            <p class="title-1">Refinement Setting</p>
+            <p class="title-1">{{ $t('modelRecipePage.field.refinementSetting') }}</p>
 
             <div class="setting-box">
                 <!-- ModelParameterReduction -->
                 <div class="select-box">
-                    <p class="label-name">ModelParameterReduction</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.modelParameterReduction') }}</p>
 
                     <a-select :disabled="readonly" v-model:value="RefinementSetting.ModelParameterReduction"
-                        placeholder="Please select" :options="DecorrectionProcessCorrections"></a-select>
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
 
                 <!-- MUBPR -->
                 <div class="select-box">
-                    <p class="label-name">MUBPR</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.mubpr') }}</p>
 
-                    <a-select :disabled="readonly" v-model:value="RefinementSetting.MUBPR" placeholder="Please select"
-                        :options="DecorrectionProcessCorrections"></a-select>
+                    <a-select :disabled="readonly" v-model:value="RefinementSetting.MUBPR"
+                        :placeholder="$t('common.tip.selectTip')" :options="DecorrectionProcessCorrections"></a-select>
                 </div>
                 <!--MUBPR-X-Max  -->
                 <div class="input-box">
-                    <p class="label-name">MUBPR-X-Max</p>
+                    <p class="label-name">M{{ $t('modelRecipePage.field.mubprXMax') }}</p>
 
-                    <a-input :disabled="readonly" v-model:value="RefinementSetting.MUBPR_X_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="RefinementSetting.MUBPR_X_Max" placeholder="" />
                 </div>
                 <!--MUBPR-Y-Max -->
                 <div class="input-box">
-                    <p class="label-name">MUBPR-Y-Max</p>
+                    <p class="label-name">{{ $t('modelRecipePage.field.mubprYMax') }}</p>
 
-                    <a-input :disabled="readonly" v-model:value="RefinementSetting.MUBPR_Y_Max" placeholder="" />
+                    <a-input class="no-number" type="number" :disabled="readonly"
+                        v-model:value="RefinementSetting.MUBPR_Y_Max" placeholder="" />
                 </div>
                 <!-- ActuatorRanges-SetName -->
                 <div class="check-select-box">
                     <p class="label-name">
-                        <a-checkbox :disabled="readonly"
-                            v-model:checked="checkForm.ActuatorRanges_SetName">ActuatorRanges-SetName</a-checkbox>
+                        <a-checkbox :disabled="readonly" v-model:checked="checkForm.ActuatorRanges_SetName">{{
+                            $t('modelRecipePage.field.actuatorRangesSetName') }}</a-checkbox>
                     </p>
 
-                    <a-input :disabled="readonly" v-model:value="RefinementSetting.ActuatorRanges_SetName" placeholder="" />
+                    <!-- <a-input :disabled="readonly" v-model:value="RefinementSetting.ActuatorRanges_SetName" placeholder="" /> -->
+                    <a-select :disabled="!checkForm.ActuatorRanges_SetName || readonly"
+                        v-model:value="RefinementSetting.ActuatorRanges_SetName" :placeholder="$t('common.tip.selectTip')"
+                        :options="actuatorRangesSetNameList"></a-select>
                 </div>
             </div>
         </section>
@@ -177,60 +194,37 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive, watchEffect } from 'vue';
+import { ref, reactive, watchEffect, computed, watch } from 'vue';
 import {
     DecorrectionCPEViaSubrecipeList,
     DecorrectionProcessCorrections,
+    globalModelList,
+    refinementModelList,
+    actuatorRangesSetNameList,
 } from '../config/globalSetting';
-// const settingValue = reactive({
-//     Seq: '1',
-//     GlobalModel: '10par',
-//     RefinementModel: 'CPE6',
-//     CommonSetting: {
-//         HealthFilter_Max: '100',
-//         HealthFilter_NSigma: '4',
-//         HealthFilter_X_Max: '100',
-//         HealthFilter_X_NSigma: '4',
-//         HealthFilter_Y_Max: '100',
-//         HealthFilter_Y_NSigma: '4',
-//         HealthFilter_EdgeClearance: '3',
-//         ResidualOutlierRemoval_NSigma: '10',
-//         Granularity: 'Per wafer',
-//         Decorrection_CPE_ViaSecs: 'false',
-//         Decorrection_CPE_ViaSubrecipe: 'false',
-//         Decorrection_ProcessCorrections: 'false',
-//         TargetLabel: 'T1',
-//         SampleSchemeName: 'Sample1',
-//     },
-//     RefinementSetting: {
-//         ModelParameterReduction: 'true',
-//         MUBPR: 'true',
-//         MUBPR_X_Max: '2',
-//         MUBPR_Y_Max: '2',
-//         ActuatorRanges_SetName: 'OVO2_enlarge',
-//     },
-// });
+const emit = defineEmits(["asyncValue"]);
+
 const CommonSetting = reactive({
-    HealthFilter_Max: '',
-    HealthFilter_NSigma: '',
-    HealthFilter_X_Max: '',
-    HealthFilter_X_NSigma: '',
-    HealthFilter_Y_Max: '',
-    HealthFilter_Y_NSigma: '',
-    HealthFilter_EdgeClearance: '',
-    ResidualOutlierRemoval_NSigma: '',
-    Granularity: '',
-    Decorrection_CPE_ViaSecs: '',
-    Decorrection_CPE_ViaSubrecipe: '',
-    Decorrection_ProcessCorrections: '',
+    HealthFilter_Max: 100,
+    HealthFilter_NSigma: 4,
+    HealthFilter_X_Max: 100,
+    HealthFilter_X_NSigma: 4,
+    HealthFilter_Y_Max: 100,
+    HealthFilter_Y_NSigma: 4,
+    HealthFilter_EdgeClearance: 3,
+    ResidualOutlierRemoval_NSigma: 10,
+    Granularity: 'Per wafer',
+    Decorrection_CPE_ViaSecs: false,
+    Decorrection_CPE_ViaSubrecipe: false,
+    Decorrection_ProcessCorrections: false,
     TargetLabel: '',
     SampleSchemeName: '',
 })
 const RefinementSetting = reactive({
-    ModelParameterReduction: '',
-    MUBPR: '',
-    MUBPR_X_Max: '',
-    MUBPR_Y_Max: '',
+    ModelParameterReduction: true,
+    MUBPR: true,
+    MUBPR_X_Max: 2,
+    MUBPR_Y_Max: 2,
     ActuatorRanges_SetName: '',
 })
 const checkForm = reactive({
@@ -240,6 +234,10 @@ const checkForm = reactive({
     SampleSchemeName: false,
     ActuatorRanges_SetName: false,
 });
+
+const globalModel = ref('')
+const refinementModel = ref('')
+
 const props = defineProps({
     settingValue: {
         type: Object,
@@ -254,36 +252,118 @@ const props = defineProps({
         type: Boolean,
         default: false,
     },
+    overruleMetrologyValidityDisabled: {
+        type: Boolean,
+        default: false,
+    },
+    keyID: {
+        type: String,
+        default: '',
+    },
 });
+
 watchEffect(() => {
     // console.log(props.settingValue, 'watchEffect配置的回调执行了')
-    if (Object.keys(props.settingValue).length > 0) {
-        // 存在
-        console.log(props.settingValue, 'props.settingValue 存在');
-        CommonSetting.HealthFilter_Max = props.settingValue.CommonSetting.HealthFilter_Max;
-        CommonSetting.HealthFilter_NSigma = props.settingValue.CommonSetting.HealthFilter_NSigma;
-        CommonSetting.HealthFilter_X_Max = props.settingValue.CommonSetting.HealthFilter_X_Max;
-        CommonSetting.HealthFilter_X_NSigma = props.settingValue.CommonSetting.HealthFilter_X_NSigma;
-        CommonSetting.HealthFilter_Y_Max = props.settingValue.CommonSetting.HealthFilter_Y_Max;
-        CommonSetting.HealthFilter_Y_NSigma = props.settingValue.CommonSetting.HealthFilter_Y_NSigma;
-        CommonSetting.HealthFilter_EdgeClearance = props.settingValue.CommonSetting.HealthFilter_EdgeClearance;
-        CommonSetting.ResidualOutlierRemoval_NSigma = props.settingValue.CommonSetting.ResidualOutlierRemoval_NSigma;
-        CommonSetting.Granularity = props.settingValue.CommonSetting.Granularity;
-        CommonSetting.Decorrection_CPE_ViaSecs = props.settingValue.CommonSetting.Decorrection_CPE_ViaSecs;
-        CommonSetting.Decorrection_CPE_ViaSubrecipe = props.settingValue.CommonSetting.Decorrection_CPE_ViaSubrecipe;
-        CommonSetting.Decorrection_ProcessCorrections = props.settingValue.CommonSetting.Decorrection_ProcessCorrections;
-        CommonSetting.TargetLabel = props.settingValue.CommonSetting.TargetLabel;
-        CommonSetting.SampleSchemeName = props.settingValue.CommonSetting.SampleSchemeName;
-        // RefinementSetting
-        RefinementSetting.ModelParameterReduction = props.settingValue.RefinementSetting.ModelParameterReduction;
-        RefinementSetting.MUBPR = props.settingValue.RefinementSetting.MUBPR;
-        RefinementSetting.MUBPR_X_Max = props.settingValue.RefinementSetting.MUBPR_X_Max;
-        RefinementSetting.MUBPR_Y_Max = props.settingValue.RefinementSetting.MUBPR_Y_Max;
-        RefinementSetting.ActuatorRanges_SetName = props.settingValue.RefinementSetting.ActuatorRanges_SetName;
+    if (props.settingValue.GlobalModel) {
+
+        globalModel.value = props.settingValue.GlobalModel
+        // 有值就勾选上
+        checkForm.GlobalModel = true
+
+    }
+    if (props.settingValue.RefinementModel) {
+        refinementModel.value = props.settingValue.RefinementModel
+        // 有值就勾选上
+        checkForm.RefinementModel = true
+    }
+    // 填充默认值
+    // Common Setting中，除了TargetLabel和SampleSchemeName，其他item都需要填充默认值。
+    if (props.settingValue.CommonSetting) {
+        CommonSetting.HealthFilter_Max = props.settingValue.CommonSetting.HealthFilter_Max
+        CommonSetting.HealthFilter_NSigma = props.settingValue.CommonSetting.HealthFilter_NSigma
+        CommonSetting.HealthFilter_X_Max = props.settingValue.CommonSetting.HealthFilter_X_Max
+        CommonSetting.HealthFilter_X_NSigma = props.settingValue.CommonSetting.HealthFilter_X_NSigma
+        CommonSetting.HealthFilter_Y_Max = props.settingValue.CommonSetting.HealthFilter_Y_Max
+        CommonSetting.HealthFilter_Y_NSigma = props.settingValue.CommonSetting.HealthFilter_Y_NSigma
+        CommonSetting.HealthFilter_EdgeClearance = props.settingValue.CommonSetting.HealthFilter_EdgeClearance
+        CommonSetting.ResidualOutlierRemoval_NSigma = props.settingValue.CommonSetting.ResidualOutlierRemoval_NSigma
+        CommonSetting.Granularity = props.settingValue.CommonSetting.Granularity
+        CommonSetting.Decorrection_CPE_ViaSecs = props.settingValue.CommonSetting.Decorrection_CPE_ViaSecs
+        CommonSetting.Decorrection_CPE_ViaSubrecipe = props.settingValue.CommonSetting.Decorrection_CPE_ViaSubrecipe
+        CommonSetting.Decorrection_ProcessCorrections = props.settingValue.CommonSetting.Decorrection_ProcessCorrections
+        CommonSetting.TargetLabel = props.settingValue.CommonSetting.TargetLabel
+        // if (CommonSetting.TargetLabel) checkForm.TargetLabel = true
+        CommonSetting.SampleSchemeName = props.settingValue.CommonSetting.SampleSchemeName
+        // if (CommonSetting.SampleSchemeName) checkForm.SampleSchemeName = true
+
+    }
+    // RefinementSetting
+    if (props.settingValue.RefinementSetting) {
+        RefinementSetting.ModelParameterReduction = props.settingValue.RefinementSetting.ModelParameterReduction
+        RefinementSetting.MUBPR = props.settingValue.RefinementSetting.MUBPR
+        RefinementSetting.MUBPR_X_Max = props.settingValue.RefinementSetting.MUBPR_X_Max
+        RefinementSetting.MUBPR_Y_Max = props.settingValue.RefinementSetting.MUBPR_Y_Max
+        RefinementSetting.ActuatorRanges_SetName = props.settingValue.RefinementSetting.ActuatorRanges_SetName
+        // if (RefinementSetting.ActuatorRanges_SetName) checkForm.ActuatorRanges_SetName = true
+    }
+    // Global Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值
+    // Refinement Model：勾选后，对应下拉框变成enable。如果取消勾选，则清空对应下拉列表框的值。如果已选中Is default modeling recipe，则不能勾选Refinement Model【Default recipe中不允许维护refinement model】
+    // 下拉列表的值来源于LIS文件库。以HOC或LIS前缀查询LIS文件库中的Global Model名称，以CPE前缀查询LIS文件库中的Refinement Model名称
+    if (!props.overruleMetrologyValidityDisabled) {
+        // 不允许修改  Refinement Model
+        checkForm.RefinementModel = false
+        refinementModel.value = ''
+    }
+
+})
+if (CommonSetting.TargetLabel) checkForm.TargetLabel = true
+if (CommonSetting.SampleSchemeName) checkForm.SampleSchemeName = true
+if (RefinementSetting.ActuatorRanges_SetName) checkForm.ActuatorRanges_SetName = true
+watch(checkForm, (newValue) => {
+
+    if (!newValue.TargetLabel) {
+        CommonSetting.TargetLabel = ''
+    }
+    if (!newValue.SampleSchemeName) {
+        CommonSetting.SampleSchemeName = ''
+    }
+    if (!newValue.ActuatorRanges_SetName) {
+        RefinementSetting.ActuatorRanges_SetName = ''
     }
 
 })
 
+watch(() => [globalModel, refinementModel, CommonSetting, RefinementSetting], (newVal) => {
+    // console.log('改变了', newVal)
+    // 这里可以收到改动之后的值, 要把这些值传回去,绑定到content上
+    emit('asyncValue', newVal, props.keyID)
+}, {
+    deep: true // 深度监听的参数
+})
+const globalModelDisabled = computed(() => {
+
+    if (props.readonly) {
+        return true
+    }
+    if (!checkForm.GlobalModel) {
+        // 清空值
+        globalModel.value = ''
+        return true
+    }
+    return false
+})
+const refinementModelDisabled = computed(() => {
+    if (props.readonly) {
+        return true
+    }
+    if (!checkForm.RefinementModel) {
+        // 清空值
+        refinementModel.value = ''
+        return true
+    }
+
+    return false
+})
 </script>
 
 <style scoped lang="less">

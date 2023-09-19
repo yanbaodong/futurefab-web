@@ -110,8 +110,8 @@ export const getModelDetails = (data: Data) => {
                             Decorrection_CPE_ViaSecs: 'false',
                             Decorrection_CPE_ViaSubrecipe: 'false',
                             Decorrection_ProcessCorrections: 'false',
-                            TargetLabel: 'T1',
-                            SampleSchemeName: 'Sample1',
+                            TargetLabel: '',
+                            SampleSchemeName: '',
                         },
                         RefinementSetting: {
                             ModelParameterReduction: '',

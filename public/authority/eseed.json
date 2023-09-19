@@ -1,26 +1,58 @@
-[ 
-	{
-		"router": "/list-page",
-		"name": "list-page",
-		"buttons": [
-			{
-				"btnId": "list-page-Add",
-				"type": "Edit",
-				"zh-CN": "新增",
-				"en-US":"Add"
-			},
-			{
-				"btnId": "list-page-save",
-				"type": "Edit",
-				"zh-CN": "保存",
-				"en-US":"Save"
-			},
-			{
-				"btnId": "list-page-delete",
-				"type": "Delete",
-				"zh-CN": "删除",
-				"en-US":"Delete"
-			}
-		]
-	}
+[
+    // {
+    // 	"router": "/list-page",
+    // 	"name": "list-page",
+    // 	"buttons": [
+    // 		{
+    // 			"btnId": "list-page-Add",
+    // 			"type": "Edit",
+    // 			"zh-CN": "新增",
+    // 			"en-US":"Add"
+    // 		},
+    // 		{
+    // 			"btnId": "list-page-save",
+    // 			"type": "Edit",
+    // 			"zh-CN": "保存",
+    // 			"en-US":"Save"
+    // 		},
+    // 		{
+    // 			"btnId": "list-page-delete",
+    // 			"type": "Delete",
+    // 			"zh-CN": "删除",
+    // 			"en-US":"Delete"
+    // 		}
+    // 	]
+    // },
+    [
+        {
+            "router": "/model-recipe-page",
+            "name": "model-recipe-page",
+            "buttons": [
+                {
+                    "btnId": "modeling-recipe-page-Add",
+                    "type": "Edit",
+                    "zh-CN": "新增",
+                    "en-US": "Add"
+                },
+                {
+                    "btnId": "modeling-recipe-page-view",
+                    "type": "Edit",
+                    "zh-CN": "查看",
+                    "en-US": "View"
+                },
+                {
+                    "btnId": "modeling-recipe-page-modify",
+                    "type": "Edit",
+                    "zh-CN": "修改",
+                    "en-US": "Edit"
+                },
+                {
+                    "btnId": "modeling-recipe-page-delete",
+                    "type": "Delete",
+                    "zh-CN": "删除",
+                    "en-US": "Delete"
+                }
+            ]
+        }
+    ]
 ]

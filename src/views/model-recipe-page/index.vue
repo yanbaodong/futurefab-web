@@ -1,12 +1,12 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-14 14:07:26
+ * @LastEditTime: 2023-09-18 17:20:10
 -->
 <template>
     <div class="model-recipe-page">
         <header class="header-search">
-            <search-group></search-group>
+            <search-group @onSearch="onSearch"></search-group>
         </header>
         <div class="border-line"></div>
         <main class="main-grid">
@@ -26,15 +26,16 @@
                     <!-- 头部 -->
                     <header class="modeling-header">
                         <div class="left-input-box">
-                            <span class="label">Modeling Recipe Name</span>
+                            <span class="label">{{ $t('modelRecipePage.field.modelingRecipe') }}</span>
                             <a-input :disabled="sidebar.readonly" v-model:value="modelingForm.recipeName" placeholder="" />
                         </div>
                         <div class="right-radio-box">
-                            <a-checkbox :disabled="sidebar.readonly" v-model:checked="modelingForm.defaultYn">Is default
-                                modeling recipe</a-checkbox>
+                            <a-checkbox :disabled="sidebar.readonly" v-model:checked="modelingForm.defaultYn">{{
+                                $t('modelRecipePage.field.isDefaultModelingRecipe') }}</a-checkbox>
                         </div>
                         <div class="save-btn">
-                            <ff-basic-button-tip v-if="!sidebar.readonly" text="Save" type="button" @onClick="saveData" />
+                            <ff-basic-button-tip v-if="!sidebar.readonly" :text="$t('common.btn.save')" type="button"
+                                @onClick="saveData" />
                         </div>
                     </header>
                     <p class="border-line"></p>
@@ -56,7 +57,9 @@
                                     <!-- model setting -->
                                     <!-- {{ pane.content }} -->
                                     <div class="global-setting-box" v-show="pane.key !== '0'">
-                                        <model-setting :settingValue="pane.content"
+                                        <model-setting :settingValue="pane.content" @asyncValue="asyncValue"
+                                            :keyID="pane.key"
+                                            v-model:overruleMetrologyValidityDisabled="overruleMetrologyValidityDisabled"
                                             :readonly="sidebar.readonly"></model-setting>
                                     </div>
                                 </a-tab-pane>
@@ -87,6 +90,7 @@ const {
     panes,
     activeKey,
     overruleMetrologyValidityDisabled,
+    asyncValue,
     changeTab,
     onEdit,
     saveData,
@@ -133,10 +137,10 @@ onMounted(async () => {
         responents,
         columns: gridOptions.columns as Array<VxeTableDefines.ColumnInfo>,
     });
-    getModelRecipe();
+    // getModelRecipe();
 });
 
-const getModelRecipe = () => {
+const getModelRecipe = (params: any) => {
     data.loading = true;
     controller = new AbortController();
     const param = {
@@ -196,6 +200,11 @@ const handleSave = () => {
         },
     });
 };
+const onSearch = (params: object) => {
+
+    getModelRecipe(params)
+
+}
 // const handleDelete = async () => {
 //     const $table: any = xGrid.value;
 //     const radioRecords = $table.getradioRecords();
@@ -276,10 +285,10 @@ const events = {
                 break;
             case 'delete':
                 if (checkboxRecords && checkboxRecords.length === 0) {
-                    showWarning('common.tip.selectData');
+                    showWarning('请选择至少一条数据进行删除');
                     return;
                 }
-                handleDelete();
+                handleDelete(checkboxRecords);
                 break;
             case 'refresh':
                 getModelRecipe();
