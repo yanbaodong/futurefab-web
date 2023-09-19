@@ -84,7 +84,7 @@ const reset = () => {
 };
 </script>
 
-<style scoped lang="less">
+<style  lang="less">
 @import url('@/assets/style/variable.less');
 
 .search-group-container {
@@ -114,6 +114,14 @@ const reset = () => {
 
             .search-left {
                 margin-right: 10px;
+
+
+            }
+
+            .btn-button {
+                border-color: @btn-default-br-color ;
+                background: @btn-default-bg-color;
+                color: @btn-default-ft-color;
             }
         }
     }

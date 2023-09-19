@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-18 17:20:10
+ * @LastEditTime: 2023-09-19 17:25:12
 -->
 <template>
     <div class="model-recipe-page">
@@ -78,7 +78,7 @@ import GlobalSetting from './components/GlobalSetting.vue';
 import ModelSetting from './components/ModelSetting.vue';
 import { onBeforeMount, onMounted, reactive, ref } from 'vue';
 import { getGridOption } from './config';
-import { deleteCustomEvent, getModelRecipeList, getTableConfig, saveCustomEvent } from '@/api/seed';
+import { getModelRecipeList, getTableConfig } from '@/api/seed';
 
 import { t, VxeGridDefines, VXETable, VxeTableDefines } from '@futurefab/vxe-table';
 
@@ -137,7 +137,7 @@ onMounted(async () => {
         responents,
         columns: gridOptions.columns as Array<VxeTableDefines.ColumnInfo>,
     });
-    // getModelRecipe();
+    getModelRecipe({});
 });
 
 const getModelRecipe = (params: any) => {
@@ -161,89 +161,12 @@ const getModelRecipe = (params: any) => {
         }
     });
 };
-const hanldeAdd = async () => {
-    // console.log('hanldeAdd', searchParam);
-    // if (!searchParam.locationRawId) {
-    //     showWarning('common.tip.searchFirst');
-    //     return;
-    // }
-    // const $table = xGrid.value;
-    // const { row: newRow } = await $table.insert({ defaultYn: false, isAdd: true });
-    // $table.setActiveRow(newRow);
-};
-const handleSave = () => {
-    const $table = xGrid.value;
-    const insertRecords = $table.getInsertRecords();
-    const { updateRecords } = $table.getRecordset();
-    const saveData = [...insertRecords, ...updateRecords];
-    VXETable.tableFun.useValid({
-        data: saveData,
-        xGird: xGrid,
-        callback: () => {
-            const params = {
-                bodyParams: {
-                    createList: insertRecords,
-                    updateList: updateRecords,
-                    eqpRawIds: '',
-                },
-            };
 
-            if (insertRecords.length === 0 && updateRecords.length === 0) {
-                showWarning('common.tip.selectData');
-                return;
-            }
-            saveCustomEvent(params).then((res: any) => {
-                if (res.status == 'SUCCESS') {
-                    successInfo('common.tip.saveSuccess');
-                }
-            });
-        },
-    });
-};
+
 const onSearch = (params: object) => {
-
     getModelRecipe(params)
 
 }
-// const handleDelete = async () => {
-//     const $table: any = xGrid.value;
-//     const radioRecords = $table.getradioRecords();
-//     if (radioRecords && radioRecords.length === 0) {
-//         showWarning('common.tip.selectData');
-//         return;
-//     }
-//     const type = await VXETable.modal.confirm(t('common.tip.deleteTip'));
-//     console.log('type', type);
-//     if (type == 'cancel') {
-//         return;
-//     }
-
-//     const deleteRecords = radioRecords.filter((ff: any) => !ff.isAdd);
-//     if (deleteRecords && deleteRecords.length === 0) {
-//         radioRecords.forEach((ff: any) => {
-//             $table.remove(ff);
-//         });
-//         VXETable.modal.message({
-//             content: t('common.tip.delSuccess'),
-//             status: 'success',
-//         });
-//         return;
-//     }
-//     const param = {
-//         bodyParams: deleteRecords,
-//     };
-//     deleteCustomEvent(param).then((res: any) => {
-//         if (res.status == 'SUCCESS') {
-//             VXETable.modal.message({
-//                 content: t('common.tip.delSuccess'),
-//                 status: 'success',
-//             });
-//             radioRecords.forEach((ff: any) => {
-//                 $table.remove(ff);
-//             });
-//         }
-//     });
-// }
 const loadingCancel = () => {
     console.log('loadingcancel');
     data.loading = false;
@@ -258,7 +181,6 @@ const events = {
     // 2. View：选中唯一一行数据，以只读方式打开Modeling Recipe配置页面
     // 3. Modify：选中唯一一行数据，以修改方式打开Modeling Recipe配置页面
     // 4. Delete：至少选中一行数据，删除选中的Modeling Recipe。如果选中了Default为Y的Modeling recipe，则弹窗警告，不能删除。删除Modeling Recipe时，需要检查是否被引用，不能删除正在被引用的recipe，需弹窗警告。
-
     toolbarToolClick: ({ code }: VxeGridDefines.ToolbarToolClickEventParams) => {
         // 获取当前选中的唯一一列数据
         const checkboxRecords = xGrid.value && xGrid.value.getCheckboxRecords();
@@ -291,7 +213,7 @@ const events = {
                 handleDelete(checkboxRecords);
                 break;
             case 'refresh':
-                getModelRecipe();
+                getModelRecipe({});
                 break;
         }
     },
