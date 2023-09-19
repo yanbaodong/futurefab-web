@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-19 09:30:56
+ * @LastEditTime: 2023-09-19 17:19:58
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -23,7 +23,7 @@ export default function useModelingRecipe() {
         //     { name: 'cancel', code: 'cancel' },
         // ],
     });
-    const modelingForm = reactive({
+    let modelingForm = reactive({
         recipeName: '',
         defaultYn: false,
         // 默认值
@@ -91,6 +91,45 @@ export default function useModelingRecipe() {
     // 新增方法
     const handleAdd = () => {
         console.log('handleAdd');
+        // 初始化数据
+        // 清空panes
+        panes.value = [];
+        panes.value.push({
+            title: t('modelRecipePage.field.globalSetting'),
+            key: '0',
+            content: {},
+            closable: false,
+        });
+        // 初始化actives
+        activeKey.value = panes.value[0].key;
+        newTabIndex.value = 1;
+        modelingForm.recipeName = '';
+        modelingForm.defaultYn = false;
+        modelingForm.GlobalSetting.EvaluationRegion = '';
+        modelingForm.GlobalSetting.HealthFilter_XYPairingRange = '1';
+        modelingForm.GlobalSetting.HealthFilter_UsedOverlayComponent = 'X and Y';
+        modelingForm.GlobalSetting.HealthFilter_InvalidateXYAsPair = 'true';
+        modelingForm.GlobalSetting.OverruleMetrologyValidityChecked = false;
+        modelingForm.GlobalSetting.ValidDataFraction_MinPercentage = '';
+        // modelingForm = {
+        //     recipeName: '',
+        //     defaultYn: false,
+        //     // 默认值
+        //     GlobalSetting: {
+        //         EvaluationRegion: '',
+        //         HealthFilter_XYPairingRange: '1',
+        //         HealthFilter_UsedOverlayComponent: 'X and Y',
+        //         HealthFilter_InvalidateXYAsPair: 'true',
+        //         OverruleMetrologyValidityChecked: false,
+        //         ValidDataFraction_MinPercentage: '',
+        //     },
+        //     ModelList: [
+        //         // 默认值
+        //         {
+        //             ...basicForm,
+        //         },
+        //     ],
+        // };
         // 新增逻辑
         sidebar.readonly = false;
         sidebar.title = t('modelRecipePage.field.add');
@@ -104,7 +143,6 @@ export default function useModelingRecipe() {
             content: {
                 ...basicForm,
             },
-            // closable: false,
         };
         panes.value.push(paneItem);
     };
@@ -350,10 +388,10 @@ export default function useModelingRecipe() {
         // 如果关闭开关，则清空EvaluationRegion和MinPercentage的值
         if (modelingForm.defaultYn) {
             // console.log('开启了');
-            overruleMetrologyValidityDisabled.value = false;
+            overruleMetrologyValidityDisabled.value = true;
         } else {
             // console.log('关闭了');
-            overruleMetrologyValidityDisabled.value = true;
+            overruleMetrologyValidityDisabled.value = false;
         }
     });
     return {

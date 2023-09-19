@@ -32,7 +32,7 @@ export const getModelRecipeList = (data: Data) => {
                     },
                     {
                         recipeName: 'AAC_RCP',
-                        defaultYn: 'Y',
+                        defaultYn: 'N',
                         createBy: 'bill',
                         createDtts: '2023-09-06 10:00:00',
                         lastUpdateBy: 'Tom',
