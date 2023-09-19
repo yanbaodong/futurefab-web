@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 16:37:38
- * @LastEditTime: 2023-09-18 13:38:00
+ * @LastEditTime: 2023-09-19 14:06:08
  */
 export const OverlayComponentList = [
     {
@@ -20,31 +20,31 @@ export const OverlayComponentList = [
 export const InvalidateXYAsPairList = [
     {
         value: 'true',
-        label: 'true',
+        label: 'True',
     },
     {
         value: 'false',
-        label: 'false',
+        label: 'False',
     },
 ];
 export const DecorrectionCPEViaSubrecipeList = [
     {
         value: 'true',
-        label: 'true',
+        label: 'True',
     },
     {
         value: 'false',
-        label: 'false',
+        label: 'False',
     },
 ];
 export const DecorrectionProcessCorrections = [
     {
         value: 'true',
-        label: 'true',
+        label: 'True',
     },
     {
         value: 'false',
-        label: 'false',
+        label: 'False',
     },
 ];
 export const defaultYnMap: any = {
@@ -162,14 +162,14 @@ export const basicForm = {
         Decorrection_CPE_ViaSecs: 'false',
         Decorrection_CPE_ViaSubrecipe: 'false',
         Decorrection_ProcessCorrections: 'false',
-        TargetLabel: 'T1',
-        SampleSchemeName: 'Sample1',
+        TargetLabel: '',
+        SampleSchemeName: '',
     },
     RefinementSetting: {
         ModelParameterReduction: 'true',
         MUBPR: 'true',
         MUBPR_X_Max: '2',
         MUBPR_Y_Max: '2',
-        ActuatorRanges_SetName: 'OVO2_enlarge',
+        ActuatorRanges_SetName: '',
     },
 };
