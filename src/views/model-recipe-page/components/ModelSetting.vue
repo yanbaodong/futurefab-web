@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:20:14
- * @LastEditTime: 2023-09-18 13:53:34
+ * @LastEditTime: 2023-09-19 09:29:24
 -->
 <template>
     <div class="model-setting-container">
@@ -127,7 +127,8 @@
                             $t('modelRecipePage.field.targetLabel') }}</a-checkbox>
                     </p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.TargetLabel" placeholder="" />
+                    <a-input :disabled="readonly || !checkForm.TargetLabel" v-model:value="CommonSetting.TargetLabel"
+                        placeholder="" />
                 </div>
                 <!-- SampleSchemeName -->
                 <div class="check-select-box">
@@ -136,7 +137,8 @@
                             $t('modelRecipePage.field.sampleSchemeName') }}</a-checkbox>
                     </p>
 
-                    <a-input :disabled="readonly" v-model:value="CommonSetting.SampleSchemeName" placeholder="" />
+                    <a-input :disabled="readonly || !checkForm.SampleSchemeName"
+                        v-model:value="CommonSetting.SampleSchemeName" placeholder="" />
                 </div>
             </div>
         </section>

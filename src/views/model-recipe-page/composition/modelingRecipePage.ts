@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 13:32:32
- * @LastEditTime: 2023-09-18 17:03:40
+ * @LastEditTime: 2023-09-19 09:30:56
  */
 
 import { ref, reactive, watchEffect } from 'vue';
@@ -208,47 +208,48 @@ export default function useModelingRecipe() {
                     checkRes = false;
                 }
                 const { CommonSetting } = item.content;
-                if (!CommonSetting.HealthFilter_Max) {
-                    showWarning('Model 配置中HealthFilter-Max不能为空!');
-                }
-                if (!CommonSetting.HealthFilter_NSigma) {
-                    showWarning('Model 配置中HealthFilter-NSigma不能为空!');
-                }
-                if (!CommonSetting.HealthFilter_X_Max) {
-                    showWarning('Model 配置中HealthFilter-X-Max不能为空!');
-                }
-                if (!CommonSetting.HealthFilter_X_NSigma) {
-                    showWarning('Model 配置中HealthFilter-X-NSigma不能为空!');
-                }
-                if (!CommonSetting.HealthFilter_Y_Max) {
-                    showWarning('Model 配置中HealthFilter-Y-Max 不能为空!');
-                }
-                if (!CommonSetting.HealthFilter_Y_NSigma) {
-                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
-                }
-                if (!CommonSetting.HealthFilter_EdgeClearance) {
-                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
-                }
-                if (!CommonSetting.ResidualOutlierRemoval_NSigma) {
-                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
-                }
-                if (!CommonSetting.Granularity) {
-                }
-                showWarning('Model 配置中HealthFilter-Max 不能为空!');
-                if (!CommonSetting.Decorrection_CPE_ViaSecs) {
-                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
-                }
-                if (!CommonSetting.Decorrection_CPE_ViaSubrecipe) {
-                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
-                }
-                if (!CommonSetting.Decorrection_ProcessCorrections) {
-                    showWarning('Model 配置中HealthFilter-Max 不能为空!');
-                }
+                // if (!CommonSetting.HealthFilter_Max) {
+                //     showWarning('Model 配置中HealthFilter-Max不能为空!');
+                // }
+                // if (!CommonSetting.HealthFilter_NSigma) {
+                //     showWarning('Model 配置中HealthFilter-NSigma不能为空!');
+                // }
+                // if (!CommonSetting.HealthFilter_X_Max) {
+                //     showWarning('Model 配置中HealthFilter-X-Max不能为空!');
+                // }
+                // if (!CommonSetting.HealthFilter_X_NSigma) {
+                //     showWarning('Model 配置中HealthFilter-X-NSigma不能为空!');
+                // }
+                // if (!CommonSetting.HealthFilter_Y_Max) {
+                //     showWarning('Model 配置中HealthFilter-Y-Max 不能为空!');
+                // }
+                // if (!CommonSetting.HealthFilter_Y_NSigma) {
+                //     showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                // }
+                // if (!CommonSetting.HealthFilter_EdgeClearance) {
+                //     showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                // }
+                // if (!CommonSetting.ResidualOutlierRemoval_NSigma) {
+                //     showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                // }
+                // if (!CommonSetting.Granularity) {
+                // }
+                // showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                // if (!CommonSetting.Decorrection_CPE_ViaSecs) {
+                //     showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                // }
+                // if (!CommonSetting.Decorrection_CPE_ViaSubrecipe) {
+                //     showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                // }
+                // if (!CommonSetting.Decorrection_ProcessCorrections) {
+                //     showWarning('Model 配置中HealthFilter-Max 不能为空!');
+                // }
             }
             return checkRes;
         });
 
         if (!checkResult) return false;
+        successInfo('保存成功');
     };
     // model 区域
     const panes = ref<{ title: string; key: string; content: any; closable?: boolean }[]>([
