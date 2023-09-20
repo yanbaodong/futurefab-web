@@ -25,7 +25,17 @@ const routes: Array<RouteRecordRaw> = [
         path: '/model-recipe-page',
         name: 'model-recipe-page',
         component: () =>
-            import(/* webpackChunkName: "seed-list-page" */ '../views/model-recipe-page/index.vue'),
+            import(
+                /* webpackChunkName: "seed-model-recipe-page" */ '../views/model-recipe-page/index.vue'
+            ),
+    },
+    {
+        path: '/generate-cpe-page',
+        name: 'generate-cpe-page',
+        component: () =>
+            import(
+                /* webpackChunkName: "seed-generate-cpe-page" */ '../views/generate-cpe-page/index.vue'
+            ),
     },
     {
         path: '/404',
