@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-20 18:42:51
- * @LastEditTime: 2023-09-20 18:59:54
+ * @LastEditTime: 2023-09-20 19:06:17
  */
 import { VXETable } from '@futurefab/vxe-table';
 
@@ -14,29 +14,22 @@ export const getGridOption = () => {
             tools: [
                 ...VXETable.tableFun.getToolsButton([
                     {
-                        id: 'modeling-recipe-page-Add',
-                        name: 'common.btn.add',
-
-                        icon: 'icon-ic_btn_Add',
+                        id: ' measure-recipe-page-cpe',
+                        name: 'Generate CPE',
+                        icon: '',
+                        type: 'button',
                     },
                     {
-                        id: 'modeling-recipe-page-view',
-                        name: 'common.btn.view',
-
-                        icon: 'icon-ic_btn_View',
-                        visible: true,
+                        id: 'measure-recipe-page-1st',
+                        name: 'Generate 1st Lot Correction',
+                        type: 'button',
+                        icon: '',
                     },
                     {
-                        id: 'modeling-recipe-page-modify',
-                        name: 'common.btn.modify',
-                        icon: 'icon-ic_btn_Modify',
-                        visible: true,
-                    },
-                    {
-                        id: 'modeling-recipe-page-delete',
-                        name: 'common.btn.delete',
-                        icon: 'icon-ic_btn_Delete',
-                        visible: true,
+                        id: 'measure-recipe-page-wlc',
+                        name: 'Generate WLC subrecipe',
+                        type: 'button',
+                        icon: '',
                     },
                 ]),
             ],
