@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-19 17:25:12
+ * @LastEditTime: 2023-09-20 14:13:32
 -->
 <template>
     <div class="model-recipe-page">
@@ -288,6 +288,12 @@ const events = {
 
                         .save-btn {
                             width: 100px;
+
+                            /deep/.btn-button {
+                                border-color: @btn-default-br-color ;
+                                background: @btn-default-bg-color;
+                                color: @btn-default-ft-color;
+                            }
                         }
                     }
 
@@ -298,6 +304,35 @@ const events = {
 
                     .model-setting {
                         margin-top: 20px;
+
+                        /deep/.tab-box {
+                            .ant-tabs {
+                                .ant-tabs-nav {
+                                    .ant-tabs-nav-wrap {
+                                        .ant-tabs-nav-list {
+                                            .ant-tabs-tab {
+                                                border-color: @br-default-color ;
+                                                background: @bg-color;
+                                                color: @input-font-color;
+
+                                                &.ant-tabs-tab-active {
+                                                    color: @tab-active-font-color;
+                                                    background: @tab-active-bg-color;
+                                                }
+                                            }
+
+                                            .ant-tabs-nav-add {
+                                                border-color: @br-default-color ;
+                                                background: @bg-color;
+                                                color: @input-font-color;
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
                     }
                 }
             }
