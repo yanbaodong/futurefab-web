@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-11 15:56:47
- * @LastEditTime: 2023-09-20 14:13:32
+ * @LastEditTime: 2023-09-20 17:23:09
 -->
 <template>
     <div class="model-recipe-page">
@@ -103,7 +103,6 @@ import {
     getPermissionButton,
     setHeaderSelectFilter,
     showWarning,
-    successInfo,
 } from '@futurefab/components/dist/utils';
 
 const gridOptions = getGridOption();

@@ -1,41 +1,47 @@
+
 <template>
-    <div class="search-group-container">
-        <div class="search-item">
-            <p class="search-label">{{ $t("modelRecipePage.field.modelingRecipe") }}</p>
-            <a-select :max-tag-count="maxTagCount" v-model:value="recipeName" mode="multiple" style="width: 100%"
-                :placeholder="$t('common.tip.selectTip')" :options="modelingList"></a-select>
-        </div>
-
-        <div class="search-item">
-            <p class="search-label">{{ $t("modelRecipePage.field.createBy") }}</p>
-            <a-select :max-tag-count="maxTagCount" v-model:value="createBy" mode="multiple" style="width: 100%"
-                :placeholder="$t('common.tip.selectTip')" :options="createByList"></a-select>
-        </div>
-        <div class=" search-item time-select">
-            <!-- <p class="search-label">
-                Create Time
-            </p> -->
-            <ff-basic-custom-time ref="refTime" :showShiftMonth="false" @time-pop="timePop"
-                :timeArea="searchParams.timeAreaBind"></ff-basic-custom-time>
-        </div>
-        <div class="search-item search-box">
-            <div class="search-left">
-                <ff-basic-button-tip :disabled="searchDisabled" :text="$t('common.btn.search')" type="button"
-                    @onClick="search" />
+    <div>
+        <header class="header-wrap">
+            <div class="search-item">
+                <p class="search-label">Technology</p>
+                <a-select :max-tag-count="maxTagCount" v-model:value="recipeName" mode="multiple" style="width: 100%"
+                    :placeholder="$t('common.tip.selectTip')" :options="modelingList"></a-select>
             </div>
 
-            <div class="reset">
-                <ff-basic-button-tip :disabled="resetDisabled" :text="$t('common.btn.reset')" type="button"
-                    @onClick="reset" />
+            <div class="search-item">
+                <p class="search-label">Product ID</p>
+                <a-select :max-tag-count="maxTagCount" v-model:value="createBy" mode="multiple" style="width: 100%"
+                    :placeholder="$t('common.tip.selectTip')" :options="createByList"></a-select>
             </div>
-        </div>
+            <div class="search-item">
+                <p class="search-label">Layer</p>
+                <a-select :max-tag-count="maxTagCount" v-model:value="createBy" mode="multiple" style="width: 100%"
+                    :placeholder="$t('common.tip.selectTip')" :options="createByList"></a-select>
+            </div>
+            <div class=" search-item time-select">
+
+                <ff-basic-custom-time ref="refTime" :showShiftMonth="false" @time-pop="timePop"
+                    :timeArea="searchParams.timeAreaBind"></ff-basic-custom-time>
+            </div>
+            <div class="search-item search-box">
+                <div class="search-left">
+                    <ff-basic-button-tip :disabled="searchDisabled" :text="$t('common.btn.search')" type="button"
+                        @onClick="search" />
+                </div>
+
+                <div class="reset">
+                    <ff-basic-button-tip :disabled="resetDisabled" :text="$t('common.btn.reset')" type="button"
+                        @onClick="reset" />
+                </div>
+            </div>
+        </header>
     </div>
 </template>
 
-<script lang="ts" setup>
+<script lang='ts' setup>
 import dayjs from 'dayjs';
 // mock 数据
-import { modelingList, createByList } from "../config/globalSetting";
+import { modelingList, createByList } from "../config/measure";
 import { reactive, onMounted, ref, nextTick } from 'vue';
 
 let searchParams = reactive({
@@ -83,12 +89,13 @@ const reset = () => {
         searchParams.timeAreaBind = [dayjs().subtract(7, 'hour'), dayjs()];
     }, 100);
 };
+
 </script>
 
-<style  lang="less">
+<style scoped lang="less">
 @import url('@/assets/style/variable.less');
 
-.search-group-container {
+.header-wrap {
     display: flex;
     align-items: center;
 
