@@ -21,7 +21,16 @@ import '@futurefab/components/dist/table';
 import '@/assets/iconfont/futurefab-svg/iconfont.js';
 import '@/assets/iconfont/futurefab/iconfont.js';
 import '@/assets/iconfont/futurefab/iconfont.css';
-import { Select, Radio, Dropdown, Input, Checkbox, Tabs, Switch } from 'ant-design-vue';
+import {
+    Select,
+    Radio,
+    Dropdown,
+    Input,
+    Checkbox,
+    Tabs,
+    Switch,
+    InputNumber,
+} from 'ant-design-vue';
 VMdPreview.use(githubTheme);
 
 VXETable.setup({
@@ -52,6 +61,7 @@ const render = () => {
     app.use(Checkbox);
     app.use(Tabs);
     app.use(Switch);
+    app.use(InputNumber);
     app.config.globalProperties.$XHttp = VXETable.requestFun.http('portal');
     app.mount('#app');
 };

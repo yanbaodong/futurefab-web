@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 16:37:38
- * @LastEditTime: 2023-09-19 14:06:08
+ * @LastEditTime: 2023-09-20 13:39:49
  */
 export const OverlayComponentList = [
     {
@@ -173,3 +173,5 @@ export const basicForm = {
         ActuatorRanges_SetName: '',
     },
 };
+// 控制数字输入框的精度,默认为 2,在这里可以设置
+export const precision: number = 2;

@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-12 16:19:22
- * @LastEditTime: 2023-09-18 14:06:24
+ * @LastEditTime: 2023-09-20 13:40:43
 -->
 <template>
     <div class="global-setting-container">
@@ -12,7 +12,7 @@
                     <div class="input-box">
                         <span class="label">{{ $t('modelRecipePage.field.xYPairingRange') }}(mm)</span>
                         <!-- 数字,可以小数 -->
-                        <a-input class="no-number" type="number" :disabled="readonly"
+                        <a-input-number :precision="precision" :controls="false"
                             v-model:value="settingValue.HealthFilter_XYPairingRange" placeholder="" />
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                     <div class="input-box">
                         <span class="label">{{ $t('modelRecipePage.field.evaluationRegion') }}(mm)</span>
                         <!-- 数字,可以小数 -->
-                        <a-input class="no-number" type="number" :disabled="disabled"
+                        <a-input-number :precision="precision" :controls="false" class="no-number" :disabled="disabled"
                             v-model:value="settingValue.EvaluationRegion" placeholder="" />
                     </div>
                     <div class="input-box">
@@ -52,7 +52,7 @@
                         <!-- readonly = true  时 都不可填  -->
                         <!--readonly = true  时 overruleMetrologyValidityDisabled 等于true 可以填  -->
                         <!--readonly = true  时 overruleMetrologyValidityDisabled false  不可以填  -->
-                        <a-input class="no-number" type="number" :disabled="disabled"
+                        <a-input-number :precision="precision" :controls="false" class="no-number" :disabled="disabled"
                             v-model:value="settingValue.ValidDataFraction_MinPercentage" placeholder="" />
                     </div>
                 </div>
@@ -63,7 +63,7 @@
 
 <script lang="ts" setup>
 import { reactive, ref, watchEffect, computed } from 'vue';
-import { OverlayComponentList, InvalidateXYAsPairList } from '../config/globalSetting';
+import { OverlayComponentList, InvalidateXYAsPairList, precision } from '../config/globalSetting';
 // const settingValue = reactive({
 //     "HealthFilter_XYPairingRange": "1",
 //     "HealthFilter_UsedOverlayComponent": "X and Y",
@@ -72,6 +72,7 @@ import { OverlayComponentList, InvalidateXYAsPairList } from '../config/globalSe
 //     "ValidDataFraction_MinPercentage": "60",
 //     OverruleMetrologyValidityChecked: false,
 // })
+
 const props = defineProps({
     settingValue: {
         type: Object,
