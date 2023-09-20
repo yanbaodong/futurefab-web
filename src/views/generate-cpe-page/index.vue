@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-20 15:18:36
- * @LastEditTime: 2023-09-20 17:22:56
+ * @LastEditTime: 2023-09-20 18:45:39
 -->
 <template>
     <div class="generate-cpe-page">
@@ -27,13 +27,14 @@
 <script lang='ts' setup>
 import SearchGroup from './components/SearchGroup.vue';
 import { t, VxeGridDefines, VXETable, VxeTableDefines } from '@futurefab/vxe-table';
-
+import { getGridOption } from './config';
 import { reactive, ref } from "vue";
 import {
     getPermissionButton,
     setHeaderSelectFilter,
     showWarning,
 } from '@futurefab/components/dist/utils';
+const gridOptions = getGridOption();
 const data = reactive({
     egHistoryList: [] as Array<any>,
     checkboxRecords: [] as Array<any>,
