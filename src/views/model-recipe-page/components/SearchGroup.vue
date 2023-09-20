@@ -2,14 +2,14 @@
     <div class="search-group-container">
         <div class="serach-item">
             <p class="search-label">{{ $t("modelRecipePage.field.modelingRecipe") }}</p>
-            <a-select v-model:value="recipeName" mode="multiple" style="width: 100%"
+            <a-select :max-tag-count="maxTagCount" v-model:value="recipeName" mode="multiple" style="width: 100%"
                 :placeholder="$t('common.tip.selectTip')" :options="modelingList"></a-select>
         </div>
 
         <div class="serach-item">
             <p class="search-label">{{ $t("modelRecipePage.field.createBy") }}</p>
-            <a-select v-model:value="createBy" mode="multiple" style="width: 100%" :placeholder="$t('common.tip.selectTip')"
-                :options="createByList"></a-select>
+            <a-select :max-tag-count="maxTagCount" v-model:value="createBy" mode="multiple" style="width: 100%"
+                :placeholder="$t('common.tip.selectTip')" :options="createByList"></a-select>
         </div>
         <div class=" serach-item time-select">
             <!-- <p class="search-label">
@@ -46,6 +46,7 @@ let searchParams = reactive({
 
 const recipeName = ref([]);
 const createBy = ref([]);
+const maxTagCount = ref(1);//超出多少个只显示数字
 const searchDisabled = ref(false);
 const resetDisabled = ref(false);
 const emit = defineEmits(["onSearch"]);
