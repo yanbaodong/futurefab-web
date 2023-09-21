@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-20 15:18:36
- * @LastEditTime: 2023-09-21 10:41:51
+ * @LastEditTime: 2023-09-21 11:14:47
 -->
 <template>
     <div class="generate-cpe-page">
@@ -20,6 +20,20 @@
                     :edit-rules="data.tableRules">
                 </vxe-grid>
             </div>
+            <!-- 新增和编辑面板 -->
+
+            <ff-basic-sidebar v-if="sidebar.show" :title="sidebar.title" :hasZoom="true" @clickbutton="handleClick">
+                <template #sidebar_content>
+                    <header class="measure-header-wrap"></header>
+                    <section class="lis-recipe-setting-wrap"></section>
+                    <section class="step-1-wrap"></section>
+                    <section class="step-2-wrap"></section>
+                    <section class="step-3-wrap"></section>
+                    <footer class="input-wrap"></footer>
+
+                </template>
+            </ff-basic-sidebar>
+
         </main>
     </div>
 </template>
@@ -36,7 +50,10 @@ import {
     showWarning,
 } from '@futurefab/components/dist/utils';
 import useMeasureRecipe from './composition/measureRecipePage';
-const { handelGenerateCpe,
+const {
+    sidebar,
+    handleClick,
+    handelGenerateCpe,
     handelGenerate1stLotCorrection,
     handelGenerate1stWlcSubrecipe } = useMeasureRecipe()
 const gridOptions = getGridOption();
