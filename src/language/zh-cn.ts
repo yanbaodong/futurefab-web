@@ -101,6 +101,7 @@ const cn: any = {
             generateCpe: 'Generate CPE',
             generate1stLotCorrection: 'Generate 1st Lot Correction',
             generateWlcSubrecipe: 'Generate WLC subrecipe',
+            mapping: 'Mapping',
         },
     },
 

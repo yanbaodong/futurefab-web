@@ -30,6 +30,7 @@ import {
     Tabs,
     Switch,
     InputNumber,
+    Popover,
 } from 'ant-design-vue';
 VMdPreview.use(githubTheme);
 
@@ -62,6 +63,7 @@ const render = () => {
     app.use(Tabs);
     app.use(Switch);
     app.use(InputNumber);
+    app.use(Popover);
     app.config.globalProperties.$XHttp = VXETable.requestFun.http('portal');
     app.mount('#app');
 };

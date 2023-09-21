@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-20 15:18:36
- * @LastEditTime: 2023-09-21 14:58:35
+ * @LastEditTime: 2023-09-21 16:47:08
 -->
 <template>
     <div class="generate-cpe-page">
@@ -49,10 +49,18 @@
                     <section class="lis-recipe-setting-wrap">
                         <lis-recipe-setting :form="lisRecipeSettingForm"></lis-recipe-setting>
                     </section>
-                    <section class="step-1-wrap"></section>
-                    <section class="step-2-wrap"></section>
-                    <section class="step-3-wrap"></section>
-                    <footer class="input-wrap"></footer>
+                    <section class="step-1-wrap">
+                        <find-mapping-process-info></find-mapping-process-info>
+                    </section>
+                    <section class="step-2-wrap">
+                        <generate-fingerprint></generate-fingerprint>
+                    </section>
+                    <section class="step-3-wrap">
+                        <generate-sub-recipe></generate-sub-recipe>
+                    </section>
+                    <footer class="input-wrap">
+
+                    </footer>
                 </template>
             </ff-basic-sidebar>
 
@@ -63,6 +71,9 @@
 <script lang='ts' setup>
 import SearchGroup from './components/SearchGroup.vue';
 import LisRecipeSetting from './components/LisRecipeSetting.vue';
+import generateSubRecipe from './components/generateSubRecipe.vue';
+import generateFingerprint from './components/generateFingerprint.vue';
+import findMappingProcessInfo from './components/findMappingProcessInfo.vue';
 import { t, VxeGridDefines, VXETable, VxeTableDefines } from '@futurefab/vxe-table';
 import { getGridOption } from './config';
 import { reactive, ref } from "vue";
@@ -167,7 +178,7 @@ const events = {
 </script>
 
 <style scoped lang="less">
-@import url('../../assets/style/variable.less');
+@import url('@/assets/style/variable.less');
 
 .generate-cpe-page {
     position: relative;
@@ -235,10 +246,17 @@ const events = {
                                 }
                             }
                         }
+
+                        .step-1-wrap {}
+
+                        .step-2-wrap {}
+
+                        .step-3-wrap {}
                     }
                 }
             }
         }
     }
+
 }
 </style>
