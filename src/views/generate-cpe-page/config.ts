@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-20 18:42:51
- * @LastEditTime: 2023-09-21 09:57:19
+ * @LastEditTime: 2023-09-21 10:41:30
  */
 import { VXETable } from '@futurefab/vxe-table';
 
@@ -15,19 +15,19 @@ export const getGridOption = () => {
                 ...VXETable.tableFun.getToolsButton([
                     {
                         id: 'measure-recipe-page-cpe',
-                        name: 'generateCpePage.btn.cpe',
+                        name: 'generateCpePage.btn.generateCpe',
                         // icon: '',
                         type: 'button',
                     },
                     {
                         id: 'measure-recipe-page-1st',
-                        name: 'generateCpePage.btn.correction',
+                        name: 'generateCpePage.btn.generate1stLotCorrection',
                         type: 'button',
                         // icon: '',
                     },
                     {
                         id: 'measure-recipe-page-wlc',
-                        name: 'generateCpePage.btn.subrecipe',
+                        name: 'generateCpePage.btn.generateWlcSubrecipe',
                         type: 'button',
                         // icon: '',
                     },

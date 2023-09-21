@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-20 15:18:36
- * @LastEditTime: 2023-09-21 09:59:09
+ * @LastEditTime: 2023-09-21 10:41:51
 -->
 <template>
     <div class="generate-cpe-page">
@@ -35,6 +35,10 @@ import {
     setHeaderSelectFilter,
     showWarning,
 } from '@futurefab/components/dist/utils';
+import useMeasureRecipe from './composition/measureRecipePage';
+const { handelGenerateCpe,
+    handelGenerate1stLotCorrection,
+    handelGenerate1stWlcSubrecipe } = useMeasureRecipe()
 const gridOptions = getGridOption();
 const data = reactive({
     egHistoryList: [] as Array<any>,
@@ -83,18 +87,30 @@ const events = {
     toolbarToolClick: ({ code }: VxeGridDefines.ToolbarToolClickEventParams) => {
         // 获取当前选中的唯一一列数据
         const checkboxRecords = xGrid.value && xGrid.value.getCheckboxRecords();
-        console.log(code);
-
-        debugger;
         switch (code) {
-            case 'cpe':
+            case 'generateCpe':
                 //   Generate CPE
+                if (checkboxRecords && checkboxRecords.length === 0) {
+                    showWarning('请选择一行或多行数据进行操作');
+                    return;
+                }
+                handelGenerateCpe()
                 break;
-            case 'correction':
+            case 'generate1stLotCorrection':
                 //   Generate 1st Lot Correction
+                if (checkboxRecords && checkboxRecords.length === 0) {
+                    showWarning('请选择一行或多行数据进行操作');
+                    return;
+                }
+                handelGenerate1stLotCorrection()
                 break;
-            case 'subrecipe':
+            case 'generateWlcSubrecipe':
+                if (checkboxRecords && checkboxRecords.length === 0) {
+                    showWarning('请选择一行或多行数据进行操作');
+                    return;
+                }
                 //   Generate WLC subrecipe
+                handelGenerate1stWlcSubrecipe()
                 break;
             case 'refresh':
                 getMeasureRecipe({});

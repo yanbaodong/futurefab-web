@@ -98,9 +98,9 @@ const cn: any = {
     },
     generateCpePage: {
         btn: {
-            cpe: 'Generate CPE',
-            correction: 'Generate 1st Lot Correction',
-            subrecipe: 'Generate WLC subrecipe',
+            generateCpe: 'Generate CPE',
+            generate1stLotCorrection: 'Generate 1st Lot Correction',
+            generateWlcSubrecipe: 'Generate WLC subrecipe',
         },
     },
 
