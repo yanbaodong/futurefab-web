@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-12 11:18:33
- * @LastEditTime: 2023-09-15 14:36:53
+ * @LastEditTime: 2023-09-21 09:57:24
  */
 import { VXETable } from '@futurefab/vxe-table';
 
@@ -16,7 +16,6 @@ export const getGridOption = () => {
                     {
                         id: 'modeling-recipe-page-Add',
                         name: 'common.btn.add',
-
                         icon: 'icon-ic_btn_Add',
                     },
                     {

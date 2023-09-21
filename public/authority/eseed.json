@@ -30,13 +30,13 @@
             "buttons": [
                 {
                     "btnId": "modeling-recipe-page-Add",
-                    "type": "Edit",
+                    "type": "Add",
                     "zh-CN": "新增",
                     "en-US": "Add"
                 },
                 {
                     "btnId": "modeling-recipe-page-view",
-                    "type": "Edit",
+                    "type": "View",
                     "zh-CN": "查看",
                     "en-US": "View"
                 },
@@ -51,6 +51,30 @@
                     "type": "Delete",
                     "zh-CN": "删除",
                     "en-US": "Delete"
+                }
+            ]
+        },
+        {
+            "router": "/generate-cpe-page",
+            "name": "generate-cpe-page",
+            "buttons": [
+                {
+                    "btnId": "measure-recipe-page-cpe",
+                    "type": "Add",
+                    "zh-CN": "Generate CPE",
+                    "en-US": "Generate CPE"
+                },
+                {
+                    "btnId": "measure-recipe-page-1st",
+                    "type": "Edit",
+                    "zh-CN": "Generate 1st Lot Correction",
+                    "en-US": "Generate 1st Lot Correction"
+                },
+                {
+                    "btnId": "measure-recipe-page-wlc",
+                    "type": "Edit",
+                    "zh-CN": "Generate WLC subrecipe",
+                    "en-US": "Generate WLC subrecipe"
                 }
             ]
         }

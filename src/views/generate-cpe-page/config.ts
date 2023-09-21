@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-20 18:42:51
- * @LastEditTime: 2023-09-20 19:06:17
+ * @LastEditTime: 2023-09-21 09:57:19
  */
 import { VXETable } from '@futurefab/vxe-table';
 
@@ -14,22 +14,22 @@ export const getGridOption = () => {
             tools: [
                 ...VXETable.tableFun.getToolsButton([
                     {
-                        id: ' measure-recipe-page-cpe',
-                        name: 'Generate CPE',
-                        icon: '',
+                        id: 'measure-recipe-page-cpe',
+                        name: 'generateCpePage.btn.cpe',
+                        // icon: '',
                         type: 'button',
                     },
                     {
                         id: 'measure-recipe-page-1st',
-                        name: 'Generate 1st Lot Correction',
+                        name: 'generateCpePage.btn.correction',
                         type: 'button',
-                        icon: '',
+                        // icon: '',
                     },
                     {
                         id: 'measure-recipe-page-wlc',
-                        name: 'Generate WLC subrecipe',
+                        name: 'generateCpePage.btn.subrecipe',
                         type: 'button',
-                        icon: '',
+                        // icon: '',
                     },
                 ]),
             ],
@@ -40,7 +40,7 @@ export const getGridOption = () => {
         columns: [
             { field: 'rawId', type: 'checkbox', width: 40, title: 'SEL', headerClassName: 'sel' },
             {
-                field: 'recipeName',
+                field: 'technology',
                 title: 'Technology',
                 sortable: true,
                 sortType: 'string',
@@ -48,7 +48,7 @@ export const getGridOption = () => {
                 filters: [{}],
             },
             {
-                field: 'defaultYn',
+                field: 'productId',
                 title: 'Product ID',
                 sortable: true,
                 sortType: 'string',
@@ -57,7 +57,7 @@ export const getGridOption = () => {
             },
 
             {
-                field: 'createBy',
+                field: 'layer',
                 title: 'Layer',
                 sortable: true,
                 sortType: 'string',
@@ -66,7 +66,7 @@ export const getGridOption = () => {
                 filterRender: {},
             },
             {
-                field: 'createDtts',
+                field: 'measureRecipeName',
                 title: 'Measure Recipe Name',
                 sortable: true,
                 sortType: 'string',
@@ -83,7 +83,7 @@ export const getGridOption = () => {
                 },
             },
             {
-                field: 'lastUpdateBy',
+                field: 'eqpId',
                 title: ' Measure EQP ID',
                 sortable: true,
                 sortType: 'string',
@@ -94,7 +94,7 @@ export const getGridOption = () => {
                 },
             },
             {
-                field: 'LastUpdateTime',
+                field: 'lotId',
                 title: ' Measure LOT ID',
                 sortable: true,
                 minWidth: 123,
@@ -104,8 +104,8 @@ export const getGridOption = () => {
                 },
             },
             {
-                field: 'LastUpdateTime',
-                title: ' Measure Point',
+                field: 'pointCount',
+                title: ' Measure Point Count',
                 sortable: true,
                 minWidth: 123,
                 // filters: [{}],
@@ -113,18 +113,9 @@ export const getGridOption = () => {
                     name: '$input',
                 },
             },
+
             {
-                field: 'LastUpdateTime',
-                title: 'Count',
-                sortable: true,
-                minWidth: 123,
-                // filters: [{}],
-                filterRender: {
-                    name: '$input',
-                },
-            },
-            {
-                field: 'LastUpdateTime',
+                field: 'pjId',
                 title: 'Measure PJ ID',
                 sortable: true,
                 minWidth: 123,
@@ -134,7 +125,7 @@ export const getGridOption = () => {
                 },
             },
             {
-                field: 'LastUpdateTime',
+                field: 'waferList',
                 title: 'Measure Wafer List',
                 sortable: true,
                 minWidth: 123,
@@ -144,7 +135,7 @@ export const getGridOption = () => {
                 },
             },
             {
-                field: 'LastUpdateTime',
+                field: 'time',
                 title: 'Measure Time',
                 sortable: true,
                 minWidth: 123,

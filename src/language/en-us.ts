@@ -93,6 +93,13 @@ const en: any = {
             actuatorRangesSetName: 'ActuatorRanges-SetName',
         },
     },
+    generateCpePage: {
+        btn: {
+            cpe: 'Generate CPE',
+            correction: 'Generate 1st Lot Correction',
+            subrecipe: 'Generate WLC subrecipe',
+        },
+    },
     ...table_en,
     ...BasicLocales.enUS,
     ...EchartLocales.enUS,
