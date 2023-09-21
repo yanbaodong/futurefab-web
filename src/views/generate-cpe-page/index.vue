@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-20 15:18:36
- * @LastEditTime: 2023-09-21 13:29:02
+ * @LastEditTime: 2023-09-21 14:58:35
 -->
 <template>
     <div class="generate-cpe-page">
@@ -28,25 +28,26 @@
 
                         <div class="input-box">
                             <!--Technology  不可修改-->
-                            <span class="label">Technology</span>
+                            <p class="label">Technology</p>
 
                             <a-input v-model:value="form.technology" placeholder="" disabled />
                         </div>
                         <div class="input-box">
                             <!-- Product ID  不可修改-->
-                            <span class="label">Product ID</span>
+                            <p class="label">Product ID</p>
 
                             <a-input v-model:value="form.productId" placeholder="" disabled />
                         </div>
                         <div class="input-box">
                             <!-- Layer  不可修改-->
-                            <span class="label">Layer</span>
+                            <p class="label">Layer</p>
 
                             <a-input v-model:value="form.layer" placeholder="" disabled />
                         </div>
                     </header>
+                    <div class="border-line"></div>
                     <section class="lis-recipe-setting-wrap">
-
+                        <lis-recipe-setting :form="lisRecipeSettingForm"></lis-recipe-setting>
                     </section>
                     <section class="step-1-wrap"></section>
                     <section class="step-2-wrap"></section>
@@ -61,6 +62,7 @@
 
 <script lang='ts' setup>
 import SearchGroup from './components/SearchGroup.vue';
+import LisRecipeSetting from './components/LisRecipeSetting.vue';
 import { t, VxeGridDefines, VXETable, VxeTableDefines } from '@futurefab/vxe-table';
 import { getGridOption } from './config';
 import { reactive, ref } from "vue";
@@ -74,6 +76,7 @@ import useMeasureRecipe from './composition/measureRecipePage';
 const {
     sidebar,
     form,
+    lisRecipeSettingForm,
     handleClick,
     handelGenerateCpe,
     handelGenerate1stLotCorrection,
@@ -203,6 +206,34 @@ const events = {
                     .vxe-tools--wrapper {
                         .vxe-button--icon {
                             display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .basic_sidebar_wrapper {
+        .vxe-modal--box {
+            .vxe-modal--body {
+                .vxe-modal--content {
+                    .basic_sidebar_content {
+                        .measure-header-wrap {
+                            display: flex;
+                            align-items: center;
+
+                            .input-box {
+                                padding: 10px 20px 20px;
+
+                                .label {
+                                    color: @input-font-color;
+                                    margin-bottom: 10px;
+                                }
+
+                                .ant-input {
+                                    width: 210px;
+                                }
+                            }
                         }
                     }
                 }

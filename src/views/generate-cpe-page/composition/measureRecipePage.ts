@@ -1,7 +1,7 @@
 /*
  * @Author: William Dong
  * @Date: 2023-09-21 10:31:54
- * @LastEditTime: 2023-09-21 13:56:26
+ * @LastEditTime: 2023-09-21 15:06:53
  */
 import { ref, reactive, watchEffect } from 'vue';
 // import { defaultYnMap, basicForm } from '../config/globalSetting';
@@ -10,19 +10,29 @@ import { showWarning, successInfo } from '@futurefab/components/dist/utils';
 import { useI18n } from 'vue-i18n';
 export default function useMeasureRecipe() {
     const sidebar = reactive({
-        show: false,
+        show: true,
         title: '',
     });
     const handleClick = (code: string) => {
         if (code == 'closeCancel' || code == 'cancel') {
             sidebar.show = false;
         }
-        console.log(code);
+        // console.log(code);
     };
     const form = reactive({
         technology: '',
         productId: '',
         layer: '',
+    });
+    const lisRecipeSettingForm = reactive({
+        gloEstRecipe: '',
+        refEstRecipe1: '',
+        refEstRecipe2: '',
+        refEstRecipe3: '',
+        refEstRecipe4: '',
+        oprRecipe: '',
+        calculationMode: '',
+        sampleReferenceMetrologyID: '',
     });
     const handelGenerateCpe = (records: any) => {
         // 选择一行或多行量测结果，用于手动生成CPE
@@ -59,6 +69,7 @@ export default function useMeasureRecipe() {
     return {
         sidebar,
         form,
+        lisRecipeSettingForm,
         handleClick,
         handelGenerateCpe,
         handelGenerate1stLotCorrection,
