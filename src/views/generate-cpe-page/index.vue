@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-20 15:18:36
- * @LastEditTime: 2023-09-21 11:14:47
+ * @LastEditTime: 2023-09-21 13:29:02
 -->
 <template>
     <div class="generate-cpe-page">
@@ -24,13 +24,34 @@
 
             <ff-basic-sidebar v-if="sidebar.show" :title="sidebar.title" :hasZoom="true" @clickbutton="handleClick">
                 <template #sidebar_content>
-                    <header class="measure-header-wrap"></header>
-                    <section class="lis-recipe-setting-wrap"></section>
+                    <header class="measure-header-wrap">
+
+                        <div class="input-box">
+                            <!--Technology  不可修改-->
+                            <span class="label">Technology</span>
+
+                            <a-input v-model:value="form.technology" placeholder="" disabled />
+                        </div>
+                        <div class="input-box">
+                            <!-- Product ID  不可修改-->
+                            <span class="label">Product ID</span>
+
+                            <a-input v-model:value="form.productId" placeholder="" disabled />
+                        </div>
+                        <div class="input-box">
+                            <!-- Layer  不可修改-->
+                            <span class="label">Layer</span>
+
+                            <a-input v-model:value="form.layer" placeholder="" disabled />
+                        </div>
+                    </header>
+                    <section class="lis-recipe-setting-wrap">
+
+                    </section>
                     <section class="step-1-wrap"></section>
                     <section class="step-2-wrap"></section>
                     <section class="step-3-wrap"></section>
                     <footer class="input-wrap"></footer>
-
                 </template>
             </ff-basic-sidebar>
 
@@ -52,6 +73,7 @@ import {
 import useMeasureRecipe from './composition/measureRecipePage';
 const {
     sidebar,
+    form,
     handleClick,
     handelGenerateCpe,
     handelGenerate1stLotCorrection,
@@ -111,7 +133,7 @@ const events = {
                     showWarning('请选择一行或多行数据进行操作');
                     return;
                 }
-                handelGenerateCpe()
+                handelGenerateCpe(checkboxRecords)
                 break;
             case 'generate1stLotCorrection':
                 //   Generate 1st Lot Correction
