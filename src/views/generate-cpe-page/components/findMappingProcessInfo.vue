@@ -1,7 +1,7 @@
 <!--
  * @Author: William Dong
  * @Date: 2023-09-21 15:54:16
- * @LastEditTime: 2023-09-21 16:58:07
+ * @LastEditTime: 2023-09-22 10:26:56
 -->
 <template>
     <div class="find-mapping-process-info-container">
@@ -17,7 +17,7 @@
             </div>
         </main>
         <span class="arrow-down">
-            ></span>
+        </span>
     </div>
 </template>
 
@@ -243,6 +243,16 @@ const gridOptions = getGridOption();
                 }
             }
         }
+    }
+
+    .arrow-down {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-right: 1px solid @input-font-color;
+        border-bottom: 1px solid @input-font-color;
+        transform: rotate(45deg);
+        margin: 0 auto;
     }
 }
 </style>
